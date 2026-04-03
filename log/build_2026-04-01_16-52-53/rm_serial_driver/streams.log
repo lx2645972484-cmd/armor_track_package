@@ -1,0 +1,45 @@
+[0.032s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20
+[0.172s] [ 22%] Built target rm_serial_driver_node
+[0.189s] [ 33%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[21.287s] [ 44%] [32m[1mLinking CXX shared library librm_serial_driver.so[0m
+[22.693s] [ 55%] Built target rm_serial_driver
+[22.773s] [ 66%] [32mBuilding CXX object CMakeFiles/rm_serial_node.dir/src/rm_serial_driver.cpp.o[0m
+[42.892s] [ 77%] [32m[1mLinking CXX executable rm_serial_node[0m
+[44.274s] [100%] Built target rm_serial_node
+[44.300s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20
+[44.305s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver
+[44.323s] -- Install configuration: ""
+[44.324s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+[44.325s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/include
+[44.325s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/include/rm_serial_driver
+[44.325s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/include/rm_serial_driver/crc.hpp
+[44.325s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/include/rm_serial_driver/packet.hpp
+[44.325s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
+[44.325s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+[44.325s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+[44.326s] -- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib/librm_serial_driver.so
+[44.344s] -- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib/librm_serial_driver.so" to ""
+[44.344s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/config
+[44.344s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/config/serial_driver.yaml
+[44.345s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/launch
+[44.345s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/launch/serial_driver.launch.py
+[44.345s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+[44.345s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+[44.345s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+[44.345s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+[44.346s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+[44.346s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+[44.346s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+[44.346s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+[44.346s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+[44.346s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+[44.346s] -- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+[44.346s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+[44.347s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+[44.347s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[44.347s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[44.347s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[44.347s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+[44.347s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+[44.347s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.xml
+[44.350s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver

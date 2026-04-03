@@ -1,0 +1,4 @@
+Log file created at: 2026/03/26 22:44:43
+Running on machine: eee-Predator-PHN16-72
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0326 22:44:43.325438 46676 MVCameraBase.cpp:100] Device:(name:MV-SUA134GC#0 sn:042162020049)Lost

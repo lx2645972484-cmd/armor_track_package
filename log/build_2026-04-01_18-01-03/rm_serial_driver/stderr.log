@@ -1,0 +1,16 @@
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:[m[K In member function ‘[01m[Kvoid rm_serial_driver::RMSerialDriver::sendData(armor_interfaces::msg::SerialDriver_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:195:34:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kvoid rm_serial_driver::float_to_5digit_array(float, uint8_t*)[m[K’
+  195 |             [01;31m[Kfloat_to_5digit_array(yaw, yaw_data,yaw_symbol)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:31:10:[m[K [01;36m[Knote: [m[Kdeclared here
+   31 |     void [01;36m[Kfloat_to_5digit_array[m[K(float num, uint8_t out[5]);
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:196:34:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kvoid rm_serial_driver::float_to_5digit_array(float, uint8_t*)[m[K’
+  196 |             [01;31m[Kfloat_to_5digit_array(pitch, pitch_data,pitch_symbol)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:31:10:[m[K [01;36m[Knote: [m[Kdeclared here
+   31 |     void [01;36m[Kfloat_to_5digit_array[m[K(float num, uint8_t out[5]);
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/rm_serial_driver.dir/build.make:76：CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:141：CMakeFiles/rm_serial_driver.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,405 @@
+[0.229s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.229s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x79d9d4e4c220>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x79d9d4e27d90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x79d9d4e27d90>>)
+[0.601s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.601s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.601s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.601s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.601s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.601s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.602s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/eee/ros2/src/armor_detect_ros2-main'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['ignore', 'ignore_ament_install']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'ignore'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'ignore_ament_install'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['colcon_pkg']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'colcon_pkg'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['colcon_meta']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'colcon_meta'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['ros']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'ros'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['cmake', 'python']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'cmake'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'python'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['python_setup_py']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'python_setup_py'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['ignore', 'ignore_ament_install']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'ignore'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'ignore_ament_install'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['colcon_pkg']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'colcon_pkg'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['colcon_meta']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'colcon_meta'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['ros']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'ros'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['cmake', 'python']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'cmake'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'python'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['python_setup_py']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'python_setup_py'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['ignore', 'ignore_ament_install']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'ignore'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'ignore_ament_install'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['colcon_pkg']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'colcon_pkg'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['colcon_meta']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'colcon_meta'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['ros']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'ros'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['cmake', 'python']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'cmake'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'python'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['python_setup_py']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'python_setup_py'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extensions ['ignore', 'ignore_ament_install']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'ignore'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'ignore_ament_install'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extensions ['colcon_pkg']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'colcon_pkg'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extensions ['colcon_meta']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'colcon_meta'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extensions ['ros']
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'ros'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extensions ['cmake', 'python']
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'cmake'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'python'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extensions ['python_setup_py']
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(include) by extension 'python_setup_py'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extensions ['ignore', 'ignore_ament_install']
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extension 'ignore'
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extension 'ignore_ament_install'
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extensions ['colcon_pkg']
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extension 'colcon_pkg'
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extensions ['colcon_meta']
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extension 'colcon_meta'
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extensions ['ros']
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_drawer) by extension 'ros'
+[0.651s] DEBUG:colcon.colcon_core.package_identification:Package 'src/armor_drawer' with type 'ros.ament_cmake' and name 'armor_drawer'
+[0.651s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'ignore_ament_install'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['colcon_pkg']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'colcon_pkg'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['colcon_meta']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'colcon_meta'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['ros']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'ros'
+[0.654s] DEBUG:colcon.colcon_core.package_identification:Package 'src/armor_interfaces' with type 'ros.ament_cmake' and name 'armor_interfaces'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extensions ['ignore', 'ignore_ament_install']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extension 'ignore'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extension 'ignore_ament_install'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extensions ['colcon_pkg']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extension 'colcon_pkg'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extensions ['colcon_meta']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extension 'colcon_meta'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extensions ['ros']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_tracker) by extension 'ros'
+[0.657s] DEBUG:colcon.colcon_core.package_identification:Package 'src/armor_tracker' with type 'ros.ament_cmake' and name 'armor_tracker_node'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extension 'ignore'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extension 'ignore_ament_install'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extensions ['colcon_pkg']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extension 'colcon_pkg'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extensions ['colcon_meta']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extension 'colcon_meta'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extensions ['ros']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_driver) by extension 'ros'
+[0.662s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_driver' with type 'ros.ament_cmake' and name 'rm_serial_driver'
+[0.662s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.662s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.662s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.662s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.662s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.735s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.735s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.739s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/eee/ros2/src/armor_detect_ros2-main/install
+[0.742s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 280 installed packages in /opt/ros/humble
+[0.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.835s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.835s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.835s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.835s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.835s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.835s] DEBUG:colcon.colcon_core.verb:Building package 'armor_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces', 'merge_install': False, 'path': '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'cmake_args' from command line to 'None'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'cmake_target' from command line to 'None'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'cmake_clean_first' from command line to 'False'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'cmake_force_configure' from command line to 'False'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'ament_cmake_args' from command line to 'None'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.836s] Level 5:colcon.colcon_core.verb:set package 'armor_drawer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.836s] DEBUG:colcon.colcon_core.verb:Building package 'armor_drawer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer', 'merge_install': False, 'path': '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_drawer', 'symlink_install': False, 'test_result_base': None}
+[0.837s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'cmake_args' from command line to 'None'
+[0.837s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'cmake_target' from command line to 'None'
+[0.837s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.837s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.837s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.837s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.837s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.838s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.838s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.838s] DEBUG:colcon.colcon_core.verb:Building package 'armor_tracker_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node', 'merge_install': False, 'path': '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker', 'symlink_install': False, 'test_result_base': None}
+[0.838s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_args' from command line to 'None'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target' from command line to 'None'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.839s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.839s] DEBUG:colcon.colcon_core.verb:Building package 'rm_serial_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver', 'merge_install': False, 'path': '/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver', 'symlink_install': False, 'test_result_base': None}
+[0.839s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.842s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.842s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_interfaces' with build type 'ament_cmake'
+[0.843s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_interfaces'
+[0.849s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.850s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.850s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.871s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces -- -j20 -l20
+[1.705s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces -- -j20 -l20
+[1.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces
+[1.889s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_interfaces)
+[1.891s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces
+[1.899s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces' for CMake module files
+[1.901s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces' for CMake config files
+[1.903s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'cmake_prefix_path')
+[1.904s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.ps1'
+[1.906s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.dsv'
+[1.908s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.sh'
+[1.911s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib'
+[1.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'ld_library_path_lib')
+[1.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.ps1'
+[1.913s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.dsv'
+[1.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.sh'
+[1.916s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/bin'
+[1.916s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/pkgconfig/armor_interfaces.pc'
+[1.917s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/python3.10/site-packages'
+[1.918s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/bin'
+[1.919s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.ps1'
+[1.922s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.dsv'
+[1.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.sh'
+[1.926s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.bash'
+[1.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.zsh'
+[1.931s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/colcon-core/packages/armor_interfaces)
+[1.933s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_interfaces)
+[1.934s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces' for CMake module files
+[1.936s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces' for CMake config files
+[1.938s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'cmake_prefix_path')
+[1.939s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.ps1'
+[1.940s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.dsv'
+[1.941s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.sh'
+[1.944s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib'
+[1.945s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'ld_library_path_lib')
+[1.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.ps1'
+[1.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.dsv'
+[1.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.sh'
+[1.949s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/bin'
+[1.950s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/pkgconfig/armor_interfaces.pc'
+[1.950s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/python3.10/site-packages'
+[1.951s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/bin'
+[1.952s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.ps1'
+[1.953s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.dsv'
+[1.954s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.sh'
+[1.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.bash'
+[1.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.zsh'
+[1.957s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/colcon-core/packages/armor_interfaces)
+[1.958s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_drawer' with build type 'ament_cmake'
+[1.958s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_drawer'
+[1.959s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.959s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.968s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker' with build type 'ament_cmake'
+[1.969s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker'
+[1.969s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.969s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.976s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver' with build type 'ament_cmake'
+[1.977s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver'
+[1.978s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.978s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.998s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer -- -j20 -l20
+[2.003s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[2.011s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20
+[2.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer -- -j20 -l20
+[2.180s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer
+[2.207s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[2.209s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_drawer)
+[2.210s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer' for CMake module files
+[2.211s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node
+[2.212s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer
+[2.213s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer' for CMake config files
+[2.214s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_drawer', 'cmake_prefix_path')
+[2.215s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/hook/cmake_prefix_path.ps1'
+[2.216s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/hook/cmake_prefix_path.dsv'
+[2.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/hook/cmake_prefix_path.sh'
+[2.220s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/lib'
+[2.220s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/bin'
+[2.220s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/lib/pkgconfig/armor_drawer.pc'
+[2.221s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/lib/python3.10/site-packages'
+[2.222s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/bin'
+[2.223s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.ps1'
+[2.228s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.dsv'
+[2.232s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.sh'
+[2.234s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.bash'
+[2.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.zsh'
+[2.236s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/colcon-core/packages/armor_drawer)
+[2.238s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_drawer)
+[2.238s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer' for CMake module files
+[2.239s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer' for CMake config files
+[2.240s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_drawer', 'cmake_prefix_path')
+[2.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/hook/cmake_prefix_path.ps1'
+[2.241s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/hook/cmake_prefix_path.dsv'
+[2.242s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/hook/cmake_prefix_path.sh'
+[2.243s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/lib'
+[2.243s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/bin'
+[2.244s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/lib/pkgconfig/armor_drawer.pc'
+[2.244s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/lib/python3.10/site-packages'
+[2.245s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/bin'
+[2.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.ps1'
+[2.248s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.dsv'
+[2.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.sh'
+[2.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.bash'
+[2.251s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.zsh'
+[2.252s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/colcon-core/packages/armor_drawer)
+[2.255s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker_node)
+[2.256s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node' for CMake module files
+[2.258s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node
+[2.259s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node' for CMake config files
+[2.259s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker_node', 'cmake_prefix_path')
+[2.260s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/hook/cmake_prefix_path.ps1'
+[2.261s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/hook/cmake_prefix_path.dsv'
+[2.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/hook/cmake_prefix_path.sh'
+[2.264s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib'
+[2.264s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/bin'
+[2.264s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib/pkgconfig/armor_tracker_node.pc'
+[2.265s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib/python3.10/site-packages'
+[2.266s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/bin'
+[2.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.ps1'
+[2.268s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.dsv'
+[2.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.sh'
+[2.271s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.bash'
+[2.272s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.zsh'
+[2.272s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/colcon-core/packages/armor_tracker_node)
+[2.274s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker_node)
+[2.274s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node' for CMake module files
+[2.275s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node' for CMake config files
+[2.276s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker_node', 'cmake_prefix_path')
+[2.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/hook/cmake_prefix_path.ps1'
+[2.277s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/hook/cmake_prefix_path.dsv'
+[2.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/hook/cmake_prefix_path.sh'
+[2.279s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib'
+[2.279s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/bin'
+[2.280s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib/pkgconfig/armor_tracker_node.pc'
+[2.281s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib/python3.10/site-packages'
+[2.282s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/bin'
+[2.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.ps1'
+[2.284s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.dsv'
+[2.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.sh'
+[2.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.bash'
+[2.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.zsh'
+[2.287s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/colcon-core/packages/armor_tracker_node)
+[46.279s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20
+[46.283s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver
+[46.327s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[46.329s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver' for CMake module files
+[46.329s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver
+[46.331s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver' for CMake config files
+[46.332s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[46.333s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[46.334s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[46.335s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[46.336s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib'
+[46.336s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[46.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[46.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[46.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[46.339s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/bin'
+[46.339s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[46.340s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib/python3.10/site-packages'
+[46.341s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/bin'
+[46.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[46.343s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[46.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[46.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[46.345s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[46.346s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[46.347s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[46.348s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver' for CMake module files
+[46.349s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver' for CMake config files
+[46.349s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[46.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[46.351s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[46.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[46.352s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib'
+[46.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[46.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[46.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[46.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[46.355s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/bin'
+[46.355s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[46.356s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib/python3.10/site-packages'
+[46.357s] Level 1:colcon.colcon_core.environment:checking '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/bin'
+[46.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[46.359s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[46.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[46.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[46.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[46.363s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[46.364s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[46.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[46.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[46.365s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[46.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[46.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[46.378s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[46.409s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[46.410s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eee/ros2/src/armor_detect_ros2-main/install/local_setup.ps1'
+[46.412s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/eee/ros2/src/armor_detect_ros2-main/install/_local_setup_util_ps1.py'
+[46.415s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eee/ros2/src/armor_detect_ros2-main/install/setup.ps1'
+[46.417s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eee/ros2/src/armor_detect_ros2-main/install/local_setup.sh'
+[46.419s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/eee/ros2/src/armor_detect_ros2-main/install/_local_setup_util_sh.py'
+[46.420s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eee/ros2/src/armor_detect_ros2-main/install/setup.sh'
+[46.422s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eee/ros2/src/armor_detect_ros2-main/install/local_setup.bash'
+[46.424s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eee/ros2/src/armor_detect_ros2-main/install/setup.bash'
+[46.426s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/eee/ros2/src/armor_detect_ros2-main/install/local_setup.zsh'
+[46.427s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/eee/ros2/src/armor_detect_ros2-main/install/setup.zsh'

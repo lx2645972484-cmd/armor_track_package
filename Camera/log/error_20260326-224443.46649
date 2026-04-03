@@ -1,0 +1,4 @@
+Log file created at: 2026/03/26 22:44:43
+Running on machine: eee-Predator-PHN16-72
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0326 22:44:43.553478 46649 CameraU3VBase.cpp:782] Function:PauseVideo, Code:set_acquisition_command(0), Error:-19

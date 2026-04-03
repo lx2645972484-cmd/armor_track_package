@@ -1,0 +1,318 @@
+[0.000000] (-) TimerEvent: {}
+[0.000182] (-) JobUnselected: {'identifier': 'armor_drawer'}
+[0.000309] (-) JobUnselected: {'identifier': 'armor_tracker_node'}
+[0.000381] (-) JobUnselected: {'identifier': 'rm_serial_driver'}
+[0.000414] (armor_interfaces) JobQueued: {'identifier': 'armor_interfaces', 'dependencies': OrderedDict()}
+[0.000447] (armor_interfaces) JobStarted: {'identifier': 'armor_interfaces'}
+[0.015008] (armor_interfaces) JobProgress: {'identifier': 'armor_interfaces', 'progress': 'cmake'}
+[0.016998] (armor_interfaces) JobProgress: {'identifier': 'armor_interfaces', 'progress': 'build'}
+[0.017088] (armor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces', '--', '-j20', '-l20'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1178'), ('SYSTEMD_EXEC_PID', '1976'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38060'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:5572'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1648,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1648'), ('INVOCATION_ID', '4e1a82af02cf4bceb8936bfddd774617'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:980d2258-4dcd-4933-b319-49ead9c4b5ec'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.088614] (armor_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.098648] (-) TimerEvent: {}
+[0.199072] (-) TimerEvent: {}
+[0.299696] (-) TimerEvent: {}
+[0.400326] (-) TimerEvent: {}
+[0.405507] (armor_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.409991] (armor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.414830] (armor_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.475063] (armor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500505] (-) TimerEvent: {}
+[0.600993] (-) TimerEvent: {}
+[0.701344] (-) TimerEvent: {}
+[0.801783] (-) TimerEvent: {}
+[0.868671] (armor_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.901935] (-) TimerEvent: {}
+[1.002256] (-) TimerEvent: {}
+[1.102654] (-) TimerEvent: {}
+[1.118572] (armor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.202756] (-) TimerEvent: {}
+[1.303084] (-) TimerEvent: {}
+[1.403456] (-) TimerEvent: {}
+[1.450482] (armor_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.484511] (armor_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.503671] (-) TimerEvent: {}
+[1.522818] (armor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.523049] (armor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.523161] (armor_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.603860] (-) TimerEvent: {}
+[1.617249] (armor_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.631855] (armor_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.685449] (armor_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[1.699408] (armor_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces\n'}
+[1.703940] (-) TimerEvent: {}
+[1.736677] (armor_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.760030] (armor_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.760442] (armor_interfaces) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[1.780544] (armor_interfaces) StdoutLine: {'line': b'[  7%] Built target ament_cmake_python_copy_armor_interfaces\n'}
+[1.804108] (-) TimerEvent: {}
+[1.904547] (-) TimerEvent: {}
+[2.005018] (-) TimerEvent: {}
+[2.105426] (-) TimerEvent: {}
+[2.120700] (armor_interfaces) StdoutLine: {'line': b'[  7%] Built target armor_interfaces__rs\n'}
+[2.127961] (armor_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[2.129050] (armor_interfaces) StdoutLine: {'line': b'writing armor_interfaces.egg-info/PKG-INFO\n'}
+[2.129346] (armor_interfaces) StdoutLine: {'line': b'writing dependency_links to armor_interfaces.egg-info/dependency_links.txt\n'}
+[2.129629] (armor_interfaces) StdoutLine: {'line': b'writing top-level names to armor_interfaces.egg-info/top_level.txt\n'}
+[2.132653] (armor_interfaces) StdoutLine: {'line': b"reading manifest file 'armor_interfaces.egg-info/SOURCES.txt'\n"}
+[2.133638] (armor_interfaces) StdoutLine: {'line': b"writing manifest file 'armor_interfaces.egg-info/SOURCES.txt'\n"}
+[2.187926] (armor_interfaces) StdoutLine: {'line': b'[  7%] Built target ament_cmake_python_build_armor_interfaces_egg\n'}
+[2.190648] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_generator_c\x1b[0m\n'}
+[2.196797] (armor_interfaces) StdoutLine: {'line': b'[  7%] Built target armor_interfaces__cpp\n'}
+[2.205587] (-) TimerEvent: {}
+[2.208826] (armor_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.c.o\x1b[0m\n'}
+[2.209127] (armor_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.c.o\x1b[0m\n'}
+[2.211309] (armor_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.213664] (armor_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.214512] (armor_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.305774] (-) TimerEvent: {}
+[2.341947] (armor_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libarmor_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[2.405892] (-) TimerEvent: {}
+[2.414954] (armor_interfaces) StdoutLine: {'line': b'[ 22%] Built target armor_interfaces__rosidl_generator_c\n'}
+[2.431520] (armor_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.433966] (armor_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.435528] (armor_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.506018] (-) TimerEvent: {}
+[2.591050] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.606164] (-) TimerEvent: {}
+[2.612244] (armor_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.cpp.o\x1b[0m\n'}
+[2.612928] (armor_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.cpp.o\x1b[0m\n'}
+[2.615856] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.634222] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.637509] (armor_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.cpp.o\x1b[0m\n'}
+[2.638978] (armor_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.cpp.o\x1b[0m\n'}
+[2.659638] (armor_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.cpp.o\x1b[0m\n'}
+[2.662356] (armor_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.cpp.o\x1b[0m\n'}
+[2.706334] (-) TimerEvent: {}
+[2.806863] (-) TimerEvent: {}
+[2.875932] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[2.897998] (armor_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.cpp.o\x1b[0m\n'}
+[2.898495] (armor_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.cpp.o\x1b[0m\n'}
+[2.901214] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[2.906996] (-) TimerEvent: {}
+[2.934545] (armor_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.cpp.o\x1b[0m\n'}
+[2.937793] (armor_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp.o\x1b[0m\n'}
+[2.940301] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.966510] (armor_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c.o\x1b[0m\n'}
+[2.968163] (armor_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.c.o\x1b[0m\n'}
+[2.976389] (armor_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.007167] (-) TimerEvent: {}
+[3.042821] (armor_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking C shared library libarmor_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.075392] (armor_interfaces) StdoutLine: {'line': b'[ 65%] Built target armor_interfaces__rosidl_typesupport_c\n'}
+[3.107334] (-) TimerEvent: {}
+[3.109484] (armor_interfaces) StdoutLine: {'line': b'[ 65%] Built target armor_interfaces__rosidl_typesupport_introspection_c\n'}
+[3.147374] (armor_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.207473] (-) TimerEvent: {}
+[3.226300] (armor_interfaces) StdoutLine: {'line': b'[ 67%] Built target armor_interfaces__rosidl_typesupport_cpp\n'}
+[3.307651] (-) TimerEvent: {}
+[3.408353] (-) TimerEvent: {}
+[3.450195] (armor_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.508529] (-) TimerEvent: {}
+[3.531662] (armor_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.538053] (armor_interfaces) StdoutLine: {'line': b'[ 72%] Built target armor_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[3.567041] (armor_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.608662] (-) TimerEvent: {}
+[3.668009] (armor_interfaces) StdoutLine: {'line': b'[ 75%] Built target armor_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[3.703224] (armor_interfaces) StdoutLine: {'line': b'[ 75%] Built target armor_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[3.708834] (-) TimerEvent: {}
+[3.737871] (armor_interfaces) StdoutLine: {'line': b'[ 75%] Built target armor_interfaces\n'}
+[3.774784] (armor_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.808978] (-) TimerEvent: {}
+[3.909393] (-) TimerEvent: {}
+[4.009879] (-) TimerEvent: {}
+[4.110341] (-) TimerEvent: {}
+[4.210839] (-) TimerEvent: {}
+[4.311345] (-) TimerEvent: {}
+[4.347816] (armor_interfaces) StdoutLine: {'line': b'[ 77%] Built target armor_interfaces__py\n'}
+[4.368055] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_generator_py\x1b[0m\n'}
+[4.392223] (armor_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c.o\x1b[0m\n'}
+[4.392705] (armor_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c.o\x1b[0m\n'}
+[4.411496] (-) TimerEvent: {}
+[4.511906] (-) TimerEvent: {}
+[4.587570] (armor_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/armor_interfaces/libarmor_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[4.612079] (-) TimerEvent: {}
+[4.659432] (armor_interfaces) StdoutLine: {'line': b'[ 85%] Built target armor_interfaces__rosidl_generator_py\n'}
+[4.677124] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[4.678315] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[4.678751] (armor_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[4.702115] (armor_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[4.702733] (armor_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[4.703141] (armor_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[4.712213] (-) TimerEvent: {}
+[4.812718] (-) TimerEvent: {}
+[4.866035] (armor_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.868696] (armor_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.871709] (armor_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.912876] (-) TimerEvent: {}
+[4.923771] (armor_interfaces) StdoutLine: {'line': b'[100%] Built target armor_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[4.924074] (armor_interfaces) StdoutLine: {'line': b'[100%] Built target armor_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.928396] (armor_interfaces) StdoutLine: {'line': b'[100%] Built target armor_interfaces__rosidl_typesupport_c__pyext\n'}
+[4.945440] (armor_interfaces) CommandEnded: {'returncode': 0}
+[4.947216] (armor_interfaces) JobProgress: {'identifier': 'armor_interfaces', 'progress': 'install'}
+[4.962518] (armor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1178'), ('SYSTEMD_EXEC_PID', '1976'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38060'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:5572'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1648,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1648'), ('INVOCATION_ID', '4e1a82af02cf4bceb8936bfddd774617'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:980d2258-4dcd-4933-b319-49ead9c4b5ec'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble')]), 'shell': False}
+[4.977740] (armor_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.978140] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/rosidl_interfaces/armor_interfaces\n'}
+[4.978571] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[4.979165] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[4.979701] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.h\n'}
+[4.980249] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[4.980495] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.h\n'}
+[4.980653] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__functions.c\n'}
+[4.980792] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__struct.h\n'}
+[4.980959] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.h\n'}
+[4.981421] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.h\n'}
+[4.981701] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__functions.h\n'}
+[4.981870] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__functions.h\n'}
+[4.981991] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__functions.c\n'}
+[4.982095] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.982192] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/serial_driver.h\n'}
+[4.982290] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/library_path.sh\n'}
+[4.982388] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/library_path.dsv\n'}
+[4.982712] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_c.so\n'}
+[4.983214] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_c.so" to ""\n'}
+[4.983480] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[4.983729] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[4.984198] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[4.984358] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_fastrtps_c.h\n'}
+[4.984474] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.984560] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.984836] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[4.985188] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.985473] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[4.985699] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[4.985873] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.985963] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[4.986043] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.c\n'}
+[4.986123] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_introspection_c.h\n'}
+[4.986202] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.c\n'}
+[4.986339] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_introspection_c.h\n'}
+[4.986562] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[4.987057] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.987407] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_c.so\n'}
+[4.987755] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[4.988271] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[4.988599] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[4.988890] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.hpp\n'}
+[4.989079] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[4.989234] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.hpp\n'}
+[4.989385] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__traits.hpp\n'}
+[4.989534] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.hpp\n'}
+[4.989766] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__builder.hpp\n'}
+[4.989997] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__traits.hpp\n'}
+[4.990136] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.hpp\n'}
+[4.990269] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__builder.hpp\n'}
+[4.990444] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__struct.hpp\n'}
+[4.990574] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/serial_driver.hpp\n'}
+[4.990698] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.990847] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[4.991058] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[4.991195] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[4.991374] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.991512] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.991682] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/dds_fastrtps\n'}
+[4.991815] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.991963] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.992099] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.992233] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[4.992390] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[4.992513] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[4.992631] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.992758] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.992918] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.cpp\n'}
+[4.993042] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.cpp\n'}
+[4.993185] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[4.993301] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.993425] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_cpp.so\n'}
+[4.993593] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[4.993772] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/pythonpath.sh\n'}
+[4.993953] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/pythonpath.dsv\n'}
+[4.994104] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info\n'}
+[4.994226] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[4.994354] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[4.994549] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[4.994694] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[4.994859] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces\n'}
+[4.995032] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg\n'}
+[4.995152] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/__init__.py\n'}
+[4.995280] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor_info.py\n'}
+[4.995411] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_serial_driver_s.c\n'}
+[4.995601] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_serial_driver.py\n'}
+[4.995744] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor_info_s.c\n'}
+[4.995900] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/libarmor_interfaces__rosidl_generator_py.so\n'}
+[4.996051] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.996171] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/__init__.py\n'}
+[4.996288] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.996405] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[4.996522] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.996638] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.996757] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.012972] (-) TimerEvent: {}
+[5.059374] (armor_interfaces) StdoutLine: {'line': b"Listing '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces'...\n"}
+[5.059702] (armor_interfaces) StdoutLine: {'line': b"Compiling '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/__init__.py'...\n"}
+[5.059870] (armor_interfaces) StdoutLine: {'line': b"Listing '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg'...\n"}
+[5.060012] (armor_interfaces) StdoutLine: {'line': b"Compiling '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/__init__.py'...\n"}
+[5.060175] (armor_interfaces) StdoutLine: {'line': b"Compiling '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor_info.py'...\n"}
+[5.060305] (armor_interfaces) StdoutLine: {'line': b"Compiling '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_serial_driver.py'...\n"}
+[5.067078] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.067438] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.067670] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.067997] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.068312] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.068509] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.070003] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_py.so\n'}
+[5.070478] (armor_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_py.so" to ""\n'}
+[5.070708] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/rust_packages/armor_interfaces\n'}
+[5.070890] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust\n'}
+[5.071028] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/build.rs\n'}
+[5.071293] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/Cargo.toml\n'}
+[5.071508] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src\n'}
+[5.071651] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/msg\n'}
+[5.071812] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/msg/rmw.rs\n'}
+[5.072173] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/msg.rs\n'}
+[5.072335] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/lib.rs\n'}
+[5.072547] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/ArmorInfo.idl\n'}
+[5.072687] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/SerialDriver.idl\n'}
+[5.072816] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/ArmorInfo.msg\n'}
+[5.072959] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/SerialDriver.msg\n'}
+[5.073057] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/package_run_dependencies/armor_interfaces\n'}
+[5.073174] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/parent_prefix_path/armor_interfaces\n'}
+[5.073312] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/ament_prefix_path.sh\n'}
+[5.073386] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/ament_prefix_path.dsv\n'}
+[5.073528] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/path.sh\n'}
+[5.073600] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/path.dsv\n'}
+[5.073662] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.bash\n'}
+[5.073730] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.sh\n'}
+[5.073793] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.zsh\n'}
+[5.073900] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.dsv\n'}
+[5.073970] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.dsv\n'}
+[5.074068] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/packages/armor_interfaces\n'}
+[5.074240] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cExport.cmake\n'}
+[5.074352] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.074516] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[5.074637] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[5.074793] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.074937] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.075063] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[5.075181] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.075300] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cppExport.cmake\n'}
+[5.075429] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[5.075539] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[5.075674] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.075786] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.075916] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[5.076027] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.076166] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_pyExport.cmake\n'}
+[5.076235] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[5.076303] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[5.076406] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.076525] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.076597] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.076663] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.076811] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.076890] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.076956] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfacesConfig.cmake\n'}
+[5.077030] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfacesConfig-version.cmake\n'}
+[5.077094] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.xml\n'}
+[5.079849] (armor_interfaces) CommandEnded: {'returncode': 0}
+[5.113753] (-) TimerEvent: {}
+[5.117770] (armor_interfaces) JobEnded: {'identifier': 'armor_interfaces', 'rc': 0}
+[5.118823] (-) EventReactorShutdown: {}

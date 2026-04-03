@@ -1,0 +1,2 @@
+source;share/armor_tracker_node/environment/ament_prefix_path.sh
+source;share/armor_tracker_node/environment/path.sh

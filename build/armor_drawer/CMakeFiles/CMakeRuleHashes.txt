@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+d82a96aea4a075612b21c593cce31b47 CMakeFiles/armor_drawer_uninstall

@@ -1,0 +1,16 @@
+[0.032s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[0.132s] [35m[1mConsolidate compiler generated dependencies of target armor_tracker_node[0m
+[0.204s] [  9%] [32m[1mLinking CXX executable armor_tracker_node[0m
+[1.675s] /usr/bin/ld: CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o: in function `VedioProcessor::getVideoinformation(int, int&, int&, double&, double&)':
+[1.675s] Vedio.cpp:(.text+0x74): undefined reference to `CameraGetImageResolution'
+[1.675s] /usr/bin/ld: Vedio.cpp:(.text+0xad): undefined reference to `CameraGetFrameRate'
+[1.675s] /usr/bin/ld: Vedio.cpp:(.text+0xfc): undefined reference to `CameraGetFrameTimeStamp'
+[1.675s] /usr/bin/ld: CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o: in function `VedioProcessor::ProcessFrame(int)':
+[1.675s] Vedio.cpp:(.text+0x1b5): undefined reference to `CameraGetFrameTimeStamp'
+[1.677s] /usr/bin/ld: CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: in function `ArmorTracker::run()':
+[1.678s] ArmorTracker.cpp:(.text+0x12da): undefined reference to `CameraPlay'
+[1.769s] collect2: error: ld returned 1 exit status
+[1.772s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:403：armor_tracker_node] 错误 1
+[1.772s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+[1.772s] gmake: *** [Makefile:146：all] 错误 2
+[1.775s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '2': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20

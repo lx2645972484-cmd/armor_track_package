@@ -1,0 +1,7 @@
+{
+  "package_name": "armor_interfaces",
+  "non_idl_tuples": [
+    "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_interfaces:msg/ArmorInfo.msg",
+    "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_interfaces:msg/SerialDriver.msg"
+  ]
+}

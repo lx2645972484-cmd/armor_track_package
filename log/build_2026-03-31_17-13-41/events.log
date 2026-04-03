@@ -1,0 +1,530 @@
+[0.000000] (-) TimerEvent: {}
+[0.000699] (armor_interfaces) JobQueued: {'identifier': 'armor_interfaces', 'dependencies': OrderedDict()}
+[0.000790] (armor_drawer) JobQueued: {'identifier': 'armor_drawer', 'dependencies': OrderedDict([('armor_interfaces', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces')])}
+[0.000819] (armor_tracker_node) JobQueued: {'identifier': 'armor_tracker_node', 'dependencies': OrderedDict([('armor_interfaces', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces')])}
+[0.000839] (rm_serial_driver) JobQueued: {'identifier': 'rm_serial_driver', 'dependencies': OrderedDict([('armor_interfaces', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces')])}
+[0.000857] (armor_interfaces) JobStarted: {'identifier': 'armor_interfaces'}
+[0.010754] (armor_interfaces) JobProgress: {'identifier': 'armor_interfaces', 'progress': 'cmake'}
+[0.012582] (armor_interfaces) JobProgress: {'identifier': 'armor_interfaces', 'progress': 'build'}
+[0.013117] (armor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces', '--', '-j20', '-l20'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1152'), ('SYSTEMD_EXEC_PID', '1896'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4763'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:22642'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1628,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1628'), ('INVOCATION_ID', '279d30a38e434e059d8841e398e02555'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26ef97b4-e7df-4e46-b869-2bdad6a7f53a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.091824] (armor_interfaces) StdoutLine: {'line': b'[  2%] Built target armor_interfaces__cpp\n'}
+[0.093148] (armor_interfaces) StdoutLine: {'line': b'[ 12%] Built target armor_interfaces__rosidl_generator_c\n'}
+[0.093430] (armor_interfaces) StdoutLine: {'line': b'[ 15%] Built target armor_interfaces__rs\n'}
+[0.099495] (-) TimerEvent: {}
+[0.107835] (armor_interfaces) StdoutLine: {'line': b'[ 15%] Built target ament_cmake_python_copy_armor_interfaces\n'}
+[0.125373] (armor_interfaces) StdoutLine: {'line': b'[ 25%] Built target armor_interfaces__rosidl_typesupport_c\n'}
+[0.127694] (armor_interfaces) StdoutLine: {'line': b'[ 35%] Built target armor_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.128083] (armor_interfaces) StdoutLine: {'line': b'[ 45%] Built target armor_interfaces__rosidl_typesupport_cpp\n'}
+[0.129942] (armor_interfaces) StdoutLine: {'line': b'[ 55%] Built target armor_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.130524] (armor_interfaces) StdoutLine: {'line': b'[ 65%] Built target armor_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.131605] (armor_interfaces) StdoutLine: {'line': b'[ 75%] Built target armor_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.167996] (armor_interfaces) StdoutLine: {'line': b'[ 75%] Built target armor_interfaces\n'}
+[0.197594] (armor_interfaces) StdoutLine: {'line': b'[ 77%] Built target armor_interfaces__py\n'}
+[0.199602] (-) TimerEvent: {}
+[0.233781] (armor_interfaces) StdoutLine: {'line': b'[ 85%] Built target armor_interfaces__rosidl_generator_py\n'}
+[0.268812] (armor_interfaces) StdoutLine: {'line': b'[ 90%] Built target armor_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.271993] (armor_interfaces) StdoutLine: {'line': b'[ 95%] Built target armor_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.273840] (armor_interfaces) StdoutLine: {'line': b'[100%] Built target armor_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.299723] (-) TimerEvent: {}
+[0.400181] (-) TimerEvent: {}
+[0.493750] (armor_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.494680] (armor_interfaces) StdoutLine: {'line': b'writing armor_interfaces.egg-info/PKG-INFO\n'}
+[0.495051] (armor_interfaces) StdoutLine: {'line': b'writing dependency_links to armor_interfaces.egg-info/dependency_links.txt\n'}
+[0.495317] (armor_interfaces) StdoutLine: {'line': b'writing top-level names to armor_interfaces.egg-info/top_level.txt\n'}
+[0.497609] (armor_interfaces) StdoutLine: {'line': b"reading manifest file 'armor_interfaces.egg-info/SOURCES.txt'\n"}
+[0.498427] (armor_interfaces) StdoutLine: {'line': b"writing manifest file 'armor_interfaces.egg-info/SOURCES.txt'\n"}
+[0.500334] (-) TimerEvent: {}
+[0.532831] (armor_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_armor_interfaces_egg\n'}
+[0.548749] (armor_interfaces) CommandEnded: {'returncode': 0}
+[0.549700] (armor_interfaces) JobProgress: {'identifier': 'armor_interfaces', 'progress': 'install'}
+[0.562998] (armor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1152'), ('SYSTEMD_EXEC_PID', '1896'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4763'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:22642'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1628,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1628'), ('INVOCATION_ID', '279d30a38e434e059d8841e398e02555'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26ef97b4-e7df-4e46-b869-2bdad6a7f53a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.574863] (armor_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.575138] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/rosidl_interfaces/armor_interfaces\n'}
+[0.575234] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[0.575522] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[0.575661] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.h\n'}
+[0.575735] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[0.575800] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.h\n'}
+[0.575892] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__functions.c\n'}
+[0.575948] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__struct.h\n'}
+[0.576006] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.h\n'}
+[0.576064] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.h\n'}
+[0.576124] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__functions.h\n'}
+[0.576231] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__functions.h\n'}
+[0.576292] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__functions.c\n'}
+[0.576425] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.576485] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/serial_driver.h\n'}
+[0.576608] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/library_path.sh\n'}
+[0.576678] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/library_path.dsv\n'}
+[0.576739] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_c.so\n'}
+[0.576799] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[0.576927] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[0.576989] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[0.577051] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_fastrtps_c.h\n'}
+[0.577110] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_fastrtps_c.h\n'}
+[0.577168] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.577232] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.577291] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[0.577374] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[0.577433] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.577491] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[0.577549] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.c\n'}
+[0.577606] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_introspection_c.h\n'}
+[0.577663] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.c\n'}
+[0.577719] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_introspection_c.h\n'}
+[0.577777] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.577832] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_c.so\n'}
+[0.577890] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[0.577947] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[0.578039] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.hpp\n'}
+[0.578098] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[0.578156] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.hpp\n'}
+[0.578220] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__traits.hpp\n'}
+[0.578282] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.hpp\n'}
+[0.578338] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__builder.hpp\n'}
+[0.578397] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__traits.hpp\n'}
+[0.578453] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.hpp\n'}
+[0.578510] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__builder.hpp\n'}
+[0.578653] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__struct.hpp\n'}
+[0.578728] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/serial_driver.hpp\n'}
+[0.578786] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.578843] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[0.578903] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[0.578963] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[0.579023] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.579081] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.579138] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/dds_fastrtps\n'}
+[0.579206] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.579267] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.579333] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces\n'}
+[0.579394] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg\n'}
+[0.579476] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail\n'}
+[0.579536] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.579597] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.579704] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.cpp\n'}
+[0.579761] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.cpp\n'}
+[0.579818] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.579880] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.579934] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/pythonpath.sh\n'}
+[0.579990] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/pythonpath.dsv\n'}
+[0.580043] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info\n'}
+[0.580097] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.580152] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.580214] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.580280] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.580334] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces\n'}
+[0.580388] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg\n'}
+[0.580444] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/__init__.py\n'}
+[0.580499] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor_info.py\n'}
+[0.580556] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_serial_driver_s.c\n'}
+[0.580610] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_serial_driver.py\n'}
+[0.580666] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor_info_s.c\n'}
+[0.580720] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/libarmor_interfaces__rosidl_generator_py.so\n'}
+[0.580774] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.580832] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/__init__.py\n'}
+[0.580887] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.580947] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[0.581001] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.581060] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.581117] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.600521] (-) TimerEvent: {}
+[0.625216] (armor_interfaces) StdoutLine: {'line': b"Listing '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces'...\n"}
+[0.625455] (armor_interfaces) StdoutLine: {'line': b"Listing '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg'...\n"}
+[0.631441] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.631814] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.632033] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.632339] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_py.so\n'}
+[0.632576] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/rust_packages/armor_interfaces\n'}
+[0.632662] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust\n'}
+[0.632847] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/build.rs\n'}
+[0.632980] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/Cargo.toml\n'}
+[0.633050] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src\n'}
+[0.633116] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/msg\n'}
+[0.633180] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/msg/rmw.rs\n'}
+[0.633302] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/msg.rs\n'}
+[0.633365] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/rust/src/lib.rs\n'}
+[0.633429] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/ArmorInfo.idl\n'}
+[0.633494] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/SerialDriver.idl\n'}
+[0.633558] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/ArmorInfo.msg\n'}
+[0.633624] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/msg/SerialDriver.msg\n'}
+[0.633688] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/package_run_dependencies/armor_interfaces\n'}
+[0.633752] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/parent_prefix_path/armor_interfaces\n'}
+[0.633814] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/ament_prefix_path.sh\n'}
+[0.633878] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.633943] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/path.sh\n'}
+[0.634009] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/environment/path.dsv\n'}
+[0.634088] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.bash\n'}
+[0.634153] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.sh\n'}
+[0.634271] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.zsh\n'}
+[0.634339] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/local_setup.dsv\n'}
+[0.634403] (armor_interfaces) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.dsv\n'}
+[0.634465] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/ament_index/resource_index/packages/armor_interfaces\n'}
+[0.634530] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.634596] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.634661] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.634728] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.634794] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.634883] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.634948] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.635091] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.635152] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.635217] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.635279] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.635340] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.635401] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.635463] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.635522] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.635579] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_pyExport.cmake\n'}
+[0.635637] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.635695] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.635758] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.635819] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.635876] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.635932] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.635991] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.636053] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.636111] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfacesConfig.cmake\n'}
+[0.636168] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfacesConfig-version.cmake\n'}
+[0.636234] (armor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/package.xml\n'}
+[0.638029] (armor_interfaces) CommandEnded: {'returncode': 0}
+[0.663498] (armor_interfaces) JobEnded: {'identifier': 'armor_interfaces', 'rc': 0}
+[0.664938] (armor_drawer) JobStarted: {'identifier': 'armor_drawer'}
+[0.668837] (armor_tracker_node) JobStarted: {'identifier': 'armor_tracker_node'}
+[0.673203] (rm_serial_driver) JobStarted: {'identifier': 'rm_serial_driver'}
+[0.678766] (armor_drawer) JobProgress: {'identifier': 'armor_drawer', 'progress': 'cmake'}
+[0.679349] (armor_drawer) JobProgress: {'identifier': 'armor_drawer', 'progress': 'build'}
+[0.679786] (armor_drawer) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer', '--', '-j20', '-l20'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1152'), ('SYSTEMD_EXEC_PID', '1896'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4763'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:22642'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1628,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1628'), ('INVOCATION_ID', '279d30a38e434e059d8841e398e02555'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26ef97b4-e7df-4e46-b869-2bdad6a7f53a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble')]), 'shell': False}
+[0.682427] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'cmake'}
+[0.683204] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'build'}
+[0.684226] (armor_tracker_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', '--', '-j20', '-l20'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1152'), ('SYSTEMD_EXEC_PID', '1896'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4763'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:22642'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1628,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1628'), ('INVOCATION_ID', '279d30a38e434e059d8841e398e02555'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26ef97b4-e7df-4e46-b869-2bdad6a7f53a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble')]), 'shell': False}
+[0.687090] (rm_serial_driver) JobProgress: {'identifier': 'rm_serial_driver', 'progress': 'cmake'}
+[0.687923] (rm_serial_driver) JobProgress: {'identifier': 'rm_serial_driver', 'progress': 'build'}
+[0.688475] (rm_serial_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver', '--', '-j20', '-l20'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1152'), ('SYSTEMD_EXEC_PID', '1896'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4763'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:22642'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1628,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1628'), ('INVOCATION_ID', '279d30a38e434e059d8841e398e02555'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26ef97b4-e7df-4e46-b869-2bdad6a7f53a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble')]), 'shell': False}
+[0.700643] (-) TimerEvent: {}
+[0.731247] (rm_serial_driver) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.774267] (armor_drawer) StdoutLine: {'line': b'[100%] Built target armor_drawer\n'}
+[0.788533] (armor_drawer) CommandEnded: {'returncode': 0}
+[0.789254] (armor_tracker_node) StdoutLine: {'line': b'[100%] Built target armor_tracker_node\n'}
+[0.789964] (armor_drawer) JobProgress: {'identifier': 'armor_drawer', 'progress': 'install'}
+[0.791483] (armor_drawer) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1152'), ('SYSTEMD_EXEC_PID', '1896'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4763'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:22642'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1628,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1628'), ('INVOCATION_ID', '279d30a38e434e059d8841e398e02555'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26ef97b4-e7df-4e46-b869-2bdad6a7f53a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble')]), 'shell': False}
+[0.800752] (-) TimerEvent: {}
+[0.802116] (armor_drawer) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.802461] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/lib/armor_drawer/armor_drawer\n'}
+[0.802707] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/ament_index/resource_index/package_run_dependencies/armor_drawer\n'}
+[0.802906] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/ament_index/resource_index/parent_prefix_path/armor_drawer\n'}
+[0.803044] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/environment/ament_prefix_path.sh\n'}
+[0.803300] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/environment/ament_prefix_path.dsv\n'}
+[0.803428] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/environment/path.sh\n'}
+[0.803545] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/environment/path.dsv\n'}
+[0.803660] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/local_setup.bash\n'}
+[0.803774] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/local_setup.sh\n'}
+[0.803886] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/local_setup.zsh\n'}
+[0.804000] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/local_setup.dsv\n'}
+[0.804112] (armor_drawer) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.dsv\n'}
+[0.804242] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/ament_index/resource_index/packages/armor_drawer\n'}
+[0.804459] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/cmake/armor_drawerConfig.cmake\n'}
+[0.804918] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/cmake/armor_drawerConfig-version.cmake\n'}
+[0.805096] (armor_drawer) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer/share/armor_drawer/package.xml\n'}
+[0.806092] (armor_drawer) CommandEnded: {'returncode': 0}
+[0.821719] (armor_drawer) JobEnded: {'identifier': 'armor_drawer', 'rc': 0}
+[0.823265] (armor_tracker_node) CommandEnded: {'returncode': 0}
+[0.823939] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'install'}
+[0.824384] (armor_tracker_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('OLDPWD', '/home/eee/ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1152'), ('SYSTEMD_EXEC_PID', '1896'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4763'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:22642'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1628,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1628'), ('INVOCATION_ID', '279d30a38e434e059d8841e398e02555'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26ef97b4-e7df-4e46-b869-2bdad6a7f53a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble')]), 'shell': False}
+[0.836746] (armor_tracker_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.837013] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib/armor_tracker_node/armor_tracker_node\n'}
+[0.837175] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/launch\n'}
+[0.837268] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/launch/1.launch.py\n'}
+[0.837484] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/ament_index/resource_index/package_run_dependencies/armor_tracker_node\n'}
+[0.837561] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/ament_index/resource_index/parent_prefix_path/armor_tracker_node\n'}
+[0.837716] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/ament_prefix_path.sh\n'}
+[0.837792] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/ament_prefix_path.dsv\n'}
+[0.837863] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/path.sh\n'}
+[0.837932] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/path.dsv\n'}
+[0.838000] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.bash\n'}
+[0.838069] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.sh\n'}
+[0.838135] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.zsh\n'}
+[0.838267] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.dsv\n'}
+[0.838359] (armor_tracker_node) StdoutLine: {'line': b'-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.dsv\n'}
+[0.838428] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/ament_index/resource_index/packages/armor_tracker_node\n'}
+[0.838492] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/cmake/armor_tracker_nodeConfig.cmake\n'}
+[0.838554] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/cmake/armor_tracker_nodeConfig-version.cmake\n'}
+[0.838618] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.xml\n'}
+[0.840120] (armor_tracker_node) CommandEnded: {'returncode': 0}
+[0.854792] (armor_tracker_node) JobEnded: {'identifier': 'armor_tracker_node', 'rc': 0}
+[0.900858] (-) TimerEvent: {}
+[0.924041] (rm_serial_driver) StdoutLine: {'line': b'-- Found libstatistics_collector: 1.3.4 (/opt/ros/humble/share/libstatistics_collector/cmake)\n'}
+[0.964301] (rm_serial_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.967706] (rm_serial_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.975654] (rm_serial_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.987981] (rm_serial_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.001027] (-) TimerEvent: {}
+[1.002974] (rm_serial_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.043151] (rm_serial_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.044978] (rm_serial_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.101233] (-) TimerEvent: {}
+[1.180537] (rm_serial_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.201337] (-) TimerEvent: {}
+[1.301647] (-) TimerEvent: {}
+[1.376035] (rm_serial_driver) StdoutLine: {'line': b'-- Found asio_cmake_module: 1.2.0 (/opt/ros/humble/share/asio_cmake_module/cmake)\n'}
+[1.401868] (-) TimerEvent: {}
+[1.502379] (rm_serial_driver) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.502641] (-) TimerEvent: {}
+[1.503962] (rm_serial_driver) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.602861] (-) TimerEvent: {}
+[1.603592] (rm_serial_driver) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.623528] (rm_serial_driver) StderrLine: {'line': b'\x1b[0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/rm_serial_driver` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.\x1b[0m\n'}
+[1.628500] (rm_serial_driver) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.628932] (rm_serial_driver) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/include\n'}
+[1.629106] (rm_serial_driver) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.629911] (rm_serial_driver) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.630136] (rm_serial_driver) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.630432] (rm_serial_driver) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.631025] (rm_serial_driver) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.631423] (rm_serial_driver) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.631812] (rm_serial_driver) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.633969] (rm_serial_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.683264] (rm_serial_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[1.695477] (rm_serial_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver\n'}
+[1.702982] (-) TimerEvent: {}
+[1.734581] (rm_serial_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target rm_serial_driver\x1b[0m\n'}
+[1.735770] (rm_serial_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target rm_serial_driver_node\x1b[0m\n'}
+[1.763173] (rm_serial_driver) StdoutLine: {'line': b'[ 25%] Built target rm_serial_driver_node\n'}
+[1.768458] (rm_serial_driver) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o\x1b[0m\n'}
+[1.803144] (-) TimerEvent: {}
+[1.903470] (-) TimerEvent: {}
+[2.003842] (-) TimerEvent: {}
+[2.104208] (-) TimerEvent: {}
+[2.204544] (-) TimerEvent: {}
+[2.304981] (-) TimerEvent: {}
+[2.405356] (-) TimerEvent: {}
+[2.505775] (-) TimerEvent: {}
+[2.606232] (-) TimerEvent: {}
+[2.706616] (-) TimerEvent: {}
+[2.807078] (-) TimerEvent: {}
+[2.907467] (-) TimerEvent: {}
+[3.007910] (-) TimerEvent: {}
+[3.108357] (-) TimerEvent: {}
+[3.208733] (-) TimerEvent: {}
+[3.309092] (-) TimerEvent: {}
+[3.409483] (-) TimerEvent: {}
+[3.509931] (-) TimerEvent: {}
+[3.610393] (-) TimerEvent: {}
+[3.710820] (-) TimerEvent: {}
+[3.811330] (-) TimerEvent: {}
+[3.911758] (-) TimerEvent: {}
+[4.012286] (-) TimerEvent: {}
+[4.112739] (-) TimerEvent: {}
+[4.213222] (-) TimerEvent: {}
+[4.313758] (-) TimerEvent: {}
+[4.414388] (-) TimerEvent: {}
+[4.514940] (-) TimerEvent: {}
+[4.615484] (-) TimerEvent: {}
+[4.716102] (-) TimerEvent: {}
+[4.816692] (-) TimerEvent: {}
+[4.917187] (-) TimerEvent: {}
+[5.017664] (-) TimerEvent: {}
+[5.118110] (-) TimerEvent: {}
+[5.218698] (-) TimerEvent: {}
+[5.319131] (-) TimerEvent: {}
+[5.419525] (-) TimerEvent: {}
+[5.519978] (-) TimerEvent: {}
+[5.620367] (-) TimerEvent: {}
+[5.720735] (-) TimerEvent: {}
+[5.821208] (-) TimerEvent: {}
+[5.921617] (-) TimerEvent: {}
+[6.022058] (-) TimerEvent: {}
+[6.122557] (-) TimerEvent: {}
+[6.223128] (-) TimerEvent: {}
+[6.323510] (-) TimerEvent: {}
+[6.423884] (-) TimerEvent: {}
+[6.524262] (-) TimerEvent: {}
+[6.624643] (-) TimerEvent: {}
+[6.725103] (-) TimerEvent: {}
+[6.825423] (-) TimerEvent: {}
+[6.925803] (-) TimerEvent: {}
+[7.026221] (-) TimerEvent: {}
+[7.126536] (-) TimerEvent: {}
+[7.226906] (-) TimerEvent: {}
+[7.327316] (-) TimerEvent: {}
+[7.427722] (-) TimerEvent: {}
+[7.528118] (-) TimerEvent: {}
+[7.628460] (-) TimerEvent: {}
+[7.728854] (-) TimerEvent: {}
+[7.829245] (-) TimerEvent: {}
+[7.929653] (-) TimerEvent: {}
+[8.030082] (-) TimerEvent: {}
+[8.130511] (-) TimerEvent: {}
+[8.230922] (-) TimerEvent: {}
+[8.331329] (-) TimerEvent: {}
+[8.431776] (-) TimerEvent: {}
+[8.532115] (-) TimerEvent: {}
+[8.632548] (-) TimerEvent: {}
+[8.732909] (-) TimerEvent: {}
+[8.833295] (-) TimerEvent: {}
+[8.933588] (-) TimerEvent: {}
+[9.033959] (-) TimerEvent: {}
+[9.134360] (-) TimerEvent: {}
+[9.234703] (-) TimerEvent: {}
+[9.335066] (-) TimerEvent: {}
+[9.435360] (-) TimerEvent: {}
+[9.535679] (-) TimerEvent: {}
+[9.636052] (-) TimerEvent: {}
+[9.736395] (-) TimerEvent: {}
+[9.836729] (-) TimerEvent: {}
+[9.937050] (-) TimerEvent: {}
+[10.037356] (-) TimerEvent: {}
+[10.137639] (-) TimerEvent: {}
+[10.237941] (-) TimerEvent: {}
+[10.338360] (-) TimerEvent: {}
+[10.438764] (-) TimerEvent: {}
+[10.539133] (-) TimerEvent: {}
+[10.639505] (-) TimerEvent: {}
+[10.739884] (-) TimerEvent: {}
+[10.840299] (-) TimerEvent: {}
+[10.940602] (-) TimerEvent: {}
+[11.040923] (-) TimerEvent: {}
+[11.141366] (-) TimerEvent: {}
+[11.241886] (-) TimerEvent: {}
+[11.342330] (-) TimerEvent: {}
+[11.442769] (-) TimerEvent: {}
+[11.543228] (-) TimerEvent: {}
+[11.643577] (-) TimerEvent: {}
+[11.744031] (-) TimerEvent: {}
+[11.844489] (-) TimerEvent: {}
+[11.944904] (-) TimerEvent: {}
+[12.045365] (-) TimerEvent: {}
+[12.145715] (-) TimerEvent: {}
+[12.246208] (-) TimerEvent: {}
+[12.346652] (-) TimerEvent: {}
+[12.447094] (-) TimerEvent: {}
+[12.547566] (-) TimerEvent: {}
+[12.648041] (-) TimerEvent: {}
+[12.723854] (rm_serial_driver) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library librm_serial_driver.so\x1b[0m\n'}
+[12.748222] (-) TimerEvent: {}
+[12.848737] (-) TimerEvent: {}
+[12.949076] (-) TimerEvent: {}
+[13.049739] (-) TimerEvent: {}
+[13.150284] (-) TimerEvent: {}
+[13.250807] (-) TimerEvent: {}
+[13.351463] (-) TimerEvent: {}
+[13.451947] (-) TimerEvent: {}
+[13.458380] (rm_serial_driver) StdoutLine: {'line': b'[ 62%] Built target rm_serial_driver\n'}
+[13.475860] (rm_serial_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_rm_serial_node\x1b[0m\n'}
+[13.510009] (rm_serial_driver) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/my_rm_serial_node.dir/src/rm_serial_driver.cpp.o\x1b[0m\n'}
+[13.552130] (-) TimerEvent: {}
+[13.652539] (-) TimerEvent: {}
+[13.752943] (-) TimerEvent: {}
+[13.853398] (-) TimerEvent: {}
+[13.953885] (-) TimerEvent: {}
+[14.054315] (-) TimerEvent: {}
+[14.154752] (-) TimerEvent: {}
+[14.255257] (-) TimerEvent: {}
+[14.355698] (-) TimerEvent: {}
+[14.456153] (-) TimerEvent: {}
+[14.556464] (-) TimerEvent: {}
+[14.656804] (-) TimerEvent: {}
+[14.757189] (-) TimerEvent: {}
+[14.857503] (-) TimerEvent: {}
+[14.957876] (-) TimerEvent: {}
+[15.058299] (-) TimerEvent: {}
+[15.158691] (-) TimerEvent: {}
+[15.259014] (-) TimerEvent: {}
+[15.359332] (-) TimerEvent: {}
+[15.459646] (-) TimerEvent: {}
+[15.560038] (-) TimerEvent: {}
+[15.660490] (-) TimerEvent: {}
+[15.760901] (-) TimerEvent: {}
+[15.861322] (-) TimerEvent: {}
+[15.961678] (-) TimerEvent: {}
+[16.062000] (-) TimerEvent: {}
+[16.162337] (-) TimerEvent: {}
+[16.262659] (-) TimerEvent: {}
+[16.363081] (-) TimerEvent: {}
+[16.463408] (-) TimerEvent: {}
+[16.563752] (-) TimerEvent: {}
+[16.664132] (-) TimerEvent: {}
+[16.764449] (-) TimerEvent: {}
+[16.864788] (-) TimerEvent: {}
+[16.965171] (-) TimerEvent: {}
+[17.065487] (-) TimerEvent: {}
+[17.165907] (-) TimerEvent: {}
+[17.266303] (-) TimerEvent: {}
+[17.366757] (-) TimerEvent: {}
+[17.467162] (-) TimerEvent: {}
+[17.567476] (-) TimerEvent: {}
+[17.667903] (-) TimerEvent: {}
+[17.768342] (-) TimerEvent: {}
+[17.868659] (-) TimerEvent: {}
+[17.969054] (-) TimerEvent: {}
+[18.069390] (-) TimerEvent: {}
+[18.169723] (-) TimerEvent: {}
+[18.270038] (-) TimerEvent: {}
+[18.370349] (-) TimerEvent: {}
+[18.470625] (-) TimerEvent: {}
+[18.570907] (-) TimerEvent: {}
+[18.671206] (-) TimerEvent: {}
+[18.771487] (-) TimerEvent: {}
+[18.871770] (-) TimerEvent: {}
+[18.972083] (-) TimerEvent: {}
+[19.072381] (-) TimerEvent: {}
+[19.172683] (-) TimerEvent: {}
+[19.273016] (-) TimerEvent: {}
+[19.373389] (-) TimerEvent: {}
+[19.473735] (-) TimerEvent: {}
+[19.574228] (-) TimerEvent: {}
+[19.674519] (-) TimerEvent: {}
+[19.774889] (-) TimerEvent: {}
+[19.875285] (-) TimerEvent: {}
+[19.975659] (-) TimerEvent: {}
+[20.076031] (-) TimerEvent: {}
+[20.176418] (-) TimerEvent: {}
+[20.276717] (-) TimerEvent: {}
+[20.377021] (-) TimerEvent: {}
+[20.477340] (-) TimerEvent: {}
+[20.577659] (-) TimerEvent: {}
+[20.678042] (-) TimerEvent: {}
+[20.778357] (-) TimerEvent: {}
+[20.878606] (-) TimerEvent: {}
+[20.978857] (-) TimerEvent: {}
+[21.079152] (-) TimerEvent: {}
+[21.179441] (-) TimerEvent: {}
+[21.279739] (-) TimerEvent: {}
+[21.380046] (-) TimerEvent: {}
+[21.480329] (-) TimerEvent: {}
+[21.580654] (-) TimerEvent: {}
+[21.681071] (-) TimerEvent: {}
+[21.781398] (-) TimerEvent: {}
+[21.881731] (-) TimerEvent: {}
+[21.982099] (-) TimerEvent: {}
+[22.082385] (-) TimerEvent: {}
+[22.182655] (-) TimerEvent: {}
+[22.282954] (-) TimerEvent: {}
+[22.383337] (-) TimerEvent: {}
+[22.483646] (-) TimerEvent: {}
+[22.583996] (-) TimerEvent: {}
+[22.684332] (-) TimerEvent: {}
+[22.784605] (-) TimerEvent: {}
+[22.885076] (-) TimerEvent: {}
+[22.985401] (-) TimerEvent: {}
+[23.085719] (-) TimerEvent: {}
+[23.186123] (-) TimerEvent: {}
+[23.286476] (-) TimerEvent: {}
+[23.386828] (-) TimerEvent: {}
+[23.487222] (-) TimerEvent: {}
+[23.532614] (rm_serial_driver) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable my_rm_serial_node\x1b[0m\n'}
+[23.587388] (-) TimerEvent: {}
+[23.687771] (-) TimerEvent: {}
+[23.788173] (-) TimerEvent: {}
+[23.888757] (-) TimerEvent: {}
+[23.989311] (-) TimerEvent: {}
+[24.089802] (-) TimerEvent: {}
+[24.169956] (rm_serial_driver) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[24.170272] (rm_serial_driver) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[24.190039] (-) TimerEvent: {}
+[24.219481] (rm_serial_driver) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[24.221731] (rm_serial_driver) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_rm_serial_node.dir/build.make:312\xef\xbc\x9amy_rm_serial_node] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[24.222186] (rm_serial_driver) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:193\xef\xbc\x9aCMakeFiles/my_rm_serial_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[24.222583] (rm_serial_driver) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[24.225598] (rm_serial_driver) CommandEnded: {'returncode': 2}
+[24.240951] (rm_serial_driver) JobEnded: {'identifier': 'rm_serial_driver', 'rc': 2}
+[24.251918] (-) EventReactorShutdown: {}

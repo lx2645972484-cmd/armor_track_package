@@ -1,0 +1,4 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/armor_drawer.dir/src/main1.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/armor_drawer.dir/src/DrawMyFunction.cpp.o[0m
+[100%] [32m[1mLinking CXX executable armor_drawer[0m
+[100%] Built target armor_drawer

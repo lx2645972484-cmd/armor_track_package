@@ -1,0 +1,20 @@
+[0.020s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20
+[0.111s] [ 22%] Built target rm_serial_driver_node
+[0.119s] [ 33%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[4.953s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:[m[K In member function ‘[01m[Kvoid rm_serial_driver::RMSerialDriver::sendData(armor_interfaces::msg::SerialDriver_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.954s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:195:34:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kvoid rm_serial_driver::float_to_5digit_array(float, uint8_t*)[m[K’
+[4.954s]   195 |             [01;31m[Kfloat_to_5digit_array(yaw, yaw_data,yaw_symbol)[m[K;
+[4.954s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.954s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:31:10:[m[K [01;36m[Knote: [m[Kdeclared here
+[4.954s]    31 |     void [01;36m[Kfloat_to_5digit_array[m[K(float num, uint8_t out[5]);
+[4.954s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.954s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:196:34:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kvoid rm_serial_driver::float_to_5digit_array(float, uint8_t*)[m[K’
+[4.954s]   196 |             [01;31m[Kfloat_to_5digit_array(pitch, pitch_data,pitch_symbol)[m[K;
+[4.955s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.955s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:31:10:[m[K [01;36m[Knote: [m[Kdeclared here
+[4.955s]    31 |     void [01;36m[Kfloat_to_5digit_array[m[K(float num, uint8_t out[5]);
+[4.955s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[8.970s] gmake[2]: *** [CMakeFiles/rm_serial_driver.dir/build.make:76：CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o] 错误 1
+[8.970s] gmake[1]: *** [CMakeFiles/Makefile2:141：CMakeFiles/rm_serial_driver.dir/all] 错误 2
+[8.970s] gmake: *** [Makefile:146：all] 错误 2
+[8.974s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver' returned '2': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20

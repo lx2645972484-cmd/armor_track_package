@@ -1,0 +1,6 @@
+Log file created at: 2026/04/01 16:51:13
+Running on machine: eee-Predator-PHN16-72
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0401 16:51:13.266840  6398 U3VControl.cpp:225] WriteAddr:268435460, BulkOut error:-4
+E0401 16:51:13.267221  6398 CameraU3VBase.cpp:782] Function:PauseVideo, Code:set_acquisition_command(0), Error:-52
+E0401 16:51:13.267285  6398 U3VControl.cpp:225] WriteAddr:268435724, BulkOut error:-4

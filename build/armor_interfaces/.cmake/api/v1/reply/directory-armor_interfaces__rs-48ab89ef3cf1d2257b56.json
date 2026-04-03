@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "armor_interfaces__rs",
+		"source" : "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/armor_interfaces__rs"
+	}
+}

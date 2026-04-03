@@ -1,0 +1,47 @@
+[0.007s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[0.024s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.110s] -- Found armor_interfaces: 0.0.0 (/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake)
+[0.126s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.127s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.131s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.137s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.145s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.151s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.174s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.190s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.191s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.269s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.304s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[0.307s] -- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.365s] -- Eigen3_INCLUDE_DIRS = 
+[0.412s] -- Configuring done
+[0.422s] -- Generating done
+[0.425s] -- Build files have been written to: /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node
+[0.451s] [35m[1mConsolidate compiler generated dependencies of target armor_tracker_node[0m
+[0.474s] [  8%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
+[0.475s] [ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o[0m
+[0.476s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o[0m
+[0.483s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:1[m[K:
+[0.483s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4:10:[m[K [01;31m[Kfatal error: [m[KGxIAPI.h: 没有那个文件或目录
+[0.483s]     4 | #include [01;31m[K"GxIAPI.h"[m[K
+[0.483s]       |          [01;31m[K^~~~~~~~~~[m[K
+[0.483s] compilation terminated.
+[0.485s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:216：CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o] 错误 1
+[0.485s] gmake[2]: *** 正在等待未完成的任务....
+[0.740s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:33[m[K,
+[0.740s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:2[m[K:
+[0.740s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4:10:[m[K [01;31m[Kfatal error: [m[KGxIAPI.h: 没有那个文件或目录
+[0.740s]     4 | #include [01;31m[K"GxIAPI.h"[m[K
+[0.740s]       |          [01;31m[K^~~~~~~~~~[m[K
+[0.740s] compilation terminated.
+[0.741s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:33[m[K,
+[0.742s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:2[m[K:
+[0.742s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4:10:[m[K [01;31m[Kfatal error: [m[KGxIAPI.h: 没有那个文件或目录
+[0.742s]     4 | #include [01;31m[K"GxIAPI.h"[m[K
+[0.742s]       |          [01;31m[K^~~~~~~~~~[m[K
+[0.742s] compilation terminated.
+[0.751s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+[0.751s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:76：CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o] 错误 1
+[0.751s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+[0.751s] gmake: *** [Makefile:146：all] 错误 2
+[0.754s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '2': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
