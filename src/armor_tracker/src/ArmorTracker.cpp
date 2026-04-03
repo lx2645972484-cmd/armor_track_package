@@ -19,7 +19,7 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
         return;
     }
     galaxy_camera_.startCapture();  // 手动开始采集线程
-    galaxy_camera_.setExposureTime(2000); // 设置曝光时间为2000微秒
+    galaxy_camera_.setExposureTime(5000); // 设置曝光时间为2000微秒
     
     // if (!camera_ready_)
     // {
@@ -85,9 +85,15 @@ void ArmorTracker::run()
         std::vector<double> current_yaws;
 
         if (!galaxy_camera_.getImage(img_data))
-            break;
+        {
+            // 给相机一点时间出图，避免 CPU 100% 空转
+            std::this_thread::sleep_for(std::chrono::milliseconds(2)); 
+            continue; // 不要 break，继续等待下一帧
+        }
 
         img = cv::Mat(img_data.height, img_data.width, CV_8UC3, img_data.data.data());
+
+        cv::cvtColor(img, img, cv::COLOR_RGB2BGR);
 
         if (img.empty())
         {

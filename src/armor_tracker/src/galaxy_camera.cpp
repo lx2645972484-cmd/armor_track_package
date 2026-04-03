@@ -171,7 +171,7 @@ namespace galaxy_camera
         // 获取负载大小，分配缓冲区
         int64_t payloadSize = 0;
         GXGetInt(camera_handle_, GX_INT_PAYLOAD_SIZE, &payloadSize);
-        bayer_buffer_holder.reserve(payloadSize);
+        bayer_buffer_holder.resize(payloadSize);
         bayer_frame.pImgBuf = bayer_buffer_holder.data();
 
         std::cout << "[GalaxyCamera] Capture thread started." << std::endl;
@@ -179,9 +179,9 @@ namespace galaxy_camera
         while (running_)
         {
             // 获取一帧图像（超时 500ms）
-            status = GXGetImage(camera_handle_, &bayer_frame, 500);
-            if (GX_SUCCESS(status))
+            try
             {
+                status = GXGetImage(camera_handle_, &bayer_frame, 500);
                 // 处理并转换为 RGB
                 ImageData rgb_image;
                 if (processFrame(bayer_frame, rgb_image))
@@ -192,14 +192,26 @@ namespace galaxy_camera
                 }
                 fail_count_ = 0;
             }
-            else
+            catch (const std::exception &e)
             {
-                // 获取失败，尝试停止并重新开始采集
-                std::cerr << "[GalaxyCamera] Get image failed, status = " << status << std::endl;
-                GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_STOP);
-                GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_START);
-                fail_count_++;
+                std::cerr << "[GalaxyCamera] Exception in captureLoop: " << e.what() << std::endl;
+                running_ = false;
+                break;
             }
+            catch (...)
+            {
+                std::cerr << "[GalaxyCamera] Unknown exception in captureLoop" << std::endl;
+                running_ = false;
+                break;
+            }
+            // else
+            // {
+            //     // 获取失败，尝试停止并重新开始采集
+            //     std::cerr << "[GalaxyCamera] Get image failed, status = " << status << std::endl;
+            //     GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_STOP);
+            //     GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_START);
+            //     fail_count_++;
+            // }
 
             if (fail_count_ > 5)
             {
