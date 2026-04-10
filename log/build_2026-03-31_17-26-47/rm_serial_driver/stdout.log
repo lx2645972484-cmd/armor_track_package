@@ -1,5 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target rm_serial_driver[0m
-[ 22%] Built target rm_serial_driver_node
-[ 55%] Built target rm_serial_driver
-[35m[1mConsolidate compiler generated dependencies of target my_rm_serial_node[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/my_rm_serial_node.dir/src/main.cpp.o[0m

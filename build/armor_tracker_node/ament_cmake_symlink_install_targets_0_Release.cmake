@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/armor_tracker_node" "TARGETS" "armor_tracker_node" "DESTINATION" "lib/armor_tracker_node")

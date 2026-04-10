@@ -1,2 +1,1 @@
-source;share/armor_drawer/environment/ament_prefix_path.sh
-source;share/armor_drawer/environment/path.sh
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer/ament_cmake_environment_hooks/local_setup.dsv

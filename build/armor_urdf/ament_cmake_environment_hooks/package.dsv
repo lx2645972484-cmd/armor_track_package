@@ -1,0 +1,4 @@
+source;share/armor_urdf/local_setup.bash
+source;share/armor_urdf/local_setup.dsv
+source;share/armor_urdf/local_setup.sh
+source;share/armor_urdf/local_setup.zsh

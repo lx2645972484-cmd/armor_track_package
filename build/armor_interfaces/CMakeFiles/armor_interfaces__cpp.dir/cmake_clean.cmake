@@ -5,11 +5,21 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/armor_interfaces/msg/detail/armor_info__struct.hpp"
   "rosidl_generator_cpp/armor_interfaces/msg/detail/armor_info__traits.hpp"
   "rosidl_generator_cpp/armor_interfaces/msg/detail/armor_info__type_support.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__builder.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__struct.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__traits.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__type_support.hpp"
   "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__builder.hpp"
   "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__struct.hpp"
   "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__traits.hpp"
   "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__type_support.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__builder.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__struct.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__traits.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/joint_state.hpp"
   "rosidl_generator_cpp/armor_interfaces/msg/serial_driver.hpp"
+  "rosidl_generator_cpp/armor_interfaces/msg/serial_receive_data.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

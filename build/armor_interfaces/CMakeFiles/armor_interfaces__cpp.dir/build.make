@@ -76,6 +76,16 @@ CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/deta
 CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__struct.hpp
 CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__traits.hpp
 CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__type_support.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/joint_state.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__builder.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__struct.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__traits.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__type_support.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/serial_receive_data.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__builder.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__struct.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__traits.hpp
+CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.hpp
 CMakeFiles/armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -95,6 +105,40 @@ rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: rosidl_adapter/armor_interfaces/msg/ArmorInfo.idl
 rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: rosidl_adapter/armor_interfaces/msg/SerialDriver.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: rosidl_adapter/armor_interfaces/msg/JointState.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: rosidl_adapter/armor_interfaces/msg/SerialReceiveData.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Char.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Header.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/String.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -125,17 +169,57 @@ rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__traits.hpp: rosi
 rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__type_support.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__type_support.hpp
 
+rosidl_generator_cpp/armor_interfaces/msg/joint_state.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/joint_state.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__builder.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__builder.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__struct.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__struct.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__traits.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__traits.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__type_support.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__type_support.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/serial_receive_data.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/serial_receive_data.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__builder.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__builder.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__struct.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__struct.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__traits.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__traits.hpp
+
+rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.hpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.hpp
+
 armor_interfaces__cpp: CMakeFiles/armor_interfaces__cpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/armor_info.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/armor_info__builder.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/armor_info__struct.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/armor_info__traits.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/armor_info__type_support.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__builder.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__struct.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__traits.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__type_support.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__builder.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__struct.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__traits.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_driver__type_support.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__builder.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__struct.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__traits.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/joint_state.hpp
 armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/serial_driver.hpp
+armor_interfaces__cpp: rosidl_generator_cpp/armor_interfaces/msg/serial_receive_data.hpp
 armor_interfaces__cpp: CMakeFiles/armor_interfaces__cpp.dir/build.make
 .PHONY : armor_interfaces__cpp
 

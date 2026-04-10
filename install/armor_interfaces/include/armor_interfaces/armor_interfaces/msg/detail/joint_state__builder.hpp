@@ -1,0 +1,1 @@
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_cpp/armor_interfaces/msg/detail/joint_state__builder.hpp

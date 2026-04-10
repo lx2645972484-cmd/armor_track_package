@@ -1,3 +1,0 @@
-gmake[2]: *** [CMakeFiles/rm_serial_driver.dir/build.make:76: CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o] 中断
-gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/rm_serial_driver.dir/all] 中断
-gmake: *** [Makefile:146: all] 中断

@@ -1,4 +1,0 @@
-[  9%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
-gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188: CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 中断
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/armor_tracker_node.dir/all] 中断
-gmake: *** [Makefile:146: all] 中断

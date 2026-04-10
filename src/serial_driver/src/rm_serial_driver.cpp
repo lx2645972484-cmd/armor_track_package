@@ -9,6 +9,7 @@
 #include <rclcpp/qos.hpp>
 #include <rclcpp/utilities.hpp>
 #include <serial_driver/serial_driver.hpp>
+// #include <armor_interfaces/msg/serial_receive_data.hpp>
 
 // C++ system
 #include <cstdint>
@@ -33,8 +34,8 @@ namespace rm_serial_driver
     {
         uint8_t Frame_Header;   // 0xAA
         uint8_t Mode;           // 0: 哨兵模式, 1: 自瞄模式
-        int16_t Delta_Yaw_10;   // 单位 0.1°，范围 -3276.8° ~ 3276.7°
-        int16_t Delta_Pitch_10; // 单位 0.1°
+        float Delta_Yaw_10;   // 单位 0.1°，范围 -3276.8° ~ 3276.7°
+        float Delta_Pitch_10; // 单位 0.1°
         uint8_t Frame_Tail;     // 0x55
     } Struct_Camera_USB_Frame;
 #pragma pack(pop)
@@ -55,6 +56,14 @@ namespace rm_serial_driver
         RCLCPP_INFO(get_logger(), "Start SerialDriver!");
 
         getParams();
+
+        // Create Subscription
+        //  参考
+        target_sub_ = this->create_subscription<armor_interfaces::msg::SerialDriver>(
+            "/tracker/target", rclcpp::SensorDataQoS(),
+            std::bind(&RMSerialDriver::sendData, this, std::placeholders::_1));
+
+        receive_data_publisher_ = this->create_publisher<armor_interfaces::msg::SerialReceiveData>("/tracker/receive_data", rclcpp::SensorDataQoS());
 
         try
         {
@@ -83,12 +92,6 @@ namespace rm_serial_driver
                 get_logger(), "Error creating serial port: %s - %s", device_name_.c_str(), ex.what());
             throw ex;
         }
-
-        // Create Subscription
-        //  参考
-        target_sub_ = this->create_subscription<armor_interfaces::msg::SerialDriver>(
-            "/tracker/target", rclcpp::SensorDataQoS(),
-            std::bind(&RMSerialDriver::sendData, this, std::placeholders::_1));
     }
 
     RMSerialDriver::~RMSerialDriver()
@@ -111,30 +114,62 @@ namespace rm_serial_driver
 
     void RMSerialDriver::receiveData()
     {
-        std::vector<uint8_t> header(1);
-        std::vector<uint8_t> data;
-        data.reserve(sizeof(ReceivePacket));
+        Union_Camera_USB_Frame Frame;
+        
+        std::vector<uint8_t> data(sizeof(Struct_Camera_USB_Frame));
+        // std::vector<uint8_t> data;
+        // data.reserve(sizeof(ReceivePacket));
 
         while (rclcpp::ok())
         {
             try
             {
-                serial_driver_->port()->receive(header);
+                serial_driver_->port()->receive(data);
+
+                // RCLCPP_INFO(get_logger(), "Received header: 0x%02X", header[0]);
+
                 // Invalid header: 0x00
-                //  if (header[0] == 0xAA)
+                //  if (data[0] == 0xAA)
                 //  {
-                //      RCLCPP_DEBUG(get_logger(), "Received header: 0x%02X", header[0]);
+                //     RCLCPP_INFO(get_logger(), "Received header: 0x%02X", data[0]);
                 //  }
                 //  else
                 //  {
-                //      RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", header[0]);
+                //      RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", data[0]);
                 //      continue; // 跳过本次循环，等待下一个数据包
                 //  }
-                data.resize(sizeof(ReceivePacket) - 1);
-                serial_driver_->port()->receive(data);
+                
+                
+                // serial_driver_->port()->receive(data);
 
-                data.insert(data.begin(), header[0]);
-                ReceivePacket packet = fromVector(data);
+                // if(data.back() != 0x55)
+                // {
+                //     RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid tail: 0x%02X", data.back());
+                //     continue; // 跳过本次循环，等待下一个数据包
+                // }
+
+                // data.insert(data.begin(), header[0]);
+                for(int i = 0; i < data.size(); i++)
+                {
+                    Frame.Raw[i] = data[i];
+                }
+
+                // for(int i = 0; i < sizeof(Frame.Raw); i++)
+                // {
+                //     RCLCPP_INFO(get_logger(), "Received data[%d]: 0x%02X", i, Frame.Raw[i]);
+                // }
+
+                double yaw = Frame.Data.Delta_Yaw_10 ;
+                double pitch = Frame.Data.Delta_Pitch_10 ;
+
+                // RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", yaw, pitch);
+
+                armor_interfaces::msg::SerialReceiveData::SharedPtr msg = std::make_shared<armor_interfaces::msg::SerialReceiveData>();
+                msg->yaw = yaw;
+                msg->pitch = pitch;
+
+                receive_data_publisher_->publish(*msg);
+
                 // if (packet.checksum == 0xFE)
                 // {
 
@@ -151,13 +186,13 @@ namespace rm_serial_driver
                 //      RCLCPP_INFO(get_logger(), "接收数据0x%02X", byte);
                 //  }
 
-                // 处理数据
-                int first_int = data[3] * 1000 + data[4] * 100 + data[5] * 10 + data[6];
-                double first = first_int / 10.0;
+                // // 处理数据
+                // int first_int = data[3] * 1000 + data[4] * 100 + data[5] * 10 + data[6];
+                // double first = first_int / 10.0;
 
-                // 后5个数字组成第二个数：10514 -> 10514 / 100 = 105.14
-                int second_int = data[8] * 1000 + data[9] * 100 + data[10] * 10 + data[11] * 1;
-                double second = second_int / 10.0;
+                // // 后5个数字组成第二个数：10514 -> 10514 / 100 = 105.14
+                // int second_int = data[8] * 1000 + data[9] * 100 + data[10] * 10 + data[11] * 1;
+                // double second = second_int / 10.0;
 
                 // printf("第一个数: %.2f\n", first);
                 // printf("第二个数: %.2f\n", second);
@@ -199,8 +234,8 @@ namespace rm_serial_driver
             Union_Camera_USB_Frame frame;
             frame.Data.Frame_Header = 0xAA;
             frame.Data.Mode = msg->symbol;
-            frame.Data.Delta_Yaw_10 = msg->yaw * 10;   // 将yaw转换为0.1度单位
-            frame.Data.Delta_Pitch_10 = msg->pitch * 10; // 将pitch转换为0.1度单位
+            frame.Data.Delta_Yaw_10 = msg->yaw;   // 将yaw转换为0.1度单位
+            frame.Data.Delta_Pitch_10 = msg->pitch; // 将pitch转换为0.1度单位
             frame.Data.Frame_Tail = 0x55;
             
             // SendPacket packet;

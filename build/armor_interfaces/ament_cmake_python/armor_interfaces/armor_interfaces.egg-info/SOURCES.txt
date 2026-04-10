@@ -6,4 +6,6 @@ armor_interfaces.egg-info/dependency_links.txt
 armor_interfaces.egg-info/top_level.txt
 armor_interfaces/msg/__init__.py
 armor_interfaces/msg/_armor_info.py
+armor_interfaces/msg/_joint_state.py
 armor_interfaces/msg/_serial_driver.py
+armor_interfaces/msg/_serial_receive_data.py

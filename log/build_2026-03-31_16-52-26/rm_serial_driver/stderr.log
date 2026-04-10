@@ -1,9 +1,0 @@
-[31mCMake Error at CMakeLists.txt:47 (add_executable):
-  add_executable cannot create target "rm_serial_driver" because another
-  target with the same name already exists.  The existing target is a shared
-  library created in source directory
-  "/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver".  See
-  documentation for policy CMP0002 for more details.
-
-[0m
-gmake: *** [Makefile:335：cmake_check_build_system] 错误 1

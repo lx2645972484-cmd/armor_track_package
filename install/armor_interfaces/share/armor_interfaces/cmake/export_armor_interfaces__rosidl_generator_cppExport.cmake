@@ -55,7 +55,7 @@ add_library(armor_interfaces::armor_interfaces__rosidl_generator_cpp INTERFACE I
 
 set_target_properties(armor_interfaces::armor_interfaces__rosidl_generator_cpp PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/armor_interfaces"
-  INTERFACE_LINK_LIBRARIES "rosidl_runtime_cpp::rosidl_runtime_cpp"
+  INTERFACE_LINK_LIBRARIES "std_msgs::std_msgs__rosidl_generator_cpp;builtin_interfaces::builtin_interfaces__rosidl_generator_cpp;rosidl_runtime_cpp::rosidl_runtime_cpp"
 )
 
 if(CMAKE_VERSION VERSION_LESS 3.0.0)

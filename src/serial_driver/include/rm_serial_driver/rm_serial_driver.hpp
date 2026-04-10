@@ -12,6 +12,7 @@
 #include <rclcpp/subscription.hpp>
 #include <serial_driver/serial_driver.hpp>
 #include "armor_interfaces/msg/serial_driver.hpp"
+#include <armor_interfaces/msg/serial_receive_data.hpp>
 // #include <std_msgs/msg/float64.hpp>
 // #include <std_msgs/msg/float64_multi_array.hpp>
 // #include <std_srvs/srv/trigger.hpp>
@@ -22,7 +23,6 @@
 #include <string>
 #include <thread>
 #include <vector>
-
 
 
 namespace rm_serial_driver
@@ -45,6 +45,7 @@ private:
 
   void getParams();
 
+  rclcpp::Publisher<armor_interfaces::msg::SerialReceiveData>::SharedPtr receive_data_publisher_;
 
   // Serial port
   std::unique_ptr<IoContext> owned_ctx_;

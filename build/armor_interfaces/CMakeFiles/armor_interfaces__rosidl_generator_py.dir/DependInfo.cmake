@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c.o" "gcc" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c.o.d"
+  "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.o" "gcc" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.o.d"
   "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c.o" "gcc" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c.o.d"
+  "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.o" "gcc" "CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.o.d"
   )
 
 # Targets to which this target links.

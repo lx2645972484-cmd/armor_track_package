@@ -71,9 +71,13 @@ armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_
 armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c
 armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_armor_info.py
 armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_driver.py
+armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_joint_state.py
+armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_receive_data.py
 armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/__init__.py
 armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c
 armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c
+armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c
+armor_interfaces__py/CMakeFiles/armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c
 
 rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -90,6 +94,40 @@ rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_f
 rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/armor_interfaces/msg/ArmorInfo.idl
 rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/armor_interfaces/msg/SerialDriver.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/armor_interfaces/msg/JointState.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/armor_interfaces/msg/SerialReceiveData.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Char.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Header.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/String.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/armor_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -105,6 +143,12 @@ rosidl_generator_py/armor_interfaces/msg/_armor_info.py: rosidl_generator_py/arm
 rosidl_generator_py/armor_interfaces/msg/_serial_driver.py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/armor_interfaces/msg/_serial_driver.py
 
+rosidl_generator_py/armor_interfaces/msg/_joint_state.py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/armor_interfaces/msg/_joint_state.py
+
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data.py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/armor_interfaces/msg/_serial_receive_data.py
+
 rosidl_generator_py/armor_interfaces/msg/__init__.py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/armor_interfaces/msg/__init__.py
 
@@ -114,6 +158,12 @@ rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c: rosidl_generator_py/ar
 rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c
 
+rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c
+
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c
+
 armor_interfaces__py: armor_interfaces__py/CMakeFiles/armor_interfaces__py
 armor_interfaces__py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c
 armor_interfaces__py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -121,8 +171,12 @@ armor_interfaces__py: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.e
 armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/__init__.py
 armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_armor_info.py
 armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c
+armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_joint_state.py
+armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c
 armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_driver.py
 armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c
+armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_receive_data.py
+armor_interfaces__py: rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c
 armor_interfaces__py: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/build.make
 .PHONY : armor_interfaces__py
 

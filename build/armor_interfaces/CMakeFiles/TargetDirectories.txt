@@ -3,13 +3,13 @@
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_generator_c.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__cpp.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_generator_py.dir
 /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir

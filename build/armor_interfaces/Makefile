@@ -237,32 +237,6 @@ armor_interfaces__rosidl_typesupport_fastrtps_c/fast:
 .PHONY : armor_interfaces__rosidl_typesupport_fastrtps_c/fast
 
 #=============================================================================
-# Target rules for targets named armor_interfaces__rosidl_typesupport_introspection_c
-
-# Build rule for target.
-armor_interfaces__rosidl_typesupport_introspection_c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 armor_interfaces__rosidl_typesupport_introspection_c
-.PHONY : armor_interfaces__rosidl_typesupport_introspection_c
-
-# fast build rule for target.
-armor_interfaces__rosidl_typesupport_introspection_c/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build
-.PHONY : armor_interfaces__rosidl_typesupport_introspection_c/fast
-
-#=============================================================================
-# Target rules for targets named armor_interfaces__rosidl_typesupport_c
-
-# Build rule for target.
-armor_interfaces__rosidl_typesupport_c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 armor_interfaces__rosidl_typesupport_c
-.PHONY : armor_interfaces__rosidl_typesupport_c
-
-# fast build rule for target.
-armor_interfaces__rosidl_typesupport_c/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build
-.PHONY : armor_interfaces__rosidl_typesupport_c/fast
-
-#=============================================================================
 # Target rules for targets named armor_interfaces__cpp
 
 # Build rule for target.
@@ -287,6 +261,32 @@ armor_interfaces__rosidl_typesupport_fastrtps_cpp: cmake_check_build_system
 armor_interfaces__rosidl_typesupport_fastrtps_cpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build
 .PHONY : armor_interfaces__rosidl_typesupport_fastrtps_cpp/fast
+
+#=============================================================================
+# Target rules for targets named armor_interfaces__rosidl_typesupport_introspection_c
+
+# Build rule for target.
+armor_interfaces__rosidl_typesupport_introspection_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 armor_interfaces__rosidl_typesupport_introspection_c
+.PHONY : armor_interfaces__rosidl_typesupport_introspection_c
+
+# fast build rule for target.
+armor_interfaces__rosidl_typesupport_introspection_c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build
+.PHONY : armor_interfaces__rosidl_typesupport_introspection_c/fast
+
+#=============================================================================
+# Target rules for targets named armor_interfaces__rosidl_typesupport_c
+
+# Build rule for target.
+armor_interfaces__rosidl_typesupport_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 armor_interfaces__rosidl_typesupport_c
+.PHONY : armor_interfaces__rosidl_typesupport_c
+
+# fast build rule for target.
+armor_interfaces__rosidl_typesupport_c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build
+.PHONY : armor_interfaces__rosidl_typesupport_c/fast
 
 #=============================================================================
 # Target rules for targets named armor_interfaces__rosidl_typesupport_introspection_cpp
@@ -315,17 +315,17 @@ armor_interfaces__rosidl_typesupport_cpp/fast:
 .PHONY : armor_interfaces__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_armor_interfaces
+# Target rules for targets named ament_cmake_python_symlink_armor_interfaces
 
 # Build rule for target.
-ament_cmake_python_copy_armor_interfaces: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_armor_interfaces
-.PHONY : ament_cmake_python_copy_armor_interfaces
+ament_cmake_python_symlink_armor_interfaces: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_armor_interfaces
+.PHONY : ament_cmake_python_symlink_armor_interfaces
 
 # fast build rule for target.
-ament_cmake_python_copy_armor_interfaces/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/build
-.PHONY : ament_cmake_python_copy_armor_interfaces/fast
+ament_cmake_python_symlink_armor_interfaces/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/build
+.PHONY : ament_cmake_python_symlink_armor_interfaces/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_armor_interfaces_egg
@@ -442,6 +442,30 @@ rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.c.s
 .PHONY : rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.c.s
 
+rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.o: rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.o
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.o
+
+# target to build an object file
+rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.o
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.o
+
+rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.i: rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.i
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.i
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.i
+
+rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.s: rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.s
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.s
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c.s
+
 rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.o: rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.c.o
 .PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.o
 
@@ -465,6 +489,30 @@ rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.s: rosid
 rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.c.s
 .PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.c.s
+
+rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.o: rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.o
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.o
+
+# target to build an object file
+rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.o
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.o
+
+rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.i: rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.i
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.i
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.i
+
+rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.s: rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.s
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.s
+.PHONY : rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c.s
 
 rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.o: rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c.o
 .PHONY : rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.o
@@ -562,6 +610,30 @@ rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c.s
 .PHONY : rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c.s
 
+rosidl_generator_py/armor_interfaces/msg/_joint_state_s.o: rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.o
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_joint_state_s.o
+
+# target to build an object file
+rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.o
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.o
+
+rosidl_generator_py/armor_interfaces/msg/_joint_state_s.i: rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.i
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_joint_state_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.i
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.i
+
+rosidl_generator_py/armor_interfaces/msg/_joint_state_s.s: rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.s
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_joint_state_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.s
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c.s
+
 rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.o: rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c.o
 .PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.o
 
@@ -585,6 +657,30 @@ rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.s: rosidl_generator_py
 rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c.s
 .PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c.s
+
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.o: rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.o
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.o
+
+# target to build an object file
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.o
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.o
+
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.i: rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.i
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.i
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.i
+
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.s: rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.s
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.s
+.PHONY : rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c.s
 
 rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.o: rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.o
@@ -610,6 +706,30 @@ rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.cpp.s
 
+rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.o: rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.o
+
+rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.i: rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.i
+
+rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.s: rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.cpp.s
+
 rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.o: rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.o
 
@@ -633,6 +753,30 @@ rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.s: rosidl_
 rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.cpp.s
+
+rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.o: rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.o
+
+rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.i: rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.i
+
+rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.s: rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.cpp.s
 
 rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.o: rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.o
@@ -658,6 +802,30 @@ rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.cpp.s
 
+rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.o: rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.o
+
+rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.i: rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.i
+
+rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.s: rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.cpp.s
+
 rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.o: rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.o
 
@@ -681,6 +849,30 @@ rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.s: rosid
 rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.cpp.s
+
+rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.o: rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.o
+
+rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.i: rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.i
+
+rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.s: rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.o: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.o
@@ -706,6 +898,30 @@ rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_suppo
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.cpp.s
 
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.o: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.i: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.s: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.s
+
 rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.o: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.o
 
@@ -729,6 +945,30 @@ rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_su
 rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.o: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.i: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.s: rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.o: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.o
@@ -754,6 +994,30 @@ rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.o: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.i: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.s: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.o: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.o
 
@@ -777,6 +1041,30 @@ rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_
 rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.o: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.i: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.s: rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.s
 
 rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.o: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.o
@@ -802,6 +1090,30 @@ rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.c.s
 
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.o: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.o
+
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.i: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.i
+
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.s: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.s
+
 rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.o: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.o
 
@@ -825,6 +1137,30 @@ rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__ty
 rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c.s
+
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.o: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.o
+
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.i: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.i
+
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.s: rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.s
 
 rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.o: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.o
@@ -850,6 +1186,30 @@ rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__typ
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.o: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.i: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.s: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.o: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.o
 
@@ -874,6 +1234,30 @@ rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.o: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.i: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.s: rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -888,7 +1272,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_armor_interfaces_egg"
-	@echo "... ament_cmake_python_copy_armor_interfaces"
+	@echo "... ament_cmake_python_symlink_armor_interfaces"
 	@echo "... armor_interfaces"
 	@echo "... armor_interfaces__cpp"
 	@echo "... armor_interfaces__py"
@@ -909,9 +1293,15 @@ help:
 	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.o"
 	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.i"
 	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.s"
+	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.o"
+	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.i"
+	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.s"
 	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.o"
 	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.i"
 	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.s"
+	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.o"
+	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.i"
+	@echo "... rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.s"
 	@echo "... rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.o"
 	@echo "... rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.i"
 	@echo "... rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.s"
@@ -924,45 +1314,87 @@ help:
 	@echo "... rosidl_generator_py/armor_interfaces/msg/_armor_info_s.o"
 	@echo "... rosidl_generator_py/armor_interfaces/msg/_armor_info_s.i"
 	@echo "... rosidl_generator_py/armor_interfaces/msg/_armor_info_s.s"
+	@echo "... rosidl_generator_py/armor_interfaces/msg/_joint_state_s.o"
+	@echo "... rosidl_generator_py/armor_interfaces/msg/_joint_state_s.i"
+	@echo "... rosidl_generator_py/armor_interfaces/msg/_joint_state_s.s"
 	@echo "... rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.o"
 	@echo "... rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.i"
 	@echo "... rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.s"
+	@echo "... rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.o"
+	@echo "... rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.i"
+	@echo "... rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.s"
 	@echo "... rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.o"
 	@echo "... rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.i"
 	@echo "... rosidl_typesupport_c/armor_interfaces/msg/armor_info__type_support.s"
+	@echo "... rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.o"
+	@echo "... rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.i"
+	@echo "... rosidl_typesupport_c/armor_interfaces/msg/joint_state__type_support.s"
 	@echo "... rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.o"
 	@echo "... rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.i"
 	@echo "... rosidl_typesupport_c/armor_interfaces/msg/serial_driver__type_support.s"
+	@echo "... rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.o"
+	@echo "... rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.i"
+	@echo "... rosidl_typesupport_c/armor_interfaces/msg/serial_receive_data__type_support.s"
 	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.o"
 	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.i"
 	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/armor_info__type_support.s"
+	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.o"
+	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.i"
+	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/joint_state__type_support.s"
 	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.o"
 	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.i"
 	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/serial_driver__type_support.s"
+	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.o"
+	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.i"
+	@echo "... rosidl_typesupport_cpp/armor_interfaces/msg/serial_receive_data__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor_info__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_driver__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor_info__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/joint_state__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_driver__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/serial_receive_data__type_support.s"
 .PHONY : help
 
 

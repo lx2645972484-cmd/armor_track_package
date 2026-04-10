@@ -1,2 +1,1 @@
-from armor_interfaces.msg._armor_info import ArmorInfo  # noqa: F401
-from armor_interfaces.msg._serial_driver import SerialDriver  # noqa: F401
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_py/armor_interfaces/msg/__init__.py

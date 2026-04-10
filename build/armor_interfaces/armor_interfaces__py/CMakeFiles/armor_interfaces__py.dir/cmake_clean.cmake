@@ -5,8 +5,12 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/armor_interfaces/msg/__init__.py"
   "../rosidl_generator_py/armor_interfaces/msg/_armor_info.py"
   "../rosidl_generator_py/armor_interfaces/msg/_armor_info_s.c"
+  "../rosidl_generator_py/armor_interfaces/msg/_joint_state.py"
+  "../rosidl_generator_py/armor_interfaces/msg/_joint_state_s.c"
   "../rosidl_generator_py/armor_interfaces/msg/_serial_driver.py"
   "../rosidl_generator_py/armor_interfaces/msg/_serial_driver_s.c"
+  "../rosidl_generator_py/armor_interfaces/msg/_serial_receive_data.py"
+  "../rosidl_generator_py/armor_interfaces/msg/_serial_receive_data_s.c"
   "CMakeFiles/armor_interfaces__py"
 )
 

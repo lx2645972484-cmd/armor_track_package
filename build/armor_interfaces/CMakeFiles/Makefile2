@@ -66,9 +66,9 @@ CMAKE_BINARY_DIR = /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfa
 all: CMakeFiles/armor_interfaces.dir/all
 all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
 all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all
+all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all
 all: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
 all: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
-all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all
 all: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 all: CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/all
 all: CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/all
@@ -91,13 +91,13 @@ clean: CMakeFiles/armor_interfaces_uninstall.dir/clean
 clean: CMakeFiles/armor_interfaces.dir/clean
 clean: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/clean
 clean: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/clean
-clean: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean
-clean: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean
 clean: CMakeFiles/armor_interfaces__cpp.dir/clean
 clean: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/clean
+clean: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean
+clean: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean
 clean: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/clean
 clean: CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/clean
-clean: CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/clean
+clean: CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/clean
 clean: CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/clean
 clean: CMakeFiles/armor_interfaces__rosidl_generator_py.dir/clean
 clean: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
@@ -193,15 +193,15 @@ CMakeFiles/armor_interfaces_uninstall.dir/clean:
 # Target rules for target CMakeFiles/armor_interfaces.dir
 
 # All Build rule for target.
-CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
+CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__cpp.dir/all
-CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
-CMakeFiles/armor_interfaces.dir/all: armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/all
-CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/all
-CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
-CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/all
 CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all
+CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
+CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
+CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/all
+CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/all
+CMakeFiles/armor_interfaces.dir/all: armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces.dir/build.make CMakeFiles/armor_interfaces.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces.dir/build.make CMakeFiles/armor_interfaces.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num= "Built target armor_interfaces"
@@ -209,7 +209,7 @@ CMakeFiles/armor_interfaces.dir/all: CMakeFiles/armor_interfaces__rosidl_typesup
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 44
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces.dir/rule
@@ -230,12 +230,12 @@ CMakeFiles/armor_interfaces.dir/clean:
 CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=3,4,5,6 "Built target armor_interfaces__rosidl_generator_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target armor_interfaces__rosidl_generator_c"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rule
@@ -256,12 +256,12 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/clean:
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=20,21,22,23 "Built target armor_interfaces__rosidl_typesupport_fastrtps_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=28,29,30,31,32,33 "Built target armor_interfaces__rosidl_typesupport_fastrtps_c"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rule
@@ -274,58 +274,6 @@ armor_interfaces__rosidl_typesupport_fastrtps_c: CMakeFiles/armor_interfaces__ro
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/clean
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir
-
-# All Build rule for target.
-CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=30,31,32,33 "Built target armor_interfaces__rosidl_typesupport_introspection_c"
-.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
-.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rule
-
-# Convenience name for target.
-armor_interfaces__rosidl_typesupport_introspection_c: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rule
-.PHONY : armor_interfaces__rosidl_typesupport_introspection_c
-
-# clean rule for target.
-CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean
-.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir
-
-# All Build rule for target.
-CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=10,11,12,13 "Built target armor_interfaces__rosidl_typesupport_c"
-.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
-.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rule
-
-# Convenience name for target.
-armor_interfaces__rosidl_typesupport_c: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rule
-.PHONY : armor_interfaces__rosidl_typesupport_c
-
-# clean rule for target.
-CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean
-.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/armor_interfaces__cpp.dir
@@ -360,12 +308,12 @@ CMakeFiles/armor_interfaces__cpp.dir/clean:
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all: CMakeFiles/armor_interfaces__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=26,27,28,29 "Built target armor_interfaces__rosidl_typesupport_fastrtps_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=36,37,38,39,40,41 "Built target armor_interfaces__rosidl_typesupport_fastrtps_cpp"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rule
@@ -380,18 +328,70 @@ CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/clean:
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir
+
+# All Build rule for target.
+CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=42,43,44,45,46,47 "Built target armor_interfaces__rosidl_typesupport_introspection_c"
+.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
+.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rule
+
+# Convenience name for target.
+armor_interfaces__rosidl_typesupport_introspection_c: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rule
+.PHONY : armor_interfaces__rosidl_typesupport_introspection_c
+
+# clean rule for target.
+CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean
+.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir
+
+# All Build rule for target.
+CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=14,15,16,17,18,19 "Built target armor_interfaces__rosidl_typesupport_c"
+.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
+.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rule
+
+# Convenience name for target.
+armor_interfaces__rosidl_typesupport_c: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rule
+.PHONY : armor_interfaces__rosidl_typesupport_c
+
+# clean rule for target.
+CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean
+.PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir
 
 # All Build rule for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/all: CMakeFiles/armor_interfaces__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=36,37,38,39 "Built target armor_interfaces__rosidl_typesupport_introspection_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=50,51,52,53,54,55 "Built target armor_interfaces__rosidl_typesupport_introspection_cpp"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rule
@@ -412,12 +412,12 @@ CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/clean:
 CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/all: CMakeFiles/armor_interfaces__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=16,17,18,19 "Built target armor_interfaces__rosidl_typesupport_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=22,23,24,25,26,27 "Built target armor_interfaces__rosidl_typesupport_cpp"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rule
@@ -432,36 +432,36 @@ CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/clean:
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir
+# Target rules for target CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_armor_interfaces"
-.PHONY : CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/all
+CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num= "Built target ament_cmake_python_symlink_armor_interfaces"
+.PHONY : CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/rule: cmake_check_build_system
+CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
-.PHONY : CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/rule
+.PHONY : CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/rule
 
 # Convenience name for target.
-ament_cmake_python_copy_armor_interfaces: CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/rule
-.PHONY : ament_cmake_python_copy_armor_interfaces
+ament_cmake_python_symlink_armor_interfaces: CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/rule
+.PHONY : ament_cmake_python_symlink_armor_interfaces
 
 # clean rule for target.
-CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/clean
-.PHONY : CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/clean
+CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/build.make CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/clean
+.PHONY : CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/all: CMakeFiles/ament_cmake_python_copy_armor_interfaces.dir/all
+CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/all: CMakeFiles/ament_cmake_python_symlink_armor_interfaces.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/build.make CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/build.make CMakeFiles/ament_cmake_python_build_armor_interfaces_egg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num= "Built target ament_cmake_python_build_armor_interfaces_egg"
@@ -492,12 +492,12 @@ CMakeFiles/armor_interfaces__rosidl_generator_py.dir/all: CMakeFiles/armor_inter
 CMakeFiles/armor_interfaces__rosidl_generator_py.dir/all: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/armor_interfaces__rosidl_generator_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=7,8,9 "Built target armor_interfaces__rosidl_generator_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=9,10,11,12,13 "Built target armor_interfaces__rosidl_generator_py"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_generator_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 50
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_generator_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rule
@@ -515,19 +515,19 @@ CMakeFiles/armor_interfaces__rosidl_generator_py.dir/clean:
 # Target rules for target CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir
 
 # All Build rule for target.
-CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
+CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/all
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
-CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_py.dir/all
+CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=24,25 "Built target armor_interfaces__rosidl_typesupport_fastrtps_c__pyext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=34,35 "Built target armor_interfaces__rosidl_typesupport_fastrtps_c__pyext"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 52
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule
@@ -546,18 +546,18 @@ CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
-CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
-CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/all
+CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_py.dir/all
+CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=34,35 "Built target armor_interfaces__rosidl_typesupport_introspection_c__pyext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=48,49 "Built target armor_interfaces__rosidl_typesupport_introspection_c__pyext"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 52
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rule
@@ -577,16 +577,16 @@ CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/clean
 # All Build rule for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_c.dir/all
 CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/all
-CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/all: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/armor_interfaces__rosidl_generator_py.dir/all
+CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/all: armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=14,15 "Built target armor_interfaces__rosidl_typesupport_c__pyext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=20,21 "Built target armor_interfaces__rosidl_typesupport_c__pyext"
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 52
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/rule
@@ -612,7 +612,7 @@ armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all: CMakeFiles/armor_i
 
 # Build rule for subdir invocation for target.
 armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles 0
 .PHONY : armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/rule
@@ -633,7 +633,7 @@ armor_interfaces__py/CMakeFiles/armor_interfaces__py.dir/clean:
 armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/all:
 	$(MAKE) $(MAKESILENT) -f armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/build.make armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/depend
 	$(MAKE) $(MAKESILENT) -f armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/build.make armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=40 "Built target armor_interfaces__rs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=56 "Built target armor_interfaces__rs"
 .PHONY : armor_interfaces__rs/CMakeFiles/armor_interfaces__rs.dir/all
 
 # Build rule for subdir invocation for target.

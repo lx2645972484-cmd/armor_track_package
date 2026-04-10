@@ -86,8 +86,44 @@ rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/rosi
 rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
 rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/ArmorInfo.idl
 rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/SerialDriver.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/JointState.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/SerialReceiveData.idl
 rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/ArmorInfo.idl
 rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/SerialDriver.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/JointState.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: rosidl_adapter/armor_interfaces/msg/SerialReceiveData.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Char.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Header.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/String.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_rs/armor_interfaces/rust/src/lib.rs: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
 	cd /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/armor_interfaces__rs && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 

@@ -144,8 +144,8 @@ armor_drawer: /usr/lib/x86_64-linux-gnu/libopencv_wechat_qrcode.so.4.5.4d
 armor_drawer: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.5.4d
 armor_drawer: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.5.4d
 armor_drawer: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_c.so
-armor_drawer: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_c.so
 armor_drawer: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so
+armor_drawer: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_c.so
 armor_drawer: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_cpp.so
 armor_drawer: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_cpp.so
 armor_drawer: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_py.so

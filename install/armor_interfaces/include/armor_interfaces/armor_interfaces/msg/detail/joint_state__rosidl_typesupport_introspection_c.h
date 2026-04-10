@@ -1,0 +1,1 @@
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__rosidl_typesupport_introspection_c.h

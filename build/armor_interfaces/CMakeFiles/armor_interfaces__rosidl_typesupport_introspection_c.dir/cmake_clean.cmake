@@ -1,14 +1,22 @@
 file(REMOVE_RECURSE
   "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.c.o"
   "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.c.o.d"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.o"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c.o.d"
   "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c.o"
   "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c.o.d"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.o"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c.o.d"
   "libarmor_interfaces__rosidl_typesupport_introspection_c.pdb"
   "libarmor_interfaces__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor_info__type_support.c"
+  "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/joint_state__type_support.c"
   "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_driver__type_support.c"
+  "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/serial_receive_data__type_support.c"
 )
 
 # Per-language clean rules from dependency scanning.

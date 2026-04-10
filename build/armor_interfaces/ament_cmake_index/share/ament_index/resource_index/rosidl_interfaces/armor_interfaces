@@ -1,4 +1,8 @@
 msg/ArmorInfo.idl
 msg/ArmorInfo.msg
+msg/JointState.idl
+msg/JointState.msg
 msg/SerialDriver.idl
 msg/SerialDriver.msg
+msg/SerialReceiveData.idl
+msg/SerialReceiveData.msg

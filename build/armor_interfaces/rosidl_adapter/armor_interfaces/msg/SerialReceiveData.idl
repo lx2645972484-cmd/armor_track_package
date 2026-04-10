@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from armor_interfaces/msg/SerialReceiveData.msg
+// generated code does not contain a copyright notice
+
+
+module armor_interfaces {
+  module msg {
+    struct SerialReceiveData {
+      double yaw;
+
+      double pitch;
+    };
+  };
+};

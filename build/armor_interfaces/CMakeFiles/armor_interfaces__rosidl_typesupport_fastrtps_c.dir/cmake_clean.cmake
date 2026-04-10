@@ -1,14 +1,22 @@
 file(REMOVE_RECURSE
   "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.cpp.o"
   "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.cpp.o.d"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.o"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp.o.d"
   "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp.o"
   "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp.o.d"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.o"
+  "CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp.o.d"
   "libarmor_interfaces__rosidl_typesupport_fastrtps_c.pdb"
   "libarmor_interfaces__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor_info__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/joint_state__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_driver__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/serial_receive_data__type_support_c.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

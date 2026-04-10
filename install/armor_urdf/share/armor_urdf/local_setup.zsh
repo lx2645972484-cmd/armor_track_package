@@ -1,0 +1,1 @@
+/home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf/ament_cmake_environment_hooks/local_setup.zsh
