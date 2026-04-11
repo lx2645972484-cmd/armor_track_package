@@ -1,1 +1,12 @@
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_c/armor_interfaces/msg/armor_info.h
+// generated from rosidl_generator_c/resource/idl.h.em
+// with input from armor_interfaces:msg/ArmorInfo.idl
+// generated code does not contain a copyright notice
+
+#ifndef ARMOR_INTERFACES__MSG__ARMOR_INFO_H_
+#define ARMOR_INTERFACES__MSG__ARMOR_INFO_H_
+
+#include "armor_interfaces/msg/detail/armor_info__struct.h"
+#include "armor_interfaces/msg/detail/armor_info__functions.h"
+#include "armor_interfaces/msg/detail/armor_info__type_support.h"
+
+#endif  // ARMOR_INTERFACES__MSG__ARMOR_INFO_H_

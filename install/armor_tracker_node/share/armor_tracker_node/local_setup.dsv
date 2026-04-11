@@ -1,1 +1,2 @@
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/ament_cmake_environment_hooks/local_setup.dsv
+source;share/armor_tracker_node/environment/ament_prefix_path.sh
+source;share/armor_tracker_node/environment/path.sh

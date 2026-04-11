@@ -1,0 +1,5 @@
+In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:2:
+/opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89: note: ‘#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead’
+   32 | #pragma message ("Warning: This header is deprecated. Use 'image_transport.hpp' instead")
+      |                                                                                         ^

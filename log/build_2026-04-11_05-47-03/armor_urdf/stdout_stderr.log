@@ -1,0 +1,21 @@
+-- Install configuration: ""
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/launch
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/urdf
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/urdf/armor_urdf.urdf
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/rviz
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/meshes
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/ament_index/resource_index/package_run_dependencies/armor_urdf
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/ament_index/resource_index/parent_prefix_path/armor_urdf
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/ament_prefix_path.sh
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/path.sh
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/path.dsv
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.bash
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.sh
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.zsh
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.dsv
+-- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/package.dsv
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/ament_index/resource_index/packages/armor_urdf
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/cmake/armor_urdfConfig.cmake
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/cmake/armor_urdfConfig-version.cmake
+-- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/package.xml

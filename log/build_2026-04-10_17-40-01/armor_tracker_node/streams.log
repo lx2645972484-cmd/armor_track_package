@@ -1,0 +1,78 @@
+[0.010s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[0.066s] [  8%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o[0m
+[0.066s] [ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o[0m
+[0.068s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
+[0.141s] In file included from [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GxIAPI.h:12[m[K,
+[0.141s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4[m[K,
+[0.141s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:1[m[K:
+[0.142s] [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GXDef.h:173:1:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypedef[m[K’ was ignored in this declaration
+[0.142s]   173 | [01;35m[Ktypedef[m[K enum GX_IP_CONFIGURE_MODE_LIST
+[0.142s]       | [01;35m[K^~~~~~~[m[K
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:[m[K In member function ‘[01m[Kvoid galaxy_camera::GalaxyCamera::captureLoop()[m[K’:
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::pImgBuf[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s]   167 |         GX_FRAME_DATA bayer_frame = {0[01;35m[K}[m[K;
+[0.383s]       |                                       [01;35m[K^[m[K
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nWidth[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nHeight[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nPixelFormat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nImgSize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nFrameID[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nTimestamp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nOffsetX[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::nOffsetY[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.383s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:167:39:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KGX_FRAME_DATA::reserved[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[0.385s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp:168:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kstatus[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[0.385s]   168 |         GX_STATUS [01;35m[Kstatus[m[K;
+[0.385s]       |                   [01;35m[K^~~~~~[m[K
+[2.863s] In file included from [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GxIAPI.h:12[m[K,
+[2.863s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4[m[K,
+[2.863s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:39[m[K,
+[2.863s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:2[m[K:
+[2.863s] [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GXDef.h:173:1:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypedef[m[K’ was ignored in this declaration
+[2.863s]   173 | [01;35m[Ktypedef[m[K enum GX_IP_CONFIGURE_MODE_LIST
+[2.863s]       | [01;35m[K^~~~~~~[m[K
+[2.897s] In file included from [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GxIAPI.h:12[m[K,
+[2.897s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4[m[K,
+[2.897s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:39[m[K,
+[2.897s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518[m[K:
+[2.897s] [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GXDef.h:173:1:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypedef[m[K’ was ignored in this declaration
+[2.897s]   173 | [01;35m[Ktypedef[m[K enum GX_IP_CONFIGURE_MODE_LIST
+[2.897s]       | [01;35m[K^~~~~~~[m[K
+[3.031s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:[m[K In member function ‘[01m[Kvoid ArmorTracker::run()[m[K’:
+[3.031s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:675:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<cv::Point_<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.031s]   675 |         for (int i = 0; [01;35m[Ki < contours.size()[m[K; i++)
+[3.031s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[3.079s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:709:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.079s]   709 |         for (int i = 0; [01;35m[Ki < this->LightBarVector.size()[m[K; i++)
+[3.079s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.079s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:711:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.079s]   711 |             for (int j = i + 1; [01;35m[Kj < this->LightBarVector.size()[m[K; j++)
+[3.079s]       |                                 [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.083s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:617:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kframe_width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.083s]   617 |     int [01;35m[Kframe_width[m[K = 0, frame_height = 0;
+[3.083s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[3.083s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:617:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kframe_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.083s]   617 |     int frame_width = 0, [01;35m[Kframe_height[m[K = 0;
+[3.083s]       |                          [01;35m[K^~~~~~~~~~~~[m[K
+[13.500s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:34[m[K,
+[13.500s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518[m[K:
+[13.500s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/LightBarProcessor.h:14:8:[m[K [01;35m[Kwarning: [m[K‘[01m[Klight.LightBar::color[m[K’ may be used uninitialized [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized-Wmaybe-uninitialized]8;;[m[K]
+[13.500s]    14 | struct [01;35m[KLightBar[m[K
+[13.500s]       |        [01;35m[K^~~~~~~~[m[K
+[13.500s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:700:22:[m[K [01;36m[Knote: [m[K‘[01m[Klight.LightBar::color[m[K’ was declared here
+[13.500s]   700 |             LightBar [01;36m[Klight[m[K;
+[13.500s]       |                      [01;36m[K^~~~~[m[K
+[13.501s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:902:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpitch[m[K’ may be used uninitialized in this function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized-Wmaybe-uninitialized]8;;[m[K]
+[13.501s]   902 |         [01;35m[Kpublish_to_serial_driver(yaw, pitch, armorPoints)[m[K;
+[13.501s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[14.686s] [ 33%] [32m[1mLinking CXX executable armor_tracker_node[0m
+[14.740s] /usr/bin/ld: 当搜索用于 /home/eee/linux_camara/lib/x86/libMVSDK.so 时跳过不兼容的 -lMVSDK
+[15.256s] /usr/bin/ld: CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: in function `ArmorTracker::msgCallback(std::shared_ptr<geometry_msgs::msg::PointStamped_<std::allocator<void> > >)':
+[15.256s] ArmorTracker.cpp:(.text+0x6b2): undefined reference to `std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > tf2::getTimestamp<geometry_msgs::msg::PointStamped_<std::allocator<void> > >(geometry_msgs::msg::PointStamped_<std::allocator<void> > const&)'
+[15.256s] /usr/bin/ld: ArmorTracker.cpp:(.text+0x6c7): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > tf2::getFrameId<geometry_msgs::msg::PointStamped_<std::allocator<void> > >(geometry_msgs::msg::PointStamped_<std::allocator<void> > const&)'
+[15.256s] /usr/bin/ld: ArmorTracker.cpp:(.text+0x703): undefined reference to `void tf2::doTransform<geometry_msgs::msg::PointStamped_<std::allocator<void> > >(geometry_msgs::msg::PointStamped_<std::allocator<void> > const&, geometry_msgs::msg::PointStamped_<std::allocator<void> >&, geometry_msgs::msg::TransformStamped_<std::allocator<void> > const&)'
+[15.288s] collect2: error: ld returned 1 exit status
+[15.290s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:419：armor_tracker_node] 错误 1
+[15.290s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+[15.290s] gmake: *** [Makefile:146：all] 错误 2
+[15.292s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '2': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20

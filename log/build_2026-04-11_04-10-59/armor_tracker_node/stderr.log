@@ -1,0 +1,43 @@
+In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+/opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89: note: ‘#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead’
+   32 | #pragma message ("Warning: This header is deprecated. Use 'image_transport.hpp' instead")
+      |                                                                                         ^
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::run()’:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:661:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<cv::Point_<int> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  661 |         for (int i = 0; i < contours.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:695:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<LightBar>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  695 |         for (int i = 0; i < this->LightBarVector.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:697:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<LightBar>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  697 |             for (int j = i + 1; j < this->LightBarVector.size(); j++)
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:640:16: warning: unused variable ‘delta_time’ [-Wunused-variable]
+  640 |         double delta_time = 1.0 / fps;
+      |                ^~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:9: warning: unused variable ‘frame_width’ [-Wunused-variable]
+  606 |     int frame_width = 0, frame_height = 0;
+      |         ^~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:26: warning: unused variable ‘frame_height’ [-Wunused-variable]
+  606 |     int frame_width = 0, frame_height = 0;
+      |                          ^~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:607:23: warning: unused variable ‘current_time_ms’ [-Wunused-variable]
+  607 |     double fps = 0.0, current_time_ms = 0.0;
+      |                       ^~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::cameraCallback(const ConstSharedPtr&, const ConstSharedPtr&)’:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1027:88: warning: unused parameter ‘camera_info’ [-Wunused-parameter]
+ 1027 |                                    const sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info)
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:40,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/LightBarProcessor.h: In member function ‘void ArmorTracker::run()’:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/LightBarProcessor.h:14:8: warning: ‘light.LightBar::color’ may be used uninitialized [-Wmaybe-uninitialized]
+   14 | struct LightBar
+      |        ^~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:686:22: note: ‘light.LightBar::color’ was declared here
+  686 |             LightBar light;
+      |                      ^~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:885:33: warning: ‘pitch’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  885 |         publish_to_serial_driver(yaw, pitch, armorPoints);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~

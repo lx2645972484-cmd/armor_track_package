@@ -1,0 +1,69 @@
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:2[m[K:
+[01m[K/opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead[m[K’
+   32 | Warning: This header is deprecated. Use 'image_transport.hpp' instead"[01;36m[K)[m[K
+      |                                                                       [01;36m[K^[m[K
+
+In file included from [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GxIAPI.h:12[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:48[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:2[m[K:
+[01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GXDef.h:173:1:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypedef[m[K’ was ignored in this declaration
+  173 | [01;35m[Ktypedef[m[K enum GX_IP_CONFIGURE_MODE_LIST
+      | [01;35m[K^~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:[m[K In constructor ‘[01m[KArmorTracker::ArmorTracker()[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:25:78:[m[K [01;31m[Kerror: [m[K‘[01m[KJointState[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’; did you mean ‘[01m[Karmor_interfaces::msg::JointState[m[K’?
+   25 | world_publisher_ = this->create_publisher<sensor_msgs::msg::[01;31m[KJointState[m[K>("/joint_state", 10);
+      |                                                             [01;31m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/joint_state.hpp:7[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:25[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:2[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/joint_state__struct.hpp:168:7:[m[K [01;36m[Knote: [m[K‘[01m[Karmor_interfaces::msg::JointState[m[K’ declared here
+  168 | using [01;36m[KJointState[m[K =
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:25:89:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KArmorTracker::create_publisher<<expression error> >(const char [13], int)[m[K’
+   25 | sher_ = [01;31m[Kthis->create_publisher<sensor_msgs::msg::JointState>("/joint_state", 10)[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.hpp:43[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.h:36[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:17[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:2[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:25:89:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   25 | sher_ = [01;31m[Kthis->create_publisher<sensor_msgs::msg::JointState>("/joint_state", 10)[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:[m[K In member function ‘[01m[Kvoid ArmorTracker::run()[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:201:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<cv::Point_<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  201 |         for (int i = 0; [01;35m[Ki < contours.size()[m[K; i++)
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:235:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  235 |         for (int i = 0; [01;35m[Ki < this->LightBarVector.size()[m[K; i++)
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:237:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  237 |             for (int j = i + 1; [01;35m[Kj < this->LightBarVector.size()[m[K; j++)
+      |                                 [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:179:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelta_time[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  179 |         double [01;35m[Kdelta_time[m[K = 1.0 / fps;
+      |                [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:145:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kframe_width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  145 |     int [01;35m[Kframe_width[m[K = 0, frame_height = 0;
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:145:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kframe_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  145 |     int frame_width = 0, [01;35m[Kframe_height[m[K = 0;
+      |                          [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:146:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_time_ms[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  146 |     double fps = 0.0, [01;35m[Kcurrent_time_ms[m[K = 0.0;
+      |                       [01;35m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

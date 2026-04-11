@@ -1,0 +1,57 @@
+[0.009s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[0.057s] [  8%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
+[2.681s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31[m[K,
+[2.681s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518[m[K:
+[2.681s] [01m[K/opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead[m[K’
+[2.681s]    32 | Warning: This header is deprecated. Use 'image_transport.hpp' instead"[01;36m[K)[m[K
+[2.681s]       |                                                                       [01;36m[K^[m[K
+[2.681s] 
+[2.862s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:[m[K In member function ‘[01m[Kvoid ArmorTracker::run()[m[K’:
+[2.863s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:663:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<cv::Point_<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.863s]   663 |         for (int i = 0; [01;35m[Ki < contours.size()[m[K; i++)
+[2.863s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[2.864s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:697:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.864s]   697 |         for (int i = 0; [01;35m[Ki < this->LightBarVector.size()[m[K; i++)
+[2.864s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.864s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:699:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.864s]   699 |             for (int j = i + 1; [01;35m[Kj < this->LightBarVector.size()[m[K; j++)
+[2.864s]       |                                 [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.866s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:887:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kimshow(cv::Mat&, const char [21])[m[K’
+[2.866s]   887 |         [01;31m[Kcv::imshow(img, "Armor Tracker Output")[m[K;
+[2.867s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.867s] In file included from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:68[m[K,
+[2.867s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:5[m[K,
+[2.867s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518[m[K:
+[2.867s] [01m[K/usr/include/opencv4/opencv2/highgui.hpp:416:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::imshow(const String&, cv::InputArray)[m[K’
+[2.867s]   416 | CV_EXPORTS_W void [01;36m[Kimshow[m[K(const String& winname, InputArray mat);
+[2.867s]       |                   [01;36m[K^~~~~~[m[K
+[2.867s] [01m[K/usr/include/opencv4/opencv2/highgui.hpp:416:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kcv::Mat[m[K’ to ‘[01m[Kconst String&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+[2.867s]   416 | CV_EXPORTS_W void imshow([01;36m[Kconst String& winname[m[K, InputArray mat);
+[2.867s]       |                          [01;36m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[2.867s] [01m[K/usr/include/opencv4/opencv2/highgui.hpp:651:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::imshow(const String&, const cv::ogl::Texture2D&)[m[K’
+[2.867s]   651 | CV_EXPORTS void [01;36m[Kimshow[m[K(const String& winname, const ogl::Texture2D& tex);
+[2.867s]       |                 [01;36m[K^~~~~~[m[K
+[2.867s] [01m[K/usr/include/opencv4/opencv2/highgui.hpp:651:38:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kcv::Mat[m[K’ to ‘[01m[Kconst String&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+[2.867s]   651 | CV_EXPORTS void imshow([01;36m[Kconst String& winname[m[K, const ogl::Texture2D& tex);
+[2.867s]       |                        [01;36m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[2.867s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:642:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelta_time[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.867s]   642 |         double [01;35m[Kdelta_time[m[K = 1.0 / fps;
+[2.867s]       |                [01;35m[K^~~~~~~~~~[m[K
+[2.867s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:608:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kframe_width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.867s]   608 |     int [01;35m[Kframe_width[m[K = 0, frame_height = 0;
+[2.867s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[2.867s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:608:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kframe_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.867s]   608 |     int frame_width = 0, [01;35m[Kframe_height[m[K = 0;
+[2.867s]       |                          [01;35m[K^~~~~~~~~~~~[m[K
+[2.867s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:609:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_time_ms[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.867s]   609 |     double fps = 0.0, [01;35m[Kcurrent_time_ms[m[K = 0.0;
+[2.867s]       |                       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[2.874s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:[m[K In member function ‘[01m[Kvoid ArmorTracker::cameraCallback(const ConstSharedPtr&, const ConstSharedPtr&)[m[K’:
+[2.874s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1031:88:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcamera_info[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.874s]  1031 |         [01;35m[Kconst sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info[m[K)
+[2.874s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[2.874s] 
+[5.809s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+[5.810s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+[5.810s] gmake: *** [Makefile:146：all] 错误 2
+[5.812s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '2': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20

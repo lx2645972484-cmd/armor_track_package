@@ -1,0 +1,70 @@
+[  8%] Building CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o
+In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+/opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89: note: ‘#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead’
+   32 | #pragma message ("Warning: This header is deprecated. Use 'image_transport.hpp' instead")
+      |                                                                                         ^
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::initialize()’:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:536:44: error: no matching function for call to ‘image_transport::ImageTransport::subscribeCamera(const char [11], int, void (ArmorTracker::*)(const ConstSharedPtr&, const ConstSharedPtr&), ArmorTracker*, const char [4], const rmw_qos_profile_t&)’
+  536 |     camera_subscriber_ = it.subscribeCamera("/image_raw", 1, &ArmorTracker::cameraCallback, this, "raw", rmw_qos_profile_sensor_data);
+      |                          ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/image_transport/image_transport/image_transport.h:34,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:366:20: note: candidate: ‘template<class T> image_transport::CameraSubscriber image_transport::ImageTransport::subscribeCamera(const string&, uint32_t, void (T::*)(const ImageConstPtr&, const CameraInfoConstPtr&), T*, const image_transport::TransportHints*)’
+  366 |   CameraSubscriber subscribeCamera(
+      |                    ^~~~~~~~~~~~~~~
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:366:20: note:   template argument deduction/substitution failed:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:536:44: note:   candidate expects 5 arguments, 6 provided
+  536 |     camera_subscriber_ = it.subscribeCamera("/image_raw", 1, &ArmorTracker::cameraCallback, this, "raw", rmw_qos_profile_sensor_data);
+      |                          ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/image_transport/image_transport/image_transport.h:34,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:384:20: note: candidate: ‘template<class T> image_transport::CameraSubscriber image_transport::ImageTransport::subscribeCamera(const string&, uint32_t, void (T::*)(const ImageConstPtr&, const CameraInfoConstPtr&), const std::shared_ptr<_Tp>&, const image_transport::TransportHints*)’
+  384 |   CameraSubscriber subscribeCamera(
+      |                    ^~~~~~~~~~~~~~~
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:384:20: note:   template argument deduction/substitution failed:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:536:44: note:   mismatched types ‘const std::shared_ptr<_Tp>’ and ‘ArmorTracker*’
+  536 |     camera_subscriber_ = it.subscribeCamera("/image_raw", 1, &ArmorTracker::cameraCallback, this, "raw", rmw_qos_profile_sensor_data);
+      |                          ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/humble/include/image_transport/image_transport/image_transport.h:34,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:339:20: note: candidate: ‘image_transport::CameraSubscriber image_transport::ImageTransport::subscribeCamera(const string&, uint32_t, const Callback&, const VoidPtr&, const image_transport::TransportHints*)’
+  339 |   CameraSubscriber subscribeCamera(
+      |                    ^~~~~~~~~~~~~~~
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:339:20: note:   candidate expects 5 arguments, 6 provided
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:349:20: note: candidate: ‘image_transport::CameraSubscriber image_transport::ImageTransport::subscribeCamera(const string&, uint32_t, void (*)(const ImageConstPtr&, const CameraInfoConstPtr&), const image_transport::TransportHints*)’
+  349 |   CameraSubscriber subscribeCamera(
+      |                    ^~~~~~~~~~~~~~~
+/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:349:20: note:   candidate expects 4 arguments, 6 provided
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::run()’:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:661:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<cv::Point_<int> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  661 |         for (int i = 0; i < contours.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:695:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<LightBar>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  695 |         for (int i = 0; i < this->LightBarVector.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:697:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<LightBar>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  697 |             for (int j = i + 1; j < this->LightBarVector.size(); j++)
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:640:16: warning: unused variable ‘delta_time’ [-Wunused-variable]
+  640 |         double delta_time = 1.0 / fps;
+      |                ^~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:9: warning: unused variable ‘frame_width’ [-Wunused-variable]
+  606 |     int frame_width = 0, frame_height = 0;
+      |         ^~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:26: warning: unused variable ‘frame_height’ [-Wunused-variable]
+  606 |     int frame_width = 0, frame_height = 0;
+      |                          ^~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:607:23: warning: unused variable ‘current_time_ms’ [-Wunused-variable]
+  607 |     double fps = 0.0, current_time_ms = 0.0;
+      |                       ^~~~~~~~~~~~~~~
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::cameraCallback(const ConstSharedPtr&, const ConstSharedPtr&)’:
+/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1027:88: warning: unused parameter ‘camera_info’ [-Wunused-parameter]
+ 1027 |                                    const sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info)
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

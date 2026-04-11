@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8713847a8d41e78bc05e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "armor_interfaces__py",
+					"jsonFile" : "directory-armor_interfaces__py-3532503678f19ea28d7e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/armor_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "armor_interfaces__rs",
+					"jsonFile" : "directory-armor_interfaces__rs-48ab89ef3cf1d2257b56.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/armor_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "armor_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_armor_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_armor_interfaces_egg-b3e63816d43a76b67933.json",
+					"name" : "ament_cmake_python_build_armor_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_armor_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_armor_interfaces-bd81875fc19606f01972.json",
+					"name" : "ament_cmake_python_copy_armor_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces-cd0e8ebb061134fc61d8.json",
+					"name" : "armor_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__cpp-6057a238fe62877f5485.json",
+					"name" : "armor_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "armor_interfaces__py::@d04adee5f99defa08eef",
+					"jsonFile" : "target-armor_interfaces__py-b862189c800f52f8f1ef.json",
+					"name" : "armor_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_generator_c-406e2879e340315d91ae.json",
+					"name" : "armor_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_generator_py-eecd12fb08077ceeb1c9.json",
+					"name" : "armor_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_c-a6e5b62e8bb41e27fe57.json",
+					"name" : "armor_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_c__pyext-95c6e58e451b8bdaf61d.json",
+					"name" : "armor_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_cpp-5f28abb5dec61d1bd306.json",
+					"name" : "armor_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_fastrtps_c-48df94ead43891d15f80.json",
+					"name" : "armor_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_fastrtps_c__pyext-035195308499b115da82.json",
+					"name" : "armor_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_fastrtps_cpp-d87a5b69bb0aab244be1.json",
+					"name" : "armor_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_introspection_c-5852e4670af191ac3df9.json",
+					"name" : "armor_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_introspection_c__pyext-23e4747f9b1f2a182bf2.json",
+					"name" : "armor_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces__rosidl_typesupport_introspection_cpp-14a4829b41e96062d175.json",
+					"name" : "armor_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "armor_interfaces__rs::@2646ca31af1a784e0d46",
+					"jsonFile" : "target-armor_interfaces__rs-b996c63a541d24c80ef8.json",
+					"name" : "armor_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "armor_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-armor_interfaces_uninstall-7eefe8a5522d40490414.json",
+					"name" : "armor_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ae19e2bb75037be67790.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces",
+		"source" : "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

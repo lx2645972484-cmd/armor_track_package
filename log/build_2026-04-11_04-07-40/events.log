@@ -1,0 +1,121 @@
+[0.000000] (-) TimerEvent: {}
+[0.000052] (-) JobUnselected: {'identifier': 'armor_drawer'}
+[0.000102] (-) JobUnselected: {'identifier': 'armor_interfaces'}
+[0.000114] (-) JobUnselected: {'identifier': 'armor_urdf'}
+[0.000122] (-) JobUnselected: {'identifier': 'galaxy_camera'}
+[0.000130] (-) JobUnselected: {'identifier': 'rm_serial_driver'}
+[0.000142] (armor_tracker_node) JobQueued: {'identifier': 'armor_tracker_node', 'dependencies': OrderedDict([('armor_interfaces', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces')])}
+[0.000350] (armor_tracker_node) JobStarted: {'identifier': 'armor_tracker_node'}
+[0.007697] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'cmake'}
+[0.008325] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'build'}
+[0.009144] (armor_tracker_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', '--', '-j20', '-l20'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('GIT_EDITOR', ':'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/eee/ros2'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1291'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '1784'), ('BUNDLED_DEBUGPY_PATH', '/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6538'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:17895'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('HISTCONTROL', 'ignorespace'), ('WINDOWPATH', '2'), ('PATH', '/home/eee/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/eee/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/eee/.local/bin:/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1756,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1756'), ('INVOCATION_ID', 'cfe692b5820c4ea884d38cc5b002387a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-cabe32bc0dfd66b9.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/eee/.config/Code/User/workspaceStorage/453a71c8f0ca34bdc84c70f790de7264/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-03dfb2077b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node'), ('GIT_MERGE_AUTOEDIT', 'no'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble')]), 'shell': False}
+[0.062777] (armor_tracker_node) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target armor_tracker_node\n'}
+[0.080028] (armor_tracker_node) StdoutLine: {'line': b'[  8%] Building CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o\n'}
+[0.099809] (-) TimerEvent: {}
+[0.200004] (-) TimerEvent: {}
+[0.300183] (-) TimerEvent: {}
+[0.400316] (-) TimerEvent: {}
+[0.500475] (-) TimerEvent: {}
+[0.600663] (-) TimerEvent: {}
+[0.700825] (-) TimerEvent: {}
+[0.801026] (-) TimerEvent: {}
+[0.901286] (-) TimerEvent: {}
+[1.001448] (-) TimerEvent: {}
+[1.101610] (-) TimerEvent: {}
+[1.201775] (-) TimerEvent: {}
+[1.301935] (-) TimerEvent: {}
+[1.402087] (-) TimerEvent: {}
+[1.502263] (-) TimerEvent: {}
+[1.602418] (-) TimerEvent: {}
+[1.702572] (-) TimerEvent: {}
+[1.802746] (-) TimerEvent: {}
+[1.902904] (-) TimerEvent: {}
+[2.003093] (-) TimerEvent: {}
+[2.103348] (-) TimerEvent: {}
+[2.203569] (-) TimerEvent: {}
+[2.303778] (-) TimerEvent: {}
+[2.403929] (-) TimerEvent: {}
+[2.504080] (-) TimerEvent: {}
+[2.604253] (-) TimerEvent: {}
+[2.704417] (-) TimerEvent: {}
+[2.718878] (armor_tracker_node) StderrLine: {'line': b'In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,\n'}
+[2.719036] (armor_tracker_node) StderrLine: {'line': b'                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:\n'}
+[2.719076] (armor_tracker_node) StderrLine: {'line': b"/opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89: note: \xe2\x80\x98#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead\xe2\x80\x99\n"}
+[2.719110] (armor_tracker_node) StderrLine: {'line': b'   32 | #pragma message ("Warning: This header is deprecated. Use \'image_transport.hpp\' instead")\n'}
+[2.719141] (armor_tracker_node) StderrLine: {'line': b'      |                                                                                         ^\n'}
+[2.804523] (-) TimerEvent: {}
+[2.891352] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function \xe2\x80\x98void ArmorTracker::initialize()\xe2\x80\x99:\n'}
+[2.891476] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:535:140: error: no matching function for call to \xe2\x80\x98image_transport::ImageTransport::ImageTransport(std::shared_ptr<rclcpp::Node>, const char [4], rclcpp::QoS)\xe2\x80\x99\n'}
+[2.891514] (armor_tracker_node) StderrLine: {'line': b'  535 |     image_transport::ImageTransport it(shared_from_this(), "raw", rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default)));\n'}
+[2.891546] (armor_tracker_node) StderrLine: {'line': b'      |                                                                                                                                            ^\n'}
+[2.891575] (armor_tracker_node) StderrLine: {'line': b'In file included from /opt/ros/humble/include/image_transport/image_transport/image_transport.h:34,\n'}
+[2.891604] (armor_tracker_node) StderrLine: {'line': b'                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,\n'}
+[2.891632] (armor_tracker_node) StderrLine: {'line': b'                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:\n'}
+[2.891660] (armor_tracker_node) StderrLine: {'line': b'/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:12: note: candidate: \xe2\x80\x98image_transport::ImageTransport::ImageTransport(rclcpp::Node::SharedPtr)\xe2\x80\x99\n'}
+[2.891693] (armor_tracker_node) StderrLine: {'line': b'  111 |   explicit ImageTransport(rclcpp::Node::SharedPtr node);\n'}
+[2.891722] (armor_tracker_node) StderrLine: {'line': b'      |            ^~~~~~~~~~~~~~\n'}
+[2.891750] (armor_tracker_node) StderrLine: {'line': b'/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:12: note:   candidate expects 1 argument, 3 provided\n'}
+[2.904611] (-) TimerEvent: {}
+[2.910179] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function \xe2\x80\x98void ArmorTracker::run()\xe2\x80\x99:\n'}
+[2.910323] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:661:27: warning: comparison of integer expressions of different signedness: \xe2\x80\x98int\xe2\x80\x99 and \xe2\x80\x98std::vector<std::vector<cv::Point_<int> > >::size_type\xe2\x80\x99 {aka \xe2\x80\x98long unsigned int\xe2\x80\x99} [-Wsign-compare]\n'}
+[2.910374] (armor_tracker_node) StderrLine: {'line': b'  661 |         for (int i = 0; i < contours.size(); i++)\n'}
+[2.910416] (armor_tracker_node) StderrLine: {'line': b'      |                         ~~^~~~~~~~~~~~~~~~~\n'}
+[2.911357] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:695:27: warning: comparison of integer expressions of different signedness: \xe2\x80\x98int\xe2\x80\x99 and \xe2\x80\x98std::vector<LightBar>::size_type\xe2\x80\x99 {aka \xe2\x80\x98long unsigned int\xe2\x80\x99} [-Wsign-compare]\n'}
+[2.911443] (armor_tracker_node) StderrLine: {'line': b'  695 |         for (int i = 0; i < this->LightBarVector.size(); i++)\n'}
+[2.911479] (armor_tracker_node) StderrLine: {'line': b'      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.911508] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:697:35: warning: comparison of integer expressions of different signedness: \xe2\x80\x98int\xe2\x80\x99 and \xe2\x80\x98std::vector<LightBar>::size_type\xe2\x80\x99 {aka \xe2\x80\x98long unsigned int\xe2\x80\x99} [-Wsign-compare]\n'}
+[2.911536] (armor_tracker_node) StderrLine: {'line': b'  697 |             for (int j = i + 1; j < this->LightBarVector.size(); j++)\n'}
+[2.911564] (armor_tracker_node) StderrLine: {'line': b'      |                                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.914484] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:640:16: warning: unused variable \xe2\x80\x98delta_time\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.914562] (armor_tracker_node) StderrLine: {'line': b'  640 |         double delta_time = 1.0 / fps;\n'}
+[2.914596] (armor_tracker_node) StderrLine: {'line': b'      |                ^~~~~~~~~~\n'}
+[2.914624] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:9: warning: unused variable \xe2\x80\x98frame_width\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.914651] (armor_tracker_node) StderrLine: {'line': b'  606 |     int frame_width = 0, frame_height = 0;\n'}
+[2.914678] (armor_tracker_node) StderrLine: {'line': b'      |         ^~~~~~~~~~~\n'}
+[2.914703] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:26: warning: unused variable \xe2\x80\x98frame_height\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.914735] (armor_tracker_node) StderrLine: {'line': b'  606 |     int frame_width = 0, frame_height = 0;\n'}
+[2.914760] (armor_tracker_node) StderrLine: {'line': b'      |                          ^~~~~~~~~~~~\n'}
+[2.914802] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:607:23: warning: unused variable \xe2\x80\x98current_time_ms\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.914880] (armor_tracker_node) StderrLine: {'line': b'  607 |     double fps = 0.0, current_time_ms = 0.0;\n'}
+[2.914917] (armor_tracker_node) StderrLine: {'line': b'      |                       ^~~~~~~~~~~~~~~\n'}
+[2.922229] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function \xe2\x80\x98void ArmorTracker::cameraCallback(const ConstSharedPtr&, const ConstSharedPtr&)\xe2\x80\x99:\n'}
+[2.922359] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1027:88: warning: unused parameter \xe2\x80\x98camera_info\xe2\x80\x99 [-Wunused-parameter]\n'}
+[2.922403] (armor_tracker_node) StderrLine: {'line': b' 1027 |                                    const sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info)\n'}
+[2.922432] (armor_tracker_node) StderrLine: {'line': b'      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\n'}
+[3.004787] (-) TimerEvent: {}
+[3.104931] (-) TimerEvent: {}
+[3.205081] (-) TimerEvent: {}
+[3.305249] (-) TimerEvent: {}
+[3.405425] (-) TimerEvent: {}
+[3.505637] (-) TimerEvent: {}
+[3.605815] (-) TimerEvent: {}
+[3.705993] (-) TimerEvent: {}
+[3.806176] (-) TimerEvent: {}
+[3.906360] (-) TimerEvent: {}
+[4.006539] (-) TimerEvent: {}
+[4.106714] (-) TimerEvent: {}
+[4.206903] (-) TimerEvent: {}
+[4.307080] (-) TimerEvent: {}
+[4.407283] (-) TimerEvent: {}
+[4.507571] (-) TimerEvent: {}
+[4.607733] (-) TimerEvent: {}
+[4.707928] (-) TimerEvent: {}
+[4.808089] (-) TimerEvent: {}
+[4.908234] (-) TimerEvent: {}
+[5.008385] (-) TimerEvent: {}
+[5.108545] (-) TimerEvent: {}
+[5.208738] (-) TimerEvent: {}
+[5.308927] (-) TimerEvent: {}
+[5.409085] (-) TimerEvent: {}
+[5.509340] (-) TimerEvent: {}
+[5.609507] (-) TimerEvent: {}
+[5.709690] (-) TimerEvent: {}
+[5.809850] (-) TimerEvent: {}
+[5.910008] (-) TimerEvent: {}
+[6.010179] (-) TimerEvent: {}
+[6.028948] (armor_tracker_node) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188\xef\xbc\x9aCMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[6.029254] (armor_tracker_node) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137\xef\xbc\x9aCMakeFiles/armor_tracker_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[6.029462] (armor_tracker_node) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[6.031249] (armor_tracker_node) CommandEnded: {'returncode': 2}
+[6.038545] (armor_tracker_node) JobEnded: {'identifier': 'armor_tracker_node', 'rc': 2}
+[6.049060] (-) EventReactorShutdown: {}

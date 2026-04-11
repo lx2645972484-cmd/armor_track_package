@@ -1,1 +1,8 @@
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/armor_interfaces
+msg/ArmorInfo.idl
+msg/ArmorInfo.msg
+msg/JointState.idl
+msg/JointState.msg
+msg/SerialDriver.idl
+msg/SerialDriver.msg
+msg/SerialReceiveData.idl
+msg/SerialReceiveData.msg

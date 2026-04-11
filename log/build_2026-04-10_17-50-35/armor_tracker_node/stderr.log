@@ -1,0 +1,8 @@
+/usr/bin/ld: CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: in function `ArmorTracker::msgCallback(std::shared_ptr<geometry_msgs::msg::PointStamped_<std::allocator<void> > >)':
+ArmorTracker.cpp:(.text+0x6b2): undefined reference to `std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > tf2::getTimestamp<geometry_msgs::msg::PointStamped_<std::allocator<void> > >(geometry_msgs::msg::PointStamped_<std::allocator<void> > const&)'
+/usr/bin/ld: ArmorTracker.cpp:(.text+0x6c7): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > tf2::getFrameId<geometry_msgs::msg::PointStamped_<std::allocator<void> > >(geometry_msgs::msg::PointStamped_<std::allocator<void> > const&)'
+/usr/bin/ld: ArmorTracker.cpp:(.text+0x703): undefined reference to `void tf2::doTransform<geometry_msgs::msg::PointStamped_<std::allocator<void> > >(geometry_msgs::msg::PointStamped_<std::allocator<void> > const&, geometry_msgs::msg::PointStamped_<std::allocator<void> >&, geometry_msgs::msg::TransformStamped_<std::allocator<void> > const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:420：armor_tracker_node] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

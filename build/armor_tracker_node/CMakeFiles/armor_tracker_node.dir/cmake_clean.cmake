@@ -7,8 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/armor_tracker_node.dir/src/LightBarProcessor.cpp.o.d"
   "CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.o"
   "CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.o.d"
-  "CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o"
-  "CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o.d"
   "CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o"
   "CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o.d"
   "CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o"

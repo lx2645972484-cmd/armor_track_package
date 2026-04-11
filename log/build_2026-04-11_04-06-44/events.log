@@ -1,0 +1,228 @@
+[0.000000] (-) TimerEvent: {}
+[0.000046] (-) JobUnselected: {'identifier': 'armor_drawer'}
+[0.000063] (-) JobUnselected: {'identifier': 'armor_interfaces'}
+[0.000074] (-) JobUnselected: {'identifier': 'armor_urdf'}
+[0.000082] (-) JobUnselected: {'identifier': 'galaxy_camera'}
+[0.000090] (-) JobUnselected: {'identifier': 'rm_serial_driver'}
+[0.000100] (armor_tracker_node) JobQueued: {'identifier': 'armor_tracker_node', 'dependencies': OrderedDict([('armor_interfaces', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces')])}
+[0.000370] (armor_tracker_node) JobStarted: {'identifier': 'armor_tracker_node'}
+[0.007143] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'cmake'}
+[0.007460] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'build'}
+[0.007891] (armor_tracker_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', '--', '-j20', '-l20'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('GIT_EDITOR', ':'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/eee/ros2'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1291'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '1784'), ('BUNDLED_DEBUGPY_PATH', '/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6538'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:17895'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('HISTCONTROL', 'ignorespace'), ('WINDOWPATH', '2'), ('PATH', '/home/eee/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/eee/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/eee/.local/bin:/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1756,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1756'), ('INVOCATION_ID', 'cfe692b5820c4ea884d38cc5b002387a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-cabe32bc0dfd66b9.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/eee/.config/Code/User/workspaceStorage/453a71c8f0ca34bdc84c70f790de7264/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-03dfb2077b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node'), ('GIT_MERGE_AUTOEDIT', 'no'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.053292] (armor_tracker_node) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target armor_tracker_node\n'}
+[0.068332] (armor_tracker_node) StdoutLine: {'line': b'[  8%] Building CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o\n'}
+[0.099672] (-) TimerEvent: {}
+[0.199884] (-) TimerEvent: {}
+[0.300079] (-) TimerEvent: {}
+[0.400301] (-) TimerEvent: {}
+[0.500494] (-) TimerEvent: {}
+[0.600697] (-) TimerEvent: {}
+[0.700887] (-) TimerEvent: {}
+[0.801044] (-) TimerEvent: {}
+[0.901241] (-) TimerEvent: {}
+[1.001437] (-) TimerEvent: {}
+[1.101589] (-) TimerEvent: {}
+[1.201767] (-) TimerEvent: {}
+[1.301923] (-) TimerEvent: {}
+[1.402082] (-) TimerEvent: {}
+[1.502281] (-) TimerEvent: {}
+[1.602430] (-) TimerEvent: {}
+[1.702585] (-) TimerEvent: {}
+[1.802756] (-) TimerEvent: {}
+[1.902912] (-) TimerEvent: {}
+[2.003087] (-) TimerEvent: {}
+[2.103253] (-) TimerEvent: {}
+[2.203459] (-) TimerEvent: {}
+[2.303612] (-) TimerEvent: {}
+[2.403782] (-) TimerEvent: {}
+[2.503936] (-) TimerEvent: {}
+[2.604119] (-) TimerEvent: {}
+[2.704300] (-) TimerEvent: {}
+[2.790598] (armor_tracker_node) StderrLine: {'line': b'In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,\n'}
+[2.790754] (armor_tracker_node) StderrLine: {'line': b'                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:\n'}
+[2.790792] (armor_tracker_node) StderrLine: {'line': b"/opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89: note: \xe2\x80\x98#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead\xe2\x80\x99\n"}
+[2.790825] (armor_tracker_node) StderrLine: {'line': b'   32 | #pragma message ("Warning: This header is deprecated. Use \'image_transport.hpp\' instead")\n'}
+[2.790864] (armor_tracker_node) StderrLine: {'line': b'      |                                                                                         ^\n'}
+[2.804415] (-) TimerEvent: {}
+[2.904565] (-) TimerEvent: {}
+[2.989607] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function \xe2\x80\x98void ArmorTracker::run()\xe2\x80\x99:\n'}
+[2.989732] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:661:27: warning: comparison of integer expressions of different signedness: \xe2\x80\x98int\xe2\x80\x99 and \xe2\x80\x98std::vector<std::vector<cv::Point_<int> > >::size_type\xe2\x80\x99 {aka \xe2\x80\x98long unsigned int\xe2\x80\x99} [-Wsign-compare]\n'}
+[2.989776] (armor_tracker_node) StderrLine: {'line': b'  661 |         for (int i = 0; i < contours.size(); i++)\n'}
+[2.989808] (armor_tracker_node) StderrLine: {'line': b'      |                         ~~^~~~~~~~~~~~~~~~~\n'}
+[2.990821] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:695:27: warning: comparison of integer expressions of different signedness: \xe2\x80\x98int\xe2\x80\x99 and \xe2\x80\x98std::vector<LightBar>::size_type\xe2\x80\x99 {aka \xe2\x80\x98long unsigned int\xe2\x80\x99} [-Wsign-compare]\n'}
+[2.990895] (armor_tracker_node) StderrLine: {'line': b'  695 |         for (int i = 0; i < this->LightBarVector.size(); i++)\n'}
+[2.990945] (armor_tracker_node) StderrLine: {'line': b'      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.990991] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:697:35: warning: comparison of integer expressions of different signedness: \xe2\x80\x98int\xe2\x80\x99 and \xe2\x80\x98std::vector<LightBar>::size_type\xe2\x80\x99 {aka \xe2\x80\x98long unsigned int\xe2\x80\x99} [-Wsign-compare]\n'}
+[2.991038] (armor_tracker_node) StderrLine: {'line': b'  697 |             for (int j = i + 1; j < this->LightBarVector.size(); j++)\n'}
+[2.991085] (armor_tracker_node) StderrLine: {'line': b'      |                                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.993961] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:640:16: warning: unused variable \xe2\x80\x98delta_time\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.994064] (armor_tracker_node) StderrLine: {'line': b'  640 |         double delta_time = 1.0 / fps;\n'}
+[2.994188] (armor_tracker_node) StderrLine: {'line': b'      |                ^~~~~~~~~~\n'}
+[2.994274] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:9: warning: unused variable \xe2\x80\x98frame_width\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.994340] (armor_tracker_node) StderrLine: {'line': b'  606 |     int frame_width = 0, frame_height = 0;\n'}
+[2.994422] (armor_tracker_node) StderrLine: {'line': b'      |         ^~~~~~~~~~~\n'}
+[2.994485] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:26: warning: unused variable \xe2\x80\x98frame_height\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.994557] (armor_tracker_node) StderrLine: {'line': b'  606 |     int frame_width = 0, frame_height = 0;\n'}
+[2.994616] (armor_tracker_node) StderrLine: {'line': b'      |                          ^~~~~~~~~~~~\n'}
+[2.994675] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:607:23: warning: unused variable \xe2\x80\x98current_time_ms\xe2\x80\x99 [-Wunused-variable]\n'}
+[2.994735] (armor_tracker_node) StderrLine: {'line': b'  607 |     double fps = 0.0, current_time_ms = 0.0;\n'}
+[2.994794] (armor_tracker_node) StderrLine: {'line': b'      |                       ^~~~~~~~~~~~~~~\n'}
+[3.001750] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function \xe2\x80\x98void ArmorTracker::cameraCallback(const ConstSharedPtr&, const ConstSharedPtr&)\xe2\x80\x99:\n'}
+[3.001898] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1027:88: warning: unused parameter \xe2\x80\x98camera_info\xe2\x80\x99 [-Wunused-parameter]\n'}
+[3.001969] (armor_tracker_node) StderrLine: {'line': b' 1027 |                                    const sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info)\n'}
+[3.002033] (armor_tracker_node) StderrLine: {'line': b'      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\n'}
+[3.004638] (-) TimerEvent: {}
+[3.104792] (-) TimerEvent: {}
+[3.204979] (-) TimerEvent: {}
+[3.305214] (-) TimerEvent: {}
+[3.405401] (-) TimerEvent: {}
+[3.505552] (-) TimerEvent: {}
+[3.605706] (-) TimerEvent: {}
+[3.705888] (-) TimerEvent: {}
+[3.806039] (-) TimerEvent: {}
+[3.906223] (-) TimerEvent: {}
+[4.006487] (-) TimerEvent: {}
+[4.106641] (-) TimerEvent: {}
+[4.206826] (-) TimerEvent: {}
+[4.306982] (-) TimerEvent: {}
+[4.407139] (-) TimerEvent: {}
+[4.507398] (-) TimerEvent: {}
+[4.607648] (-) TimerEvent: {}
+[4.707815] (-) TimerEvent: {}
+[4.807980] (-) TimerEvent: {}
+[4.908160] (-) TimerEvent: {}
+[5.008328] (-) TimerEvent: {}
+[5.108488] (-) TimerEvent: {}
+[5.208656] (-) TimerEvent: {}
+[5.308964] (-) TimerEvent: {}
+[5.409155] (-) TimerEvent: {}
+[5.509335] (-) TimerEvent: {}
+[5.609493] (-) TimerEvent: {}
+[5.709652] (-) TimerEvent: {}
+[5.809843] (-) TimerEvent: {}
+[5.909991] (-) TimerEvent: {}
+[6.010168] (-) TimerEvent: {}
+[6.110363] (-) TimerEvent: {}
+[6.210517] (-) TimerEvent: {}
+[6.310679] (-) TimerEvent: {}
+[6.410858] (-) TimerEvent: {}
+[6.511029] (-) TimerEvent: {}
+[6.611201] (-) TimerEvent: {}
+[6.711385] (-) TimerEvent: {}
+[6.811537] (-) TimerEvent: {}
+[6.911696] (-) TimerEvent: {}
+[7.011872] (-) TimerEvent: {}
+[7.112024] (-) TimerEvent: {}
+[7.212169] (-) TimerEvent: {}
+[7.312312] (-) TimerEvent: {}
+[7.412479] (-) TimerEvent: {}
+[7.512647] (-) TimerEvent: {}
+[7.612826] (-) TimerEvent: {}
+[7.712972] (-) TimerEvent: {}
+[7.813147] (-) TimerEvent: {}
+[7.913318] (-) TimerEvent: {}
+[8.013487] (-) TimerEvent: {}
+[8.113643] (-) TimerEvent: {}
+[8.213897] (-) TimerEvent: {}
+[8.314095] (-) TimerEvent: {}
+[8.414272] (-) TimerEvent: {}
+[8.514435] (-) TimerEvent: {}
+[8.614579] (-) TimerEvent: {}
+[8.714730] (-) TimerEvent: {}
+[8.814918] (-) TimerEvent: {}
+[8.915064] (-) TimerEvent: {}
+[9.015227] (-) TimerEvent: {}
+[9.115388] (-) TimerEvent: {}
+[9.215542] (-) TimerEvent: {}
+[9.315696] (-) TimerEvent: {}
+[9.415858] (-) TimerEvent: {}
+[9.516030] (-) TimerEvent: {}
+[9.616223] (-) TimerEvent: {}
+[9.716413] (-) TimerEvent: {}
+[9.816562] (-) TimerEvent: {}
+[9.916705] (-) TimerEvent: {}
+[10.016854] (-) TimerEvent: {}
+[10.117004] (-) TimerEvent: {}
+[10.217148] (-) TimerEvent: {}
+[10.317332] (-) TimerEvent: {}
+[10.417495] (-) TimerEvent: {}
+[10.517652] (-) TimerEvent: {}
+[10.617837] (-) TimerEvent: {}
+[10.718009] (-) TimerEvent: {}
+[10.818193] (-) TimerEvent: {}
+[10.918388] (-) TimerEvent: {}
+[11.018549] (-) TimerEvent: {}
+[11.118731] (-) TimerEvent: {}
+[11.218901] (-) TimerEvent: {}
+[11.319101] (-) TimerEvent: {}
+[11.419293] (-) TimerEvent: {}
+[11.519426] (-) TimerEvent: {}
+[11.619600] (-) TimerEvent: {}
+[11.719774] (-) TimerEvent: {}
+[11.819924] (-) TimerEvent: {}
+[11.920077] (-) TimerEvent: {}
+[12.020254] (-) TimerEvent: {}
+[12.120407] (-) TimerEvent: {}
+[12.220558] (-) TimerEvent: {}
+[12.320741] (-) TimerEvent: {}
+[12.420929] (-) TimerEvent: {}
+[12.521082] (-) TimerEvent: {}
+[12.621322] (-) TimerEvent: {}
+[12.721489] (-) TimerEvent: {}
+[12.821636] (-) TimerEvent: {}
+[12.921796] (-) TimerEvent: {}
+[13.021959] (-) TimerEvent: {}
+[13.098273] (armor_tracker_node) StderrLine: {'line': b'In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:40,\n'}
+[13.098528] (armor_tracker_node) StderrLine: {'line': b'                 from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:\n'}
+[13.098579] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/LightBarProcessor.h: In member function \xe2\x80\x98void ArmorTracker::run()\xe2\x80\x99:\n'}
+[13.098612] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/LightBarProcessor.h:14:8: warning: \xe2\x80\x98light.LightBar::color\xe2\x80\x99 may be used uninitialized [-Wmaybe-uninitialized]\n'}
+[13.098650] (armor_tracker_node) StderrLine: {'line': b'   14 | struct LightBar\n'}
+[13.098677] (armor_tracker_node) StderrLine: {'line': b'      |        ^~~~~~~~\n'}
+[13.098702] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:686:22: note: \xe2\x80\x98light.LightBar::color\xe2\x80\x99 was declared here\n'}
+[13.098730] (armor_tracker_node) StderrLine: {'line': b'  686 |             LightBar light;\n'}
+[13.098755] (armor_tracker_node) StderrLine: {'line': b'      |                      ^~~~~\n'}
+[13.098992] (armor_tracker_node) StderrLine: {'line': b'/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:885:33: warning: \xe2\x80\x98pitch\xe2\x80\x99 may be used uninitialized in this function [-Wmaybe-uninitialized]\n'}
+[13.099065] (armor_tracker_node) StderrLine: {'line': b'  885 |         publish_to_serial_driver(yaw, pitch, armorPoints);\n'}
+[13.099099] (armor_tracker_node) StderrLine: {'line': b'      |         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[13.122145] (-) TimerEvent: {}
+[13.222314] (-) TimerEvent: {}
+[13.322472] (-) TimerEvent: {}
+[13.422639] (-) TimerEvent: {}
+[13.522836] (-) TimerEvent: {}
+[13.622985] (-) TimerEvent: {}
+[13.723136] (-) TimerEvent: {}
+[13.823285] (-) TimerEvent: {}
+[13.923437] (-) TimerEvent: {}
+[14.023588] (-) TimerEvent: {}
+[14.090121] (armor_tracker_node) StdoutLine: {'line': b'[ 16%] Linking CXX executable armor_tracker_node\n'}
+[14.123677] (-) TimerEvent: {}
+[14.223840] (-) TimerEvent: {}
+[14.324007] (-) TimerEvent: {}
+[14.424205] (-) TimerEvent: {}
+[14.524375] (-) TimerEvent: {}
+[14.542013] (armor_tracker_node) StdoutLine: {'line': b'[100%] Built target armor_tracker_node\n'}
+[14.551850] (armor_tracker_node) CommandEnded: {'returncode': 0}
+[14.552502] (armor_tracker_node) JobProgress: {'identifier': 'armor_tracker_node', 'progress': 'install'}
+[14.558031] (armor_tracker_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node'], 'cwd': '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'eee'), ('LC_TIME', 'zh_CN.UTF-8'), ('GIT_EDITOR', ':'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/eee'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/eee/ros2'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1291'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '1784'), ('BUNDLED_DEBUGPY_PATH', '/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6538'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'eee'), ('JOURNAL_STREAM', '8:17895'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'eee'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('HISTCONTROL', 'ignorespace'), ('WINDOWPATH', '2'), ('PATH', '/home/eee/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/eee/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/eee/.local/bin:/opt/ros/humble/bin:/home/eee/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/eee-Predator-PHN16-72:@/tmp/.ICE-unix/1756,unix/eee-Predator-PHN16-72:/tmp/.ICE-unix/1756'), ('INVOCATION_ID', 'cfe692b5820c4ea884d38cc5b002387a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/eee/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-cabe32bc0dfd66b9.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/eee/.config/Code/User/workspaceStorage/453a71c8f0ca34bdc84c70f790de7264/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-03dfb2077b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node'), ('GIT_MERGE_AUTOEDIT', 'no'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble')]), 'shell': False}
+[14.564542] (armor_tracker_node) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[14.564798] (armor_tracker_node) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[14.564980] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/lib/armor_tracker_node/armor_tracker_node\n'}
+[14.565188] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/launch/1.launch.py\n'}
+[14.565320] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/ament_index/resource_index/package_run_dependencies/armor_tracker_node\n'}
+[14.565420] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/ament_index/resource_index/parent_prefix_path/armor_tracker_node\n'}
+[14.565502] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/ament_prefix_path.sh\n'}
+[14.565585] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/ament_prefix_path.dsv\n'}
+[14.565670] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/path.sh\n'}
+[14.565746] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/environment/path.dsv\n'}
+[14.565819] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.bash\n'}
+[14.565892] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.sh\n'}
+[14.565963] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.zsh\n'}
+[14.566059] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/local_setup.dsv\n'}
+[14.566106] (armor_tracker_node) StdoutLine: {'line': b'-- Symlinking: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.dsv\n'}
+[14.573851] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/ament_index/resource_index/packages/armor_tracker_node\n'}
+[14.573982] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/cmake/armor_tracker_nodeConfig.cmake\n'}
+[14.574036] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/cmake/armor_tracker_nodeConfig-version.cmake\n'}
+[14.574156] (armor_tracker_node) StdoutLine: {'line': b'-- Up-to-date symlink: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node/share/armor_tracker_node/package.xml\n'}
+[14.575089] (armor_tracker_node) CommandEnded: {'returncode': 0}
+[14.586520] (armor_tracker_node) JobEnded: {'identifier': 'armor_tracker_node', 'rc': 0}
+[14.586880] (-) EventReactorShutdown: {}

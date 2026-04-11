@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target armor_tracker_node[0m
+[  8%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m

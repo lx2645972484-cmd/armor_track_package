@@ -21,6 +21,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(Eigen3 REQUIRED)
 message(STATUS "Eigen3_INCLUDE_DIRS = ${Eigen3_INCLUDE_DIRS}")
@@ -33,7 +34,6 @@ set(SOURCES
   src/KalmanFilter.cpp 
   src/LightBarProcessor.cpp
   src/MathTool.cpp
-  src/MultipleKalman.cpp
   src/Preprocessing.cpp
   src/RotationCenterSolver.cpp
   src/Vedio.cpp
@@ -58,7 +58,7 @@ target_include_directories(armor_tracker_node
     /home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc
 )
 
-target_link_directories(armor_tracker_node PRIVATE /home/eee/linux_camara/lib/x86)
+target_link_directories(armor_tracker_node PRIVATE /home/eee/linux_camara/lib/x64)
 
 # 链接 OpenCV 库（非 ROS 依赖需要手动链接）
 target_link_libraries(armor_tracker_node
@@ -66,6 +66,7 @@ target_link_libraries(armor_tracker_node
   Eigen3::Eigen
   MVSDK
   gxiapi
+  tf2_geometry_msgs::tf2_geometry_msgs
 )
 
 # 处理 ROS 依赖（自动处理包含目录和链接）
@@ -76,6 +77,7 @@ ament_target_dependencies(armor_tracker_node
   std_msgs
   tf2
   tf2_ros
+  tf2_geometry_msgs
 )
 
 # 安装可执行文件

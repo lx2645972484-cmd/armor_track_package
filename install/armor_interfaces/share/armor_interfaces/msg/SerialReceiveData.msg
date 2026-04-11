@@ -1,1 +1,2 @@
-/home/eee/ros2/src/armor_detect_ros2-main/src/armor_interfaces/msg/SerialReceiveData.msg
+float64 yaw
+float64 pitch

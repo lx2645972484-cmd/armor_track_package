@@ -1,1 +1,31 @@
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_adapter/armor_interfaces/msg/JointState.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from armor_interfaces/msg/JointState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module armor_interfaces {
+  module msg {
+    struct JointState {
+      @verbatim (language="comment", text=
+        "时间戳和坐标系ID")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "关节名称列表")
+      sequence<string> name;
+
+      @verbatim (language="comment", text=
+        "关节位置（旋转关节为弧度，平移关节为米）")
+      sequence<double> position;
+
+      @verbatim (language="comment", text=
+        "关节速度（弧度/秒 或 米/秒）")
+      sequence<double> velocity;
+
+      @verbatim (language="comment", text=
+        "关节力矩或力（Nm 或 N）")
+      sequence<double> effort;
+    };
+  };
+};

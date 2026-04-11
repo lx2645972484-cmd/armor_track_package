@@ -1,0 +1,249 @@
+[0.008s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[0.025s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.110s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.116s] -- Found armor_interfaces: 0.0.0 (/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/share/armor_interfaces/cmake)
+[0.134s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.135s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.139s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.145s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.153s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.178s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.186s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.204s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.205s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.278s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.305s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[0.308s] -- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.368s] -- Eigen3_INCLUDE_DIRS = 
+[0.368s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.370s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.371s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.417s] -- Configuring done
+[0.440s] -- Generating done
+[0.444s] -- Build files have been written to: /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node
+[0.480s] [35m[1mConsolidate compiler generated dependencies of target armor_tracker_node[0m
+[0.508s] [  8%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o[0m
+[0.510s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
+[0.510s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o[0m
+[0.510s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/KalmanFilter.cpp.o[0m
+[0.511s] [ 41%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o[0m
+[0.907s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518[m[K:
+[0.908s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31:10:[m[K [01;31m[Kfatal error: [m[Kimage_transport/image_transport.h: 没有那个文件或目录
+[0.908s]    31 | #include [01;31m[K<image_transport/image_transport.h>[m[K
+[0.908s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.908s] compilation terminated.
+[0.908s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:2[m[K:
+[0.908s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31:10:[m[K [01;31m[Kfatal error: [m[Kimage_transport/image_transport.h: 没有那个文件或目录
+[0.908s]    31 | #include [01;31m[K<image_transport/image_transport.h>[m[K
+[0.908s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.908s] compilation terminated.
+[0.914s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+[0.914s] gmake[2]: *** 正在等待未完成的任务....
+[0.914s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:76：CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o] 错误 1
+[1.883s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:[m[K In member function ‘[01m[Kvoid MultipleKalman::update(const std::vector<double, std::allocator<double> >&, double)[m[K’:
+[1.884s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:41:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::predict()[m[K’
+[1.884s]    41 |         [01;31m[Kk1.predict()[m[K;
+[1.884s]       |         [01;31m[K~~~~~~~~~~^~[m[K
+[1.884s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.884s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.884s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:25:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::predict(double)[m[K’
+[1.884s]    25 |     Eigen::VectorXd [01;36m[Kpredict[m[K(double dt);
+[1.884s]       |                     [01;36m[K^~~~~~~[m[K
+[1.891s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:25:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[1.891s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:46:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::predict()[m[K’
+[1.891s]    46 |         [01;31m[Kk2.predict()[m[K;
+[1.891s]       |         [01;31m[K~~~~~~~~~~^~[m[K
+[1.891s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.891s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.892s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:25:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::predict(double)[m[K’
+[1.892s]    25 |     Eigen::VectorXd [01;36m[Kpredict[m[K(double dt);
+[1.892s]       |                     [01;36m[K^~~~~~~[m[K
+[1.892s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:25:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[1.892s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:57:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.892s]    57 |             [01;31m[Kk1.init(meas, delta_time, meas)[m[K;
+[1.892s]       |             [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.892s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.892s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.892s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.892s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.892s]       |          [01;36m[K^~~~[m[K
+[1.892s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.892s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:70:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.893s]    70 |                 [01;31m[Kk1.init(meas, delta_time, meas)[m[K;
+[1.893s]       |                 [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.893s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.893s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.893s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.893s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.893s]       |          [01;36m[K^~~~[m[K
+[1.893s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.893s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:74:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.893s]    74 |                 [01;31m[Kk1.update(meas, delta_time, pre_yaw1)[m[K;
+[1.893s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.893s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.893s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.893s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.893s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.893s]       |                     [01;36m[K^~~~~~[m[K
+[1.893s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.893s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:91:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.893s]    91 |                 [01;31m[Kk1.init(meas, delta_time, meas)[m[K;
+[1.893s]       |                 [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.893s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.893s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.893s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.894s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.894s]       |          [01;36m[K^~~~[m[K
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:98:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.894s]    98 |                 [01;31m[Kk1.update(meas, delta_time, pre_yaw1)[m[K;
+[1.894s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.894s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.894s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.894s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.894s]       |                     [01;36m[K^~~~~~[m[K
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:105:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.894s]   105 |                 [01;31m[Kk2.update(meas, delta_time, pre_yaw2)[m[K;
+[1.894s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.894s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.894s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.894s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.894s]       |                     [01;36m[K^~~~~~[m[K
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:116:30:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.894s]   116 |                     [01;31m[Kk1.update(meas, delta_time, pre_yaw1)[m[K;
+[1.894s]       |                     [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.894s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.894s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.894s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.894s]       |                     [01;36m[K^~~~~~[m[K
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.894s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:122:30:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.894s]   122 |                     [01;31m[Kk2.update(meas, delta_time, pre_yaw2)[m[K;
+[1.894s]       |                     [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.894s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.894s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.895s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.895s]       |                     [01;36m[K^~~~~~[m[K
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:140:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.895s]   140 |             [01;31m[Kk1.init(m1, delta_time, m1)[m[K;
+[1.895s]       |             [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.895s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.895s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.895s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.895s]       |          [01;36m[K^~~~[m[K
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:150:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.895s]   150 |             [01;31m[Kk2.init(m2, delta_time, m2)[m[K;
+[1.895s]       |             [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.895s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.895s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.895s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.895s]       |          [01;36m[K^~~~[m[K
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:168:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.895s]   168 |                 [01;31m[Kk1.init(m1, delta_time, m1)[m[K;
+[1.895s]       |                 [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.895s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.895s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.895s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.895s]       |          [01;36m[K^~~~[m[K
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.895s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:178:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.895s]   178 |                 [01;31m[Kk2.init(m2, delta_time, m2)[m[K;
+[1.895s]       |                 [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.895s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.895s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.896s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.896s]       |          [01;36m[K^~~~[m[K
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:187:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.896s]   187 |                 [01;31m[Kk1.update(old_meas, delta_time, pre_yaw1)[m[K;
+[1.896s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.896s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.896s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.896s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.896s]       |                     [01;36m[K^~~~~~[m[K
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:196:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.896s]   196 |                 [01;31m[Kk2.init(new_meas, delta_time, new_meas)[m[K;
+[1.896s]       |                 [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.896s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.896s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.896s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.896s]       |          [01;36m[K^~~~[m[K
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:222:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.896s]   222 |                 [01;31m[Kk1.init(m1, delta_time, m1)[m[K;
+[1.896s]       |                 [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.896s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.896s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.896s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.896s]       |          [01;36m[K^~~~[m[K
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:231:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::init(double&, double&, double&)[m[K’
+[1.896s]   231 |                 [01;31m[Kk2.init(m2, delta_time, m2)[m[K;
+[1.896s]       |                 [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.896s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.896s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.896s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Kalman::init(geometry_msgs::msg::PointStamped, double)[m[K’
+[1.897s]    29 |     void [01;36m[Kinit[m[K(geometry_msgs::msg::PointStamped point,double delta_time);
+[1.897s]       |          [01;36m[K^~~~[m[K
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:29:10:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:238:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.897s]   238 |                 [01;31m[Kk2.update(chosen_m_k2, delta_time, pre_yaw2)[m[K;
+[1.897s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.897s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.897s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.897s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.897s]       |                     [01;36m[K^~~~~~[m[K
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:248:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.897s]   248 |                 [01;31m[Kk1.update(chosen_m_k1, delta_time, pre_yaw1)[m[K;
+[1.897s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.897s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.897s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.897s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.897s]       |                     [01;36m[K^~~~~~[m[K
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:255:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.897s]   255 |                 [01;31m[Kk1.update(chosen_m_k1, delta_time, pre_yaw1)[m[K;
+[1.897s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.897s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.897s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.897s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.897s]       |                     [01;36m[K^~~~~~[m[K
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:257:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KKalman::update(double&, double&, double&)[m[K’
+[1.897s]   257 |                 [01;31m[Kk2.update(chosen_m_k2, delta_time, pre_yaw2)[m[K;
+[1.897s]       |                 [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.897s] In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MultipleKalman.h:4[m[K,
+[1.897s]                  from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp:1[m[K:
+[1.897s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped)[m[K’
+[1.897s]    27 |     Eigen::VectorXd [01;36m[Kupdate[m[K(geometry_msgs::msg::PointStamped point);
+[1.898s]       |                     [01;36m[K^~~~~~[m[K
+[1.898s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/KalmanFilter.h:27:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[2.131s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/RotationCenterSolver.cpp:[m[K In member function ‘[01m[Kvoid RotationCenterSolver::addObservation(const cv::Mat&, const cv::Mat&)[m[K’:
+[2.132s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/RotationCenterSolver.cpp:21:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<RotationCenterSolver::Observation>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.132s]    21 |     if ([01;35m[Khistory.size() > max_history_size[m[K)
+[2.132s]       |         [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[2.216s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:132：CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o] 错误 1
+[5.753s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+[5.753s] gmake: *** [Makefile:146：all] 错误 2
+[5.755s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '2': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20

@@ -306,30 +306,6 @@ src/MathTool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.s
 .PHONY : src/MathTool.cpp.s
 
-src/MultipleKalman.o: src/MultipleKalman.cpp.o
-.PHONY : src/MultipleKalman.o
-
-# target to build an object file
-src/MultipleKalman.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o
-.PHONY : src/MultipleKalman.cpp.o
-
-src/MultipleKalman.i: src/MultipleKalman.cpp.i
-.PHONY : src/MultipleKalman.i
-
-# target to preprocess a source file
-src/MultipleKalman.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.i
-.PHONY : src/MultipleKalman.cpp.i
-
-src/MultipleKalman.s: src/MultipleKalman.cpp.s
-.PHONY : src/MultipleKalman.s
-
-# target to generate assembly for a file
-src/MultipleKalman.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.s
-.PHONY : src/MultipleKalman.cpp.s
-
 src/Preprocessing.o: src/Preprocessing.cpp.o
 .PHONY : src/Preprocessing.o
 
@@ -502,9 +478,6 @@ help:
 	@echo "... src/MathTool.o"
 	@echo "... src/MathTool.i"
 	@echo "... src/MathTool.s"
-	@echo "... src/MultipleKalman.o"
-	@echo "... src/MultipleKalman.i"
-	@echo "... src/MultipleKalman.s"
 	@echo "... src/Preprocessing.o"
 	@echo "... src/Preprocessing.i"
 	@echo "... src/Preprocessing.s"

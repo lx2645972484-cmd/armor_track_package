@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target armor_tracker_node[0m
+[  8%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:35:10:[m[K [01;31m[Kfatal error: [m[Kcv_bridge/cv_bridge.h: 没有那个文件或目录
+   35 | #include [01;31m[K<cv_bridge/cv_bridge.h>[m[K // 需要在 package.xml 和 CMakeLists.txt 加上 cv_bridge 依赖
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:2[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:35:10:[m[K [01;31m[Kfatal error: [m[Kcv_bridge/cv_bridge.h: 没有那个文件或目录
+   35 | #include [01;31m[K<cv_bridge/cv_bridge.h>[m[K // 需要在 package.xml 和 CMakeLists.txt 加上 cv_bridge 依赖
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:76：CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

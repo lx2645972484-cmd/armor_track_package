@@ -5,6 +5,7 @@
 #include <vector>
 #include <cmath>
 #include <deque>
+#include "geometry_msgs/msg/point_stamped.hpp"
 
 //接口：
 class Kalman
@@ -21,11 +22,11 @@ public:
     
     Kalman(int state,int guance);
 
-    double predict();
+    Eigen::VectorXd predict(double dt);
 
-    double update(double yaw,double delta_time,double pre_yaw);
+    Eigen::VectorXd update(geometry_msgs::msg::PointStamped point);
 
-    void init(double yaw,double delta_time,double pre_yaw);
+    void init(geometry_msgs::msg::PointStamped point,double delta_time);
 };
 
 #endif

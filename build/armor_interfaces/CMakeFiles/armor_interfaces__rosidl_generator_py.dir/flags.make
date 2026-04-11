@@ -6,5 +6,5 @@ C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"armor_interfac
 
 C_INCLUDES = -I/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_c -I/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_generator_py -I/usr/include/python3.10 -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface
 
-C_FLAGS = -O3 -DNDEBUG -fPIC -Wall -Wextra
+C_FLAGS = -fPIC -Wall -Wextra
 

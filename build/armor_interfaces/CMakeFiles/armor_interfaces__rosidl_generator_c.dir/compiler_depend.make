@@ -40,7 +40,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -48,9 +47,7 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/detail/armor_info__struct.h \
@@ -63,8 +60,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /opt/ros/humble/include/rcutils/rcutils/allocator.h \
   /opt/ros/humble/include/rcutils/rcutils/macros.h \
   /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h \
@@ -77,8 +72,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h
@@ -122,7 +115,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -130,9 +122,7 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/detail/joint_state__struct.h \
@@ -149,8 +139,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /opt/ros/humble/include/rcutils/rcutils/allocator.h \
   /opt/ros/humble/include/rcutils/rcutils/macros.h \
   /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h \
@@ -163,8 +151,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
@@ -212,7 +198,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -220,9 +205,7 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__struct.h \
@@ -235,8 +218,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /opt/ros/humble/include/rcutils/rcutils/allocator.h \
   /opt/ros/humble/include/rcutils/rcutils/macros.h \
   /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h \
@@ -249,8 +230,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h
@@ -294,7 +273,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -302,9 +280,7 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__struct.h \
@@ -317,8 +293,6 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /opt/ros/humble/include/rcutils/rcutils/allocator.h \
   /opt/ros/humble/include/rcutils/rcutils/macros.h \
   /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h \
@@ -331,14 +305,14 @@ CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_int
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h
 
 
 rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.c:
+
+rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__struct.h:
 
 rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__functions.h:
 
@@ -362,8 +336,6 @@ rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
@@ -375,20 +347,6 @@ rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.c:
 /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h:
 
 /opt/ros/humble/include/rcutils/rcutils/allocator.h:
-
-rosidl_generator_c/armor_interfaces/msg/detail/serial_driver__struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
-
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
-
-/usr/include/strings.h:
-
-/usr/include/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
@@ -412,7 +370,13 @@ rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -436,6 +400,8 @@ rosidl_generator_c/armor_interfaces/msg/detail/serial_receive_data__functions.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 rosidl_generator_c/armor_interfaces/msg/rosidl_generator_c__visibility_control.h:
@@ -445,6 +411,8 @@ rosidl_generator_c/armor_interfaces/msg/rosidl_generator_c__visibility_control.h
 /usr/include/features-time64.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h:
 
@@ -490,15 +458,7 @@ rosidl_generator_c/armor_interfaces/msg/detail/armor_info__functions.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
 rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
@@ -518,18 +478,16 @@ rosidl_generator_c/armor_interfaces/msg/detail/joint_state__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
-rosidl_generator_c/armor_interfaces/msg/detail/armor_info__struct.h:
-
-/usr/include/assert.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+rosidl_generator_c/armor_interfaces/msg/detail/armor_info__struct.h:
+
+/usr/include/assert.h:
+
+/usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:

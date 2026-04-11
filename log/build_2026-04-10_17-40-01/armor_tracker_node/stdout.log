@@ -1,0 +1,4 @@
+[  8%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
+[ 33%] [32m[1mLinking CXX executable armor_tracker_node[0m

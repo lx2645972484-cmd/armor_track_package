@@ -125,24 +125,10 @@ CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MathTool.cpp -o CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.s
 
-CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
-CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp
-CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp
-
-CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp > CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.i
-
-CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MultipleKalman.cpp -o CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.s
-
 CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
 CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/Preprocessing.cpp
 CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/Preprocessing.cpp
 
 CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.i: cmake_force
@@ -156,7 +142,7 @@ CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.s: cmake_force
 CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
 CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/RotationCenterSolver.cpp
 CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/RotationCenterSolver.cpp
 
 CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.i: cmake_force
@@ -170,7 +156,7 @@ CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.s: cmake_force
 CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
 CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/Vedio.cpp
 CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/Vedio.cpp
 
 CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.s: cmake_force
 CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
 CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp
 CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp
 
 CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.s: cmake_force
 CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
 CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/armor_camera_capture.cpp
 CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/armor_camera_capture.cpp
 
 CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.i: cmake_force
@@ -212,7 +198,7 @@ CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.s: cmake_force
 CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
 CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp
 CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp
 
 CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.i: cmake_force
@@ -229,7 +215,6 @@ armor_tracker_node_OBJECTS = \
 "CMakeFiles/armor_tracker_node.dir/src/KalmanFilter.cpp.o" \
 "CMakeFiles/armor_tracker_node.dir/src/LightBarProcessor.cpp.o" \
 "CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.o" \
-"CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o" \
 "CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o" \
 "CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o" \
 "CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o" \
@@ -244,7 +229,6 @@ armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/KalmanFilter.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/LightBarProcessor.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.o
-armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/MultipleKalman.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/Preprocessing.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o
@@ -313,6 +297,7 @@ armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
+armor_tracker_node: /usr/lib/x86_64-linux-gnu/liborocos-kdl.so
 armor_tracker_node: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_c.so
 armor_tracker_node: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_c.so
 armor_tracker_node: /opt/ros/humble/lib/libtf2_ros.so
@@ -415,7 +400,7 @@ armor_tracker_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_genera
 armor_tracker_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 armor_tracker_node: /opt/ros/humble/lib/librcutils.so
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable armor_tracker_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable armor_tracker_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/armor_tracker_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

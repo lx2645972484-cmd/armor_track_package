@@ -1,1 +1,14 @@
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_interfaces/rosidl_adapter/armor_interfaces/msg/ArmorInfo.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from armor_interfaces/msg/ArmorInfo.msg
+// generated code does not contain a copyright notice
+
+
+module armor_interfaces {
+  module msg {
+    struct ArmorInfo {
+      double yaw;
+
+      double time;
+    };
+  };
+};

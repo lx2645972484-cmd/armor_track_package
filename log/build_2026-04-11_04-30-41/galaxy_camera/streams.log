@@ -1,0 +1,17 @@
+[0.008s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/galaxy_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/galaxy_camera -- -j20 -l20
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target galaxy_camera[0m
+[0.073s] [ 50%] Built target galaxy_camera_node
+[0.078s] [ 75%] [32mBuilding CXX object CMakeFiles/galaxy_camera.dir/src/galaxy_camera_node.cpp.o[0m
+[1.548s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/rm_vision_ros2_galaxy_camera-master/src/galaxy_camera_node.cpp:[m[K In constructor ‘[01m[Kgalaxy_camera::GalaxyCameraNode::GalaxyCameraNode(const rclcpp::NodeOptions&)[m[K’:
+[1.548s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/rm_vision_ros2_galaxy_camera-master/src/galaxy_camera_node.cpp:66:79:[m[K [01;31m[Kerror: [m[K‘[01m[KFalse[m[K’ was not declared in this scope
+[1.548s]    66 | ensor_data_qos = this->declare_parameter("use_sensor_data_qos", [01;31m[KFalse[m[K);
+[1.548s]       |                                                                 [01;31m[K^~~~~[m[K
+[1.548s] 
+[1.560s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/rm_vision_ros2_galaxy_camera-master/src/galaxy_camera_node.cpp:66:10:[m[K [01;31m[Kerror: [m[Kunused variable ‘[01m[Kuse_sensor_data_qos[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Werror=unused-variable]8;;[m[K]
+[1.560s]    66 |     bool [01;31m[Kuse_sensor_data_qos[m[K = this->declare_parameter("use_sensor_data_qos", False);
+[1.560s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.900s] cc1plus: all warnings being treated as errors
+[1.915s] gmake[2]: *** [CMakeFiles/galaxy_camera.dir/build.make:76：CMakeFiles/galaxy_camera.dir/src/galaxy_camera_node.cpp.o] 错误 1
+[1.916s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/galaxy_camera.dir/all] 错误 2
+[1.916s] gmake: *** [Makefile:146：all] 错误 2
+[1.918s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/galaxy_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/galaxy_camera -- -j20 -l20

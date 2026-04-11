@@ -1,1 +1,1 @@
-/home/eee/ros2/src/armor_detect_ros2-main/build/armor_drawer/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/armor_drawer
+armor_interfaces;geometry_msgs;rclcpp;std_msgs;tf2;tf2_ros;opencv4;robot_state_publisher;rviz2;launch;launch_ros

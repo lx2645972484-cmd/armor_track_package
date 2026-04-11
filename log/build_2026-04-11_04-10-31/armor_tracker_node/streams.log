@@ -1,0 +1,49 @@
+[0.008s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20
+[0.054s] Consolidate compiler generated dependencies of target armor_tracker_node
+[0.067s] [  8%] Building CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o
+[2.771s] In file included from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+[2.771s]                  from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+[2.771s] /opt/ros/humble/include/image_transport/image_transport/image_transport.h:32:89: note: ‘#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead’
+[2.771s]    32 | #pragma message ("Warning: This header is deprecated. Use 'image_transport.hpp' instead")
+[2.772s]       |                                                                                         ^
+[2.942s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::initialize()’:
+[2.942s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:535:90: error: no matching function for call to ‘image_transport::ImageTransport::ImageTransport(std::shared_ptr<rclcpp::Node>, const char [4], const rmw_qos_profile_t&)’
+[2.942s]   535 |     image_transport::ImageTransport it(shared_from_this(), "raw", rmw_qos_profile_default);
+[2.942s]       |                                                                                          ^
+[2.942s] In file included from /opt/ros/humble/include/image_transport/image_transport/image_transport.h:34,
+[2.942s]                  from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:31,
+[2.942s]                  from /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:518:
+[2.942s] /opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:12: note: candidate: ‘image_transport::ImageTransport::ImageTransport(rclcpp::Node::SharedPtr)’
+[2.942s]   111 |   explicit ImageTransport(rclcpp::Node::SharedPtr node);
+[2.942s]       |            ^~~~~~~~~~~~~~
+[2.942s] /opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:12: note:   candidate expects 1 argument, 3 provided
+[2.960s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::run()’:
+[2.960s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:661:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<cv::Point_<int> > >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+[2.960s]   661 |         for (int i = 0; i < contours.size(); i++)
+[2.960s]       |                         ~~^~~~~~~~~~~~~~~~~
+[2.961s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:695:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<LightBar>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+[2.961s]   695 |         for (int i = 0; i < this->LightBarVector.size(); i++)
+[2.961s]       |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2.961s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:697:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<LightBar>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+[2.961s]   697 |             for (int j = i + 1; j < this->LightBarVector.size(); j++)
+[2.961s]       |                                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2.964s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:640:16: warning: unused variable ‘delta_time’ [-Wunused-variable]
+[2.964s]   640 |         double delta_time = 1.0 / fps;
+[2.964s]       |                ^~~~~~~~~~
+[2.964s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:9: warning: unused variable ‘frame_width’ [-Wunused-variable]
+[2.964s]   606 |     int frame_width = 0, frame_height = 0;
+[2.964s]       |         ^~~~~~~~~~~
+[2.965s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:606:26: warning: unused variable ‘frame_height’ [-Wunused-variable]
+[2.965s]   606 |     int frame_width = 0, frame_height = 0;
+[2.965s]       |                          ^~~~~~~~~~~~
+[2.965s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:607:23: warning: unused variable ‘current_time_ms’ [-Wunused-variable]
+[2.965s]   607 |     double fps = 0.0, current_time_ms = 0.0;
+[2.965s]       |                       ^~~~~~~~~~~~~~~
+[2.972s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp: In member function ‘void ArmorTracker::cameraCallback(const ConstSharedPtr&, const ConstSharedPtr&)’:
+[2.972s] /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1027:88: warning: unused parameter ‘camera_info’ [-Wunused-parameter]
+[2.972s]  1027 |                                    const sensor_msgs::msg::CameraInfo::ConstSharedPtr& camera_info)
+[2.972s]       |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+[6.093s] gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:188：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+[6.093s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+[6.093s] gmake: *** [Makefile:146：all] 错误 2
+[6.095s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node' returned '2': CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_tracker_node:/home/eee/ros2/src/armor_detect_ros2-main/install/armor_drawer:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/rm_serial_driver/lib:/home/eee/ros2/src/armor_detect_ros2-main/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node -- -j20 -l20

@@ -26,6 +26,7 @@
 #include "tf2_ros/buffer.h"
 #include <tf2_ros/create_timer_ros.h>
 #include <tf2_ros/message_filter.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 #include "RotationCenterSolver.h"
 #include "KalmanFilter.h"
@@ -56,8 +57,11 @@ private:
     // 工具类
     MathTool mtl;
 
+    // 单目标卡尔曼类
+    Kalman kalman{9,3}; // 9维状态，3维观测
+
     // 多目标卡尔曼类
-    MultipleKalman mltkalman;
+    // MultipleKalman mltkalman;
 
     // armor_camera::ArmorCameraCapture camera_capture_;
 
@@ -108,6 +112,10 @@ private:
 
     geometry_msgs::msg::PointStamped point_out; // 转换后的目标点
 
+    rclcpp::Time last_time_; // 上次处理消息的时间，用于计算时间间隔
+
+    bool KalmanInit = false; // 卡尔曼滤波器是否已初始化
+
 public:
     ArmorTracker();
     void run();
@@ -120,7 +128,7 @@ private:
 
     void ColorDetect(std::vector<cv::Point> contour,LightBar light,cv::Mat img);
 
-    void publish_to_serial_driver(double yaw, double pitch,std::vector<cv::Point2f> armorPoints);
+    void publish_to_serial_driver(double yaw, double pitch,const std::vector<cv::Point2f> &armorPoints);
 
     void receiveDataCallback(armor_interfaces::msg::SerialReceiveData::SharedPtr msg);
 

@@ -1,0 +1,8 @@
+[0.007s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20
+[0.055s] [ 22%] Built target rm_serial_driver_node
+[0.063s] [ 33%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[7.632s] [ 44%] [32m[1mLinking CXX shared library librm_serial_driver.so[0m
+[8.040s] [ 55%] Built target rm_serial_driver
+[8.074s] [ 66%] [32mBuilding CXX object CMakeFiles/rm_serial_node.dir/src/rm_serial_driver.cpp.o[0m
+[14.174s] [ 77%] [32m[1mLinking CXX executable rm_serial_node[0m
+[14.582s] [100%] Built target rm_serial_node
