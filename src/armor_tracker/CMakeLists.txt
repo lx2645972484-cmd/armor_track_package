@@ -23,6 +23,9 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(image_transport REQUIRED)
 find_package(Eigen3 REQUIRED)
 message(STATUS "Eigen3_INCLUDE_DIRS = ${Eigen3_INCLUDE_DIRS}")
 
@@ -78,6 +81,9 @@ ament_target_dependencies(armor_tracker_node
   tf2
   tf2_ros
   tf2_geometry_msgs
+  sensor_msgs
+  cv_bridge
+  image_transport
 )
 
 # 安装可执行文件

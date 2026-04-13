@@ -9,6 +9,10 @@
 #include <algorithm>
 #include <string>
 #include <Eigen/Dense>
+#include <thread>
+#include <sensor_msgs/msg/image.hpp>
+#include <cv_bridge/cv_bridge.h>
+#include <image_transport/image_transport.hpp>
 
 #include "armor_interfaces/msg/armor_info.hpp"
 #include "armor_interfaces/msg/serial_driver.hpp"
@@ -116,10 +120,13 @@ private:
 
     bool KalmanInit = false; // 卡尔曼滤波器是否已初始化
 
+    // std::thread image_process_thread_; // 图像处理线程
+
+    image_transport::Publisher debug_image_pub_; // 调试图像发布者
+
 public:
     ArmorTracker();
     void run();
-    
 
 private:
     void publish_armor_msg();
@@ -130,7 +137,7 @@ private:
 
     void publish_to_serial_driver(double yaw, double pitch,const std::vector<cv::Point2f> &armorPoints);
 
-    void receiveDataCallback(armor_interfaces::msg::SerialReceiveData::SharedPtr msg);
+    void receiveDataCallback(const armor_interfaces::msg::SerialReceiveData msg);
 
     void msgCallback(const geometry_msgs::msg::PointStamped::SharedPtr point_ptr);  
 };

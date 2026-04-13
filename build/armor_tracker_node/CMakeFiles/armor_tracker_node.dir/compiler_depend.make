@@ -606,6 +606,9 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: /home/eee/ros2/src/arm
   /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
   /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.hpp \
   /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.hpp \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
@@ -681,10 +684,7 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: /home/eee/ros2/src/arm
   /usr/include/c++/11/future \
   /usr/include/c++/11/condition_variable \
   /usr/include/c++/11/bits/atomic_futex.h \
-  /usr/include/c++/11/bits/std_thread.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
-  /usr/include/c++/11/thread \
-  /usr/include/c++/11/bits/this_thread_sleep.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
   /opt/ros/humble/include/rcl/rcl/guard_condition.h \
   /opt/ros/humble/include/rcl/rcl/allocator.h \
@@ -5059,6 +5059,9 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
   /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
   /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.hpp \
   /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.hpp \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
@@ -5134,10 +5137,7 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
   /usr/include/c++/11/future \
   /usr/include/c++/11/condition_variable \
   /usr/include/c++/11/bits/atomic_futex.h \
-  /usr/include/c++/11/bits/std_thread.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
-  /usr/include/c++/11/thread \
-  /usr/include/c++/11/bits/this_thread_sleep.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
   /opt/ros/humble/include/rcl/rcl/guard_condition.h \
   /opt/ros/humble/include/rcl/rcl/allocator.h \
@@ -7287,6 +7287,18 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
+/opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp:
+
+/usr/include/c++/11/bits/std_thread.h:
+
+/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/usr/include/c++/11/bits/this_thread_sleep.h:
+
 /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
@@ -7482,18 +7494,6 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
 /usr/include/c++/11/future:
-
-/usr/include/c++/11/bits/std_thread.h:
-
-/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp:
-
-/usr/include/c++/11/bits/this_thread_sleep.h:
 
 /opt/ros/humble/include/rcl/rcl/guard_condition.h:
 

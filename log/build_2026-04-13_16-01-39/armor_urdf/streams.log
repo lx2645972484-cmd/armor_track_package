@@ -1,0 +1,25 @@
+[0.009s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf -- -j20 -l20
+[0.037s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf -- -j20 -l20
+[0.043s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf
+[0.048s] -- Install configuration: ""
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/launch
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/urdf
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/urdf/armor_urdf.urdf
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/rviz
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/meshes
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/ament_index/resource_index/package_run_dependencies/armor_urdf
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/ament_index/resource_index/parent_prefix_path/armor_urdf
+[0.048s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/ament_prefix_path.sh
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/ament_prefix_path.dsv
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/path.sh
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/environment/path.dsv
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.bash
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.sh
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.zsh
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/local_setup.dsv
+[0.049s] -- Installing: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/package.dsv
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/ament_index/resource_index/packages/armor_urdf
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/cmake/armor_urdfConfig.cmake
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/cmake/armor_urdfConfig-version.cmake
+[0.049s] -- Up-to-date: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_urdf/share/armor_urdf/package.xml
+[0.051s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/eee/ros2/src/armor_detect_ros2-main/build/armor_urdf

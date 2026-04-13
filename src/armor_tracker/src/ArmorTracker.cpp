@@ -7,14 +7,17 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
 {
     int num_cores = cv::getNumberOfCPUs();
     cv::setNumThreads(num_cores);
+
+    // 初始化调试图像发布者
+    debug_image_pub_ = image_transport::create_publisher(this, "/tracker/debug_image");
+
     // 初始化发布者和TF广播器
     armor_info_publisher = this->create_publisher<armor_interfaces::msg::ArmorInfo>("armor_info", 10);
     center_publisher = this->create_publisher<geometry_msgs::msg::PointStamped>("center_point", 10);
-    // tf_broadcaster = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
     // 发布相机到世界坐标系的初始姿态
     tf_camera_to_world_publisher_ = this->create_publisher<armor_interfaces::msg::JointState>("/joint_states", 10);
-    joint_state_msg_.name = {"pan_yaw_joint", "tilt_pitch_joint"};
+    joint_state_msg_.name = {"yaw_joint", "pitch_joint"};
     joint_state_msg_.position = {0.0, 0.0};
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
 
@@ -63,7 +66,7 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
         return;
     }
     galaxy_camera_.startCapture();        // 手动开始采集线程
-    galaxy_camera_.setExposureTime(5000); // 设置曝光时间为2000微秒
+    galaxy_camera_.setExposureTime(5000); // 设置曝光时间为5000微秒
 
     // if (!camera_ready_)
     // {
@@ -97,8 +100,8 @@ void ArmorTracker::run()
     // 图像相关参数
     cv::Mat img, imgClose;
     galaxy_camera::ImageData img_data;
-    int blue_thre_value = 100; // 二值化查找蓝色装甲板光条参数
-    int red_thre_value = 100;
+    int blue_thre_value = 50; // 二值化查找蓝色装甲板光条参数
+    int red_thre_value = 50;
 
     // int frame_width = 0, frame_height = 0;
     // double fps = 0.0, current_time_ms = 0.0;
@@ -352,7 +355,6 @@ void ArmorTracker::run()
 
                 geometry_msgs::msg::PointStamped point_in;
                 point_in.header.frame_id = "camera_link";
-                // 注意：不要用 this->now()，用 tf2::TimePointZero 获取最新可用的 TF 即可，防止时间戳不匹配报错
                 point_in.header.stamp = rclcpp::Time(0);
                 point_in.point.x = tx;
                 point_in.point.y = ty;
@@ -362,21 +364,15 @@ void ArmorTracker::run()
 
                 try
                 {
-                    // 2. 直接在当前线程同步将点转换到底盘坐标系
-                    tf_buffer_->transform(point_in, point_out_local, target_frame_, tf2::durationFromSec(0.05));
+                    tf_buffer_->transform(point_in, point_out_local, target_frame_, tf2::durationFromSec(0.0));
 
-                    // 3. 将转换成功的点交给你的成员变量，供卡尔曼滤波使用
                     this->point_out = point_out_local;
-
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
-                                         "转换成功! X:%.2f Y:%.2f Z:%.2f",
-                                         point_out.point.x, point_out.point.y, point_out.point.z);
                 }
                 catch (const tf2::TransformException &ex)
                 {
+                    // 如果查不到，说明底盘位姿没跟上，丢弃这帧的数据，直接 continue 抓取下一张图
                     RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
-                                         "坐标变换失败: %s", ex.what());
-                    // 变换失败时跳过本次卡尔曼更新
+                                         "坐标变换未就绪，丢弃本帧: %s", ex.what());
                     continue;
                 }
 
@@ -391,6 +387,12 @@ void ArmorTracker::run()
                 double horiz = std::sqrt(tx * tx + tz * tz);
                 pitch = std::atan2(-ty, horiz) * 180 / M_PI;
 
+                // std::cout << "装甲板中心点坐标 (观测量): "
+                //           << " | Yaw: " << yaw
+                //           << " Pitch: " << pitch
+                //           << " horiz: " << horiz
+                //           << std::endl;
+
                 cv::Point2f armor_center(0, 0);
                 for (const auto &p : armorPoints)
                     armor_center += p;
@@ -402,24 +404,6 @@ void ArmorTracker::run()
             }
         }
 
-        // if (!current_yaws.empty())
-        // {
-        //     mltkalman.update(current_yaws, delta_time);
-        // }
-
-        // armorTracker_.time = current_time_ms / 1000.0;
-
-        // if (mltkalman.is_active1())
-        // {
-        //     armorTracker_.yaw = mltkalman.get_yaw1();
-        //     armor_info_publisher->publish(armorTracker_);
-        // }
-
-        // if (mltkalman.is_active2())
-        // {
-        //     armorTracker_.yaw = mltkalman.get_yaw2();
-        //     armor_info_publisher->publish(armorTracker_);
-        // }
         if (KalmanInit == false)
         {
             kalman.init(point_out, delta_time);
@@ -433,7 +417,7 @@ void ArmorTracker::run()
         }
 
         geometry_msgs::msg::PointStamped kalman_point;
-        kalman_point.header.frame_id = "camera_link";
+        kalman_point.header.frame_id = "turret_base_link";
         kalman_point.header.stamp = this->now();
         kalman_point.point.x = kalman.X(0);
         kalman_point.point.y = kalman.X(1);
@@ -443,38 +427,61 @@ void ArmorTracker::run()
         double y = -kalman.X(2);
         double x = -kalman.X(1);
 
-        geometry_msgs::msg::PointStamped trans_kalman_point;
-        trans_kalman_point.header.frame_id = "camera_link";
-        trans_kalman_point.header.stamp = this->now();
-        trans_kalman_point.point.x = x;
-        trans_kalman_point.point.y = y;
-        trans_kalman_point.point.z = z;
-
-        cv::circle(img, cv::Point2f(x, y), 10, cv::Scalar(0, 0, 255), -1);
-
         geometry_msgs::msg::PointStamped test;
+        test.header.frame_id = "camera_link";
+        test.header.stamp = this->now();
+        test.point.x = x;
+        test.point.y = y;
+        test.point.z = z;
 
-        tf_buffer_->transform(kalman_point, test, "camera_link");
+        // std::cout << "卡尔曼滤波预测点坐标 (相机坐标系): X=" << test.point.x
+        //<< " Y=" << test.point.y
+        // << " Z=" << test.point.z << std::endl;
 
-        double yaw_test = std::atan2(test.point.y, test.point.x) * 180.0 / M_PI;
-        double horiz_test = std::sqrt(test.point.x * test.point.x + test.point.y * test.point.y);
-        double pitch_test = std::atan2(test.point.z, horiz_test) * 180.0 / M_PI;
+        std::vector<cv::Point3f> out_center_3d;
+        out_center_3d.emplace_back(x, y, z);
+        std::vector<cv::Point2f> out_center_2d;
+
+        // 优化：复用初始化的 zeros 矩阵，杜绝每帧动态生成 Mat 的操作
+        cv::projectPoints(out_center_3d, rvec_zero, tvec_zero,
+                          camera_matrix, dist_coeffs, out_center_2d);
+
+        cv::circle(img, out_center_2d[0], 8, cv::Scalar(0, 0, 255), -1);
 
         // geometry_msgs::msg::PointStamped test;
 
-        // double yaw_test = std::atan2(kalman_point.point.y, kalman_point.point.x) * 180.0 / M_PI;
-        // double horiz_test = std::sqrt(kalman_point.point.x * kalman_point.point.x + kalman_point.point.y * kalman_point.point.y);
-        // double pitch_test = std::atan2(kalman_point.point.z, horiz_test) * 180.0 / M_PI;
+        // tf_buffer_->transform(kalman_point, test, "camera_link");
 
-        cv::imshow("Armor Tracker", img);
+        double yaw_test = std::atan2(kalman_point.point.y, kalman_point.point.x) * 180.0 / M_PI;
+        double horiz_test = std::sqrt(kalman_point.point.x * kalman_point.point.x + kalman_point.point.y * kalman_point.point.y);
+        double pitch_test = std::atan2(kalman_point.point.z, horiz_test) * 180.0 / M_PI;
+
+        // RCLCPP_INFO(this->get_logger(), "卡尔曼滤波预测点角度 (世界坐标系): X=%.2f Y=%.2f Z=%.2f", yaw_test, pitch_test, horiz_test);
+
+
+        if (debug_image_pub_.getNumSubscribers() > 0)
+        {
+            std_msgs::msg::Header header;
+            // 获取当前时间戳
+            header.stamp = this->now();
+            // 填入相机的坐标系 ID，跟你 TF 发布的一致即可
+            header.frame_id = "camera_link";
+
+            // cv_bridge::CvImage 将 header、图像编码格式("bgr8")和原始 cv::Mat 包装起来
+            // toImageMsg() 将其转化为 sensor_msgs::msg::Image
+            auto img_msg = cv_bridge::CvImage(header, "bgr8", img).toImageMsg();
+
+            // 发布图像！
+            debug_image_pub_.publish(img_msg);
+        }
 
         publish_to_serial_driver(yaw_test, pitch_test, armorPoints);
 
-        char key = cv::waitKey(30);
-        if (key == 27)
-        {
-            break;
-        }
+        // char key = cv::waitKey(30);
+        // if (key == 27)
+        // {
+        //     break;
+        // }
     }
 
     galaxy_camera_.stop();
@@ -561,7 +568,7 @@ void ArmorTracker::publish_to_serial_driver(double yaw, double pitch, const std:
 {
     armor_interfaces::msg::SerialDriver serial_msg;
     // RCLCPP_INFO(this->get_logger(), "Yaw: %.2f, Pitch: %.2f", yaw, pitch);
-    serial_msg.yaw = -yaw;
+    serial_msg.yaw = yaw;
     if (pitch < -180 || pitch > 180)
     {
         RCLCPP_INFO(this->get_logger(), "Pitch angle out of range: %f", pitch);
@@ -583,10 +590,13 @@ void ArmorTracker::publish_to_serial_driver(double yaw, double pitch, const std:
     serial_driver_publisher_->publish(serial_msg);
 }
 
-void ArmorTracker::receiveDataCallback(armor_interfaces::msg::SerialReceiveData::SharedPtr msg)
+void ArmorTracker::receiveDataCallback(const armor_interfaces::msg::SerialReceiveData msg)
 {
-    joint_state_msg_.position[0] = msg->yaw;
-    joint_state_msg_.position[1] = msg->pitch;
+    joint_state_msg_.position[0] = msg.yaw;
+    joint_state_msg_.position[1] = msg.pitch;
+
+    std::cout << "从串口获取的yaw和pitch - Yaw: " << msg.yaw
+              << " Pitch: " << msg.pitch << std::endl;
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
 }
 

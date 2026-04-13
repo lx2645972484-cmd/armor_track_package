@@ -94,6 +94,6 @@ void Kalman::init(geometry_msgs::msg::PointStamped point,double delta_time)
 
     X << point.point.x, point.point.y, point.point.z, 0, 0, 0, 0, 0, 0;
     P = Eigen::MatrixXd::Identity(9, 9);
-    P.block<3,3>(3,3) = Eigen::MatrixXd::Identity(3,3) * 100.0;
-    P.block<3,3>(6,6) = Eigen::MatrixXd::Identity(3,3) * 500.0;
+    P.block<3,3>(3,3) = Eigen::MatrixXd::Identity(3,3) * 10.0;
+    P.block<3,3>(6,6) = Eigen::MatrixXd::Identity(3,3) * 50.0;
 }

@@ -92,13 +92,14 @@ def generate_launch_description():
     )
 
     # ========== RViz2 ==========
-    # rviz2_node = Node(
-    #     package="rviz2",
-    #     executable="rviz2",
-    #     name="rviz2",
-    #     output="screen"
-    #     # 如需自动加载配置文件，可添加 arguments=["-d", "/path/to/your.rviz"]
-    # )
+    rviz2_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        output="screen",
+        # 如需自动加载配置文件，可添加 arguments=["-d", "/path/to/your.rviz"]
+        # arguments=["-d", os.path.join(tracker_pkg_share, "config", "display_tf.rviz")]   # 可选：自动加载配置
+    )
 
     # ========== 原有业务节点（来自 armor_tracker_node 包） ==========
     armor_tracker_node = Node(
@@ -134,7 +135,7 @@ def generate_launch_description():
         model_arg,
         robot_state_publisher_node,
         joint_state_publisher_node,
-        # rviz2_node,
+        rviz2_node,
         armor_tracker_node,
         armor_drawer_node,
         rm_serial_driver_node,

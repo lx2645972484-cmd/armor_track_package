@@ -481,7 +481,10 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
     auto tracker = std::make_shared<ArmorTracker>();
-    tracker->run();
+    std::thread run_thread([&tracker]() {
+        tracker->run();
+    });
+    run_thread.detach(); // 分离线程，让它在后台跑
     rclcpp::spin(tracker);
     rclcpp::shutdown();
     return 0;

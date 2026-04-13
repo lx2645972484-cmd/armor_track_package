@@ -128,25 +128,25 @@ namespace rm_serial_driver
 
                 // RCLCPP_INFO(get_logger(), "Received header: 0x%02X", header[0]);
 
-                // Invalid header: 0x00
-                //  if (data[0] == 0xAA)
-                //  {
-                //     RCLCPP_INFO(get_logger(), "Received header: 0x%02X", data[0]);
-                //  }
-                //  else
-                //  {
-                //      RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", data[0]);
-                //      continue; // 跳过本次循环，等待下一个数据包
-                //  }
+                
+                 if (data[0] == 0xAA)
+                 {
+                    RCLCPP_INFO(get_logger(), "Received header: 0x%02X", data[0]);
+                 }
+                 else
+                 {
+                     RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", data[0]);
+                     continue; // 跳过本次循环，等待下一个数据包
+                 }
                 
                 
                 // serial_driver_->port()->receive(data);
 
-                // if(data.back() != 0x55)
-                // {
-                //     RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid tail: 0x%02X", data.back());
-                //     continue; // 跳过本次循环，等待下一个数据包
-                // }
+                if(data.back() != 0x55)
+                {
+                    RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid tail: 0x%02X", data.back());
+                    continue; // 跳过本次循环，等待下一个数据包
+                }
 
                 // data.insert(data.begin(), header[0]);
                 for(int i = 0; i < data.size(); i++)
@@ -164,35 +164,15 @@ namespace rm_serial_driver
 
                 // RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", yaw, pitch);
 
-                armor_interfaces::msg::SerialReceiveData::SharedPtr msg = std::make_shared<armor_interfaces::msg::SerialReceiveData>();
-                msg->yaw = yaw;
-                msg->pitch = pitch;
+                armor_interfaces::msg::SerialReceiveData msg;
+                msg.yaw = yaw;
+                msg.pitch = pitch;
 
-                receive_data_publisher_->publish(*msg);
+                RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", msg.yaw, msg.pitch);
 
-                // if (packet.checksum == 0xFE)
-                // {
+                receive_data_publisher_->publish(msg);
 
-                // }
-                // else
-                // {
-                //   RCLCPP_ERROR(get_logger(), "0xFE error!");
-                // }
-
-                // 调试选项
-                //  RCLCPP_INFO(get_logger(), "接收数据: ");
-                //  for(uint8_t byte : data)
-                //  {
-                //      RCLCPP_INFO(get_logger(), "接收数据0x%02X", byte);
-                //  }
-
-                // // 处理数据
-                // int first_int = data[3] * 1000 + data[4] * 100 + data[5] * 10 + data[6];
-                // double first = first_int / 10.0;
-
-                // // 后5个数字组成第二个数：10514 -> 10514 / 100 = 105.14
-                // int second_int = data[8] * 1000 + data[9] * 100 + data[10] * 10 + data[11] * 1;
-                // double second = second_int / 10.0;
+               
 
                 // printf("第一个数: %.2f\n", first);
                 // printf("第二个数: %.2f\n", second);
@@ -238,48 +218,12 @@ namespace rm_serial_driver
             frame.Data.Delta_Pitch_10 = msg->pitch; // 将pitch转换为0.1度单位
             frame.Data.Frame_Tail = 0x55;
             
-            // SendPacket packet;
-            // 处理发送数据
-            // uint8_t yaw_data[5];
-            // uint8_t pitch_data[5];
+            
 
             double yaw;
             double pitch;
 
-            // yaw = msg->yaw;
-            // pitch = msg->pitch;
-            // // int yaw_symbol = msg->yaw_symbol;
-            // // int pitch_symbol = msg->pitch_symbol;
-
-            // float_to_5digit_array(yaw, yaw_data, yaw_symbol);
-            // float_to_5digit_array(pitch, pitch_data, pitch_symbol);
-
-            // std::vector<uint8_t> data(13);
-            // data[0] = 0xAA;
-            // data[1] = 1;
-            // data[2] = yaw_symbol;
-            // data[7] = pitch_symbol;
-            // data[12] = 0x55;
-
-            // for (int i = 3; i <= 6; i++)
-            // {
-            //     data[i] = yaw_data[i - 3];
-            // }
-
-            // for (int i = 8; i <= 11; i++)
-            // {
-            //     data[i] = pitch_data[i - 8];
-            // }
-
-            // for (int i = 0; i < 13; i++)
-            // {
-            //     RCLCPP_INFO(get_logger(), "data[%d]发送数据: %d", i, data[i]);
-            // }
-
-            // std::vector<uint8_t> a;
-            // a.push_back(1);
-
-            // std::vector<uint8_t> data = toVector(packet);
+           
             std::vector<uint8_t> data(frame.Raw, frame.Raw + sizeof(frame));
             serial_driver_->port()->send(data);
 
