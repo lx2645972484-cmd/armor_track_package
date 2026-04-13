@@ -10,6 +10,7 @@
 #include <string>
 #include <Eigen/Dense>
 #include <thread>
+#include <mutex> // 别忘了包含头文件
 #include <sensor_msgs/msg/image.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <image_transport/image_transport.hpp>
@@ -114,7 +115,9 @@ private:
 
     std::shared_ptr<tf2_ros::MessageFilter<geometry_msgs::msg::PointStamped>> tf2_filter_; // 消息过滤器
 
-    geometry_msgs::msg::PointStamped point_out; // 转换后的目标点
+    geometry_msgs::msg::PointStamped target_point_out; // 转换后的目标点
+
+    std::mutex target_point_out_mutex_; // 保护target_point_out的互斥锁
 
     rclcpp::Time last_time_; // 上次处理消息的时间，用于计算时间间隔
 
@@ -124,6 +127,7 @@ private:
 
     image_transport::Publisher debug_image_pub_; // 调试图像发布者
 
+    bool isFindArmor = false; // 是否找到装甲板的标志
 public:
     ArmorTracker();
     void run();

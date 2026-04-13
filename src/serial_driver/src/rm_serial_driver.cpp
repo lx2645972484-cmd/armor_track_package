@@ -33,9 +33,9 @@ namespace rm_serial_driver
     typedef struct
     {
         uint8_t Frame_Header;   // 0xAA
-        uint8_t Mode;           // 0: 哨兵模式, 1: 自瞄模式
-        float Delta_Yaw_10;   // 单位 0.1°，范围 -3276.8° ~ 3276.7°
-        float Delta_Pitch_10; // 单位 0.1°
+        uint8_t Mode;           
+        float Yaw;  
+        float Pitch; 
         uint8_t Frame_Tail;     // 0x55
     } Struct_Camera_USB_Frame;
 #pragma pack(pop)
@@ -159,8 +159,8 @@ namespace rm_serial_driver
                 //     RCLCPP_INFO(get_logger(), "Received data[%d]: 0x%02X", i, Frame.Raw[i]);
                 // }
 
-                double yaw = Frame.Data.Delta_Yaw_10 ;
-                double pitch = Frame.Data.Delta_Pitch_10 ;
+                double yaw = Frame.Data.Yaw ;
+                double pitch = Frame.Data.Pitch ;
 
                 // RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", yaw, pitch);
 
@@ -214,8 +214,8 @@ namespace rm_serial_driver
             Union_Camera_USB_Frame frame;
             frame.Data.Frame_Header = 0xAA;
             frame.Data.Mode = msg->symbol;
-            frame.Data.Delta_Yaw_10 = msg->yaw;   // 将yaw转换为0.1度单位
-            frame.Data.Delta_Pitch_10 = msg->pitch; // 将pitch转换为0.1度单位
+            frame.Data.Yaw = msg->yaw;   // 将yaw转换为0.1度单位
+            frame.Data.Pitch = msg->pitch; // 将pitch转换为0.1度单位
             frame.Data.Frame_Tail = 0x55;
             
             

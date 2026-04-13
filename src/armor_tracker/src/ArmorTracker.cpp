@@ -22,7 +22,7 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
 
     // TF相关参数
-    target_frame_ = "turret_base_link"; // 赋值给成员变量，不是声明局部变量
+    target_frame_ = "base_link"; // 赋值给成员变量，不是声明局部变量
     typedef std::chrono::duration<int> seconds_type;
     seconds_type buffer_timeout(1);
 
@@ -85,6 +85,8 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
 
 void ArmorTracker::run()
 {
+    isFindArmor = false;
+
     const float ARMOR_WIDTH = 0.135f;                    // 灯条中心间距 135mm
     const float ARMOR_HEIGHT = 0.055f;                   // 灯条高度 55mm
     const float HALF_ARMOR_WIDTH = ARMOR_WIDTH / 2.0f;   // 0.0675m
@@ -283,7 +285,6 @@ void ArmorTracker::run()
                     continue;
                 }
 
-                // 优化：将四个单独的绘制循环整合为一个，减少分支预测失败和循环开销
                 for (int k = 0; k < 4; k++)
                 {
                     int next_k = (k + 1) % 4;
@@ -294,6 +295,8 @@ void ArmorTracker::run()
                     std::string coord = cv::format("(%d,%d)", (int)armorPoints[k].x, (int)armorPoints[k].y);
                     cv::putText(img, coord, armorPoints[k], cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 255, 255), 1);
                     cv::circle(img, armorPoints[k], 2, cv::Scalar(0, 0, 255), -1);
+
+                    isFindArmor = true;
                 }
 
                 cv::Mat rvec, tvec;
@@ -336,37 +339,19 @@ void ArmorTracker::run()
 
                 // 优化：用底层内存指针获取数据远比调用 .at<double>() 快
                 const double *tvec_data = tvec.ptr<double>();
-                double tx = tvec_data[2];
-                double ty = -tvec_data[0];
-                double tz = -tvec_data[1];
 
-                geometry_msgs::msg::PointStamped target1; // 发布装甲板中心点到TF
-                // target1.header.frame_id = "camera_link";       // 注意：这里的坐标系是相机坐标系，不是世界坐标系
-
-                // // 优化：直接使用 ROS 2 的时间接口获取当前时间，避免了每帧调用 std::chrono 的系统调用开销
-                // target1.header.stamp = this->now();
-                // // 优化：直接使用 ROS 2 的坐标接口发布数据，避免了构造 ROS 2 消息的开销
-                // target1.point.x = tx;
-                // target1.point.y = ty;
-                // target1.point.z = tz;
-
-                // // 发布目标点到相机坐标系的变换TF，供其他节点使用
-                // target_point_pub_->publish(target1);
-
-                geometry_msgs::msg::PointStamped point_in;
-                point_in.header.frame_id = "camera_link";
-                point_in.header.stamp = rclcpp::Time(0);
-                point_in.point.x = tx;
-                point_in.point.y = ty;
-                point_in.point.z = tz;
+                geometry_msgs::msg::PointStamped point_in_camera;
+                point_in_camera.header.frame_id = "camera_link";
+                point_in_camera.header.stamp = this->now();
+                point_in_camera.point.x = tvec.at<double>(2);  // ROS的前 = OpenCV的前
+                point_in_camera.point.y = -tvec.at<double>(0); // ROS的左 = OpenCV右的反向
+                point_in_camera.point.z = -tvec.at<double>(1); // ROS的上 = OpenCV下的反向
 
                 geometry_msgs::msg::PointStamped point_out_local;
-
                 try
                 {
-                    tf_buffer_->transform(point_in, point_out_local, target_frame_, tf2::durationFromSec(0.0));
-
-                    this->point_out = point_out_local;
+                    tf_buffer_->transform(point_in_camera, point_out_local, target_frame_, tf2::durationFromSec(0.0));
+                    this->target_point_out = point_out_local;
                 }
                 catch (const tf2::TransformException &ex)
                 {
@@ -377,15 +362,15 @@ void ArmorTracker::run()
                 }
 
                 // camera -> base_link 的变换只需要查询一次
-                auto camera_transformStamped = tf_buffer_->lookupTransform("camera_link", "turret_base_link", tf2::TimePointZero);
+                auto camera_transformStamped = tf_buffer_->lookupTransform("camera_link", "base_link", tf2::TimePointZero);
 
                 // 至此，我们获得了相机到底座的变换关系，以及装甲板中心点在底座坐标系下的坐标！！！
 
-                yaw = std::atan2(tx, tz) * 180 / M_PI;
+                yaw = std::atan2(target_point_out.point.y, target_point_out.point.x) * 180 / M_PI;
                 current_yaws.push_back(yaw);
 
-                double horiz = std::sqrt(tx * tx + tz * tz);
-                pitch = std::atan2(-ty, horiz) * 180 / M_PI;
+                double horiz = std::sqrt(target_point_out.point.x * target_point_out.point.x + target_point_out.point.y * target_point_out.point.y);
+                pitch = std::atan2(target_point_out.point.z, horiz) * 180 / M_PI;
 
                 // std::cout << "装甲板中心点坐标 (观测量): "
                 //           << " | Yaw: " << yaw
@@ -404,35 +389,42 @@ void ArmorTracker::run()
             }
         }
 
-        if (KalmanInit == false)
+        geometry_msgs::msg::PointStamped safe_point_out;
+
+        // 新学的绝招，瞬间加锁，把数据掏出来，立刻解锁
         {
-            kalman.init(point_out, delta_time);
+            std::lock_guard<std::mutex> lock(target_point_out_mutex_);
+            safe_point_out = this->target_point_out;
+        }
+
+        if (KalmanInit == false && isFindArmor == true)
+        {
+            kalman.init(safe_point_out, delta_time);
             KalmanInit = true;
         }
 
         if (KalmanInit == true)
         {
             kalman.predict(delta_time);
-            kalman.update(point_out);
+            if (isFindArmor == true)
+            {
+                kalman.update(safe_point_out); 
+            }
         }
 
         geometry_msgs::msg::PointStamped kalman_point;
-        kalman_point.header.frame_id = "turret_base_link";
+        kalman_point.header.frame_id = "base_link";
         kalman_point.header.stamp = this->now();
         kalman_point.point.x = kalman.X(0);
         kalman_point.point.y = kalman.X(1);
         kalman_point.point.z = kalman.X(2);
 
-        double z = kalman.X(0);
-        double y = -kalman.X(2);
-        double x = -kalman.X(1);
-
         geometry_msgs::msg::PointStamped test;
-        test.header.frame_id = "camera_link";
-        test.header.stamp = this->now();
-        test.point.x = x;
-        test.point.y = y;
-        test.point.z = z;
+        test = tf_buffer_->transform(kalman_point, "camera_link");
+
+        double x = test.point.x;
+        double y = test.point.y;
+        double z = test.point.z;
 
         // std::cout << "卡尔曼滤波预测点坐标 (相机坐标系): X=" << test.point.x
         //<< " Y=" << test.point.y
@@ -456,15 +448,13 @@ void ArmorTracker::run()
         double horiz_test = std::sqrt(kalman_point.point.x * kalman_point.point.x + kalman_point.point.y * kalman_point.point.y);
         double pitch_test = std::atan2(kalman_point.point.z, horiz_test) * 180.0 / M_PI;
 
-        // RCLCPP_INFO(this->get_logger(), "卡尔曼滤波预测点角度 (世界坐标系): X=%.2f Y=%.2f Z=%.2f", yaw_test, pitch_test, horiz_test);
-
+        // RCLCPP_INFO(this->get_logger(), "卡尔曼滤波预测点角度 (世界坐标系): X=%.2f Y=%.2f Z=%.2f", yaw_test, pitch_test);
 
         if (debug_image_pub_.getNumSubscribers() > 0)
         {
             std_msgs::msg::Header header;
             // 获取当前时间戳
             header.stamp = this->now();
-            // 填入相机的坐标系 ID，跟你 TF 发布的一致即可
             header.frame_id = "camera_link";
 
             // cv_bridge::CvImage 将 header、图像编码格式("bgr8")和原始 cv::Mat 包装起来
@@ -476,12 +466,6 @@ void ArmorTracker::run()
         }
 
         publish_to_serial_driver(yaw_test, pitch_test, armorPoints);
-
-        // char key = cv::waitKey(30);
-        // if (key == 27)
-        // {
-        //     break;
-        // }
     }
 
     galaxy_camera_.stop();
@@ -592,8 +576,8 @@ void ArmorTracker::publish_to_serial_driver(double yaw, double pitch, const std:
 
 void ArmorTracker::receiveDataCallback(const armor_interfaces::msg::SerialReceiveData msg)
 {
-    joint_state_msg_.position[0] = msg.yaw;
-    joint_state_msg_.position[1] = msg.pitch;
+    joint_state_msg_.position[0] = msg.yaw * M_PI / 180.0;
+    joint_state_msg_.position[1] = msg.pitch * M_PI / 180.0;
 
     std::cout << "从串口获取的yaw和pitch - Yaw: " << msg.yaw
               << " Pitch: " << msg.pitch << std::endl;
@@ -605,13 +589,16 @@ void ArmorTracker::msgCallback(const geometry_msgs::msg::PointStamped::SharedPtr
     RCLCPP_INFO(this->get_logger(), "msgCallback 被调用！来自帧: %s", point_ptr->header.frame_id.c_str());
     try
     {
-        tf_buffer_->transform(*point_ptr, point_out, target_frame_);
+        {
+            std::lock_guard<std::mutex> lock(target_point_out_mutex_);
+            tf_buffer_->transform(*point_ptr, target_point_out, target_frame_);
+        }
         RCLCPP_INFO(
             this->get_logger(), "坐标点相对于%s的坐标:(%.2f,%.2f,%.2f)",
             target_frame_.c_str(),
-            point_out.point.x,
-            point_out.point.y,
-            point_out.point.z);
+            target_point_out.point.x,
+            target_point_out.point.y,
+            target_point_out.point.z);
     }
     catch (tf2::TransformException &ex)
     {
