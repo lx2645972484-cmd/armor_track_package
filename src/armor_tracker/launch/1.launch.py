@@ -54,6 +54,7 @@ from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.parameter_descriptions import ParameterValue
+from launch.actions import TimerAction
 import os
 
 def generate_launch_description():
@@ -80,15 +81,6 @@ def generate_launch_description():
         name="robot_state_publisher",
         output="screen",
         parameters=[{"robot_description": robot_description}]
-    )
-
-    # ========== joint_state_publisher ==========
-    # 如果你的模型全是固定关节，此节点不是必需的，但保留也无妨
-    joint_state_publisher_node = Node(
-        package="joint_state_publisher",
-        executable="joint_state_publisher",
-        name="joint_state_publisher",
-        output="screen"
     )
 
     # ========== RViz2 ==========
@@ -134,9 +126,8 @@ def generate_launch_description():
     return LaunchDescription([
         model_arg,
         robot_state_publisher_node,
-        joint_state_publisher_node,
         rviz2_node,
-        armor_tracker_node,
+        TimerAction(period=10.0, actions=[armor_tracker_node]),  # 延迟 2 秒启动
         armor_drawer_node,
         rm_serial_driver_node,
     ])

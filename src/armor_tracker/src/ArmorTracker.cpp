@@ -16,7 +16,8 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
     center_publisher = this->create_publisher<geometry_msgs::msg::PointStamped>("center_point", 10);
 
     // 发布相机到世界坐标系的初始姿态
-    tf_camera_to_world_publisher_ = this->create_publisher<armor_interfaces::msg::JointState>("/joint_states", 10);
+
+    tf_camera_to_world_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
     joint_state_msg_.name = {"yaw_joint", "pitch_joint"};
     joint_state_msg_.position = {0.0, 0.0};
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
@@ -342,7 +343,7 @@ void ArmorTracker::run()
 
                 geometry_msgs::msg::PointStamped point_in_camera;
                 point_in_camera.header.frame_id = "camera_link";
-                point_in_camera.header.stamp = this->now();
+                point_in_camera.header.stamp = rclcpp::Time(0);
                 point_in_camera.point.x = tvec.at<double>(2);  // ROS的前 = OpenCV的前
                 point_in_camera.point.y = -tvec.at<double>(0); // ROS的左 = OpenCV右的反向
                 point_in_camera.point.z = -tvec.at<double>(1); // ROS的上 = OpenCV下的反向
@@ -352,17 +353,18 @@ void ArmorTracker::run()
                 {
                     tf_buffer_->transform(point_in_camera, point_out_local, target_frame_, tf2::durationFromSec(0.0));
                     this->target_point_out = point_out_local;
+                    auto camera_transformStamped = tf_buffer_->lookupTransform("camera_link", "base_link", tf2::TimePointZero);
                 }
                 catch (const tf2::TransformException &ex)
                 {
                     // 如果查不到，说明底盘位姿没跟上，丢弃这帧的数据，直接 continue 抓取下一张图
                     RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
                                          "坐标变换未就绪，丢弃本帧: %s", ex.what());
+                    isFindArmor = false;
                     continue;
                 }
 
                 // camera -> base_link 的变换只需要查询一次
-                auto camera_transformStamped = tf_buffer_->lookupTransform("camera_link", "base_link", tf2::TimePointZero);
 
                 // 至此，我们获得了相机到底座的变换关系，以及装甲板中心点在底座坐标系下的坐标！！！
 
@@ -408,19 +410,28 @@ void ArmorTracker::run()
             kalman.predict(delta_time);
             if (isFindArmor == true)
             {
-                kalman.update(safe_point_out); 
+                kalman.update(safe_point_out);
             }
         }
 
         geometry_msgs::msg::PointStamped kalman_point;
         kalman_point.header.frame_id = "base_link";
-        kalman_point.header.stamp = this->now();
+        kalman_point.header.stamp = rclcpp::Time(0);
         kalman_point.point.x = kalman.X(0);
         kalman_point.point.y = kalman.X(1);
         kalman_point.point.z = kalman.X(2);
 
         geometry_msgs::msg::PointStamped test;
-        test = tf_buffer_->transform(kalman_point, "camera_link");
+        try
+        {
+            test = tf_buffer_->transform(kalman_point, "camera_link");
+        }
+        catch (const tf2::TransformException &ex)
+        {
+            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+                                 "卡尔曼预测点 TF 变换未就绪: %s", ex.what());
+            continue; // 直接跳过这帧的后续绘制和发送，抓取下一张图
+        }
 
         double x = test.point.x;
         double y = test.point.y;
@@ -450,21 +461,23 @@ void ArmorTracker::run()
 
         // RCLCPP_INFO(this->get_logger(), "卡尔曼滤波预测点角度 (世界坐标系): X=%.2f Y=%.2f Z=%.2f", yaw_test, pitch_test);
 
-        if (debug_image_pub_.getNumSubscribers() > 0)
-        {
-            std_msgs::msg::Header header;
-            // 获取当前时间戳
-            header.stamp = this->now();
-            header.frame_id = "camera_link";
+        // if (debug_image_pub_.getNumSubscribers() > 0)
+        // {
+        //     std_msgs::msg::Header header;
+        //     // 获取当前时间戳
+        //     header.stamp = this->now();
+        //     header.frame_id = "camera_link";
 
-            // cv_bridge::CvImage 将 header、图像编码格式("bgr8")和原始 cv::Mat 包装起来
-            // toImageMsg() 将其转化为 sensor_msgs::msg::Image
-            auto img_msg = cv_bridge::CvImage(header, "bgr8", img).toImageMsg();
+        //     // cv_bridge::CvImage 将 header、图像编码格式("bgr8")和原始 cv::Mat 包装起来
+        //     // toImageMsg() 将其转化为 sensor_msgs::msg::Image
+        //     auto img_msg = cv_bridge::CvImage(header, "bgr8", img).toImageMsg();
 
-            // 发布图像！
-            debug_image_pub_.publish(img_msg);
-        }
+        //     // 发布图像！
+        //     debug_image_pub_.publish(img_msg);
+        // }
 
+        cv::imshow("Debug Image", img);
+        cv::waitKey(1);
         publish_to_serial_driver(yaw_test, pitch_test, armorPoints);
     }
 
@@ -576,11 +589,14 @@ void ArmorTracker::publish_to_serial_driver(double yaw, double pitch, const std:
 
 void ArmorTracker::receiveDataCallback(const armor_interfaces::msg::SerialReceiveData msg)
 {
+    // 【必须加上这句】给关节状态打上当前的时间戳！
+    joint_state_msg_.header.stamp = this->now(); 
+
     joint_state_msg_.position[0] = msg.yaw * M_PI / 180.0;
     joint_state_msg_.position[1] = msg.pitch * M_PI / 180.0;
 
-    std::cout << "从串口获取的yaw和pitch - Yaw: " << msg.yaw
-              << " Pitch: " << msg.pitch << std::endl;
+    // std::cout << "从串口获取的yaw和pitch - Yaw: " << msg.yaw
+    //           << " Pitch: " << msg.pitch << std::endl;
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
 }
 

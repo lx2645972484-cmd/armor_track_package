@@ -15,6 +15,7 @@
 #include <cv_bridge/cv_bridge.h>
 #include <image_transport/image_transport.hpp>
 
+#include <sensor_msgs/msg/joint_state.hpp>
 #include "armor_interfaces/msg/armor_info.hpp"
 #include "armor_interfaces/msg/serial_driver.hpp"
 #include "geometry_msgs/msg/transform_stamped.hpp"
@@ -87,7 +88,7 @@ private:
     rclcpp::Publisher<armor_interfaces::msg::ArmorInfo>::SharedPtr armor_info_publisher; // 装甲信息发布者
     rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr center_publisher;     // 中心点发布者
     std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster;     
-    rclcpp::Publisher<armor_interfaces::msg::JointState>::SharedPtr tf_camera_to_world_publisher_;                  // TF广播器
+    rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr tf_camera_to_world_publisher_;                  // TF广播器
 
     cv::Matx33d cv_to_ros; // OpenCV到ROS的转换矩阵
     double delta_t = 0.02; // 时间间隔
@@ -101,7 +102,7 @@ private:
 
     rclcpp::Subscription<armor_interfaces::msg::SerialReceiveData>::SharedPtr camera_to_world_sub_;
 
-    armor_interfaces::msg::JointState joint_state_msg_; // 关节状态消息
+    sensor_msgs::msg::JointState joint_state_msg_; // 关节状态消息
 
     std::shared_ptr<tf2_ros::TransformListener> transform_listener_; // TF监听器
     

@@ -538,106 +538,59 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.hpp \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp \
  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__builder.hpp \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+ /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp \
  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
  /usr/include/c++/11/codecvt \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+ /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.hpp \
  /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/serial_driver.hpp \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__struct.hpp \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__builder.hpp \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__traits.hpp \
- /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
- /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__builder.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
- /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__type_support.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.h \
- /opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.hpp \
- /opt/ros/humble/include/tf2_ros/tf2_ros/visibility_control.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
- /usr/include/c++/11/csignal /usr/include/signal.h \
- /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
- /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
- /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
- /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
- /usr/include/x86_64-linux-gnu/bits/sigaction.h \
- /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
- /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
- /usr/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/sigstksz.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/sigthread.h \
- /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
- /usr/include/c++/11/future /usr/include/c++/11/condition_variable \
- /usr/include/c++/11/bits/atomic_futex.h \
- /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
- /opt/ros/humble/include/rcl/rcl/guard_condition.h \
- /opt/ros/humble/include/rcl/rcl/allocator.h \
- /opt/ros/humble/include/rcutils/rcutils/allocator.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
+ /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__type_support.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp \
+ /usr/include/opencv4/opencv2/core/core.hpp \
+ /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc/types_c.h \
+ /usr/include/opencv4/opencv2/core/core_c.h \
+ /usr/include/opencv4/opencv2/core/types_c.h \
+ /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h \
+ /opt/ros/humble/include/image_transport/image_transport/image_transport.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/node.hpp \
+ /usr/include/c++/11/condition_variable \
  /opt/ros/humble/include/rcutils/rcutils/macros.h \
  /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
  /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
  /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
+ /opt/ros/humble/include/rcl/rcl/error_handling.h \
+ /opt/ros/humble/include/rcutils/rcutils/error_handling.h \
+ /opt/ros/humble/include/rcutils/rcutils/allocator.h \
  /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
- /opt/ros/humble/include/rcl/rcl/context.h \
- /opt/ros/humble/include/rmw/rmw/init.h \
- /opt/ros/humble/include/rmw/rmw/init_options.h \
- /opt/ros/humble/include/rmw/rmw/domain_id.h \
- /opt/ros/humble/include/rmw/rmw/localhost.h \
- /opt/ros/humble/include/rmw/rmw/visibility_control.h \
- /opt/ros/humble/include/rmw/rmw/macros.h \
- /opt/ros/humble/include/rmw/rmw/ret_types.h \
- /opt/ros/humble/include/rmw/rmw/security_options.h \
+ /opt/ros/humble/include/rcutils/rcutils/snprintf.h \
+ /opt/ros/humble/include/rcl/rcl/node.h \
+ /opt/ros/humble/include/rcl/rcl/allocator.h \
  /opt/ros/humble/include/rcl/rcl/arguments.h \
  /opt/ros/humble/include/rcl/rcl/log_level.h \
  /opt/ros/humble/include/rcl/rcl/macros.h \
  /opt/ros/humble/include/rcl/rcl/types.h \
  /opt/ros/humble/include/rmw/rmw/types.h \
  /opt/ros/humble/include/rcutils/rcutils/logging.h \
- /opt/ros/humble/include/rcutils/rcutils/error_handling.h \
- /opt/ros/humble/include/rcutils/rcutils/snprintf.h \
  /opt/ros/humble/include/rcutils/rcutils/time.h \
  /opt/ros/humble/include/rcutils/rcutils/types.h \
  /opt/ros/humble/include/rcutils/rcutils/types/array_list.h \
@@ -650,26 +603,68 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /opt/ros/humble/include/rmw/rmw/events_statuses/events_statuses.h \
  /opt/ros/humble/include/rmw/rmw/events_statuses/incompatible_qos.h \
  /opt/ros/humble/include/rmw/rmw/qos_policy_kind.h \
+ /opt/ros/humble/include/rmw/rmw/visibility_control.h \
  /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_changed.h \
  /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_lost.h \
  /opt/ros/humble/include/rmw/rmw/events_statuses/message_lost.h \
  /opt/ros/humble/include/rmw/rmw/events_statuses/offered_deadline_missed.h \
  /opt/ros/humble/include/rmw/rmw/events_statuses/requested_deadline_missed.h \
+ /opt/ros/humble/include/rmw/rmw/init.h \
+ /opt/ros/humble/include/rmw/rmw/init_options.h \
+ /opt/ros/humble/include/rmw/rmw/domain_id.h \
+ /opt/ros/humble/include/rmw/rmw/localhost.h \
+ /opt/ros/humble/include/rmw/rmw/macros.h \
+ /opt/ros/humble/include/rmw/rmw/ret_types.h \
+ /opt/ros/humble/include/rmw/rmw/security_options.h \
  /opt/ros/humble/include/rmw/rmw/serialized_message.h \
  /opt/ros/humble/include/rmw/rmw/subscription_content_filter_options.h \
  /opt/ros/humble/include/rmw/rmw/time.h \
  /opt/ros/humble/include/rcl/rcl/visibility_control.h \
  /opt/ros/humble/include/rcl_yaml_param_parser/rcl_yaml_param_parser/types.h \
+ /opt/ros/humble/include/rcl/rcl/context.h \
  /opt/ros/humble/include/rcl/rcl/init_options.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdalign.h \
- /opt/ros/humble/include/rcl/rcl/wait.h \
+ /opt/ros/humble/include/rcl/rcl/guard_condition.h \
+ /opt/ros/humble/include/rcl/rcl/node_options.h \
+ /opt/ros/humble/include/rcl/rcl/domain_id.h \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/list_parameters_result.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_descriptor.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__type_support.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_event.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__builder.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__type_support.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp \
+ /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__type_support.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/client.hpp \
+ /usr/include/c++/11/future /usr/include/c++/11/bits/atomic_futex.h \
+ /usr/include/c++/11/optional /usr/include/c++/11/variant \
  /opt/ros/humble/include/rcl/rcl/client.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
  /opt/ros/humble/include/rcl/rcl/event_callback.h \
  /opt/ros/humble/include/rmw/rmw/event_callback_type.h \
- /opt/ros/humble/include/rcl/rcl/node.h \
- /opt/ros/humble/include/rcl/rcl/node_options.h \
- /opt/ros/humble/include/rcl/rcl/domain_id.h \
+ /opt/ros/humble/include/rcl/rcl/wait.h \
  /opt/ros/humble/include/rcl/rcl/service.h \
  /opt/ros/humble/include/rcl/rcl/subscription.h \
  /opt/ros/humble/include/rmw/rmw/message_sequence.h \
@@ -683,26 +678,10 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /opt/ros/humble/include/rmw/rmw/subscription_options.h \
  /opt/ros/humble/include/rcl/rcl/event.h \
  /opt/ros/humble/include/rcl/rcl/publisher.h \
- /opt/ros/humble/include/rcpputils/rcpputils/scope_exit.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/context.hpp \
- /usr/include/c++/11/typeindex /usr/include/c++/11/unordered_set \
- /usr/include/c++/11/bits/unordered_set.h \
- /opt/ros/humble/include/rclcpp/rclcpp/init_options.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/visibility_control.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/macros.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/contexts/default_context.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/guard_condition.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/client.hpp \
- /usr/include/c++/11/optional /usr/include/c++/11/variant \
- /opt/ros/humble/include/rcl/rcl/error_handling.h \
  /opt/ros/humble/include/rclcpp/rclcpp/detail/cpp_callback_trampoline.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/exceptions.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/exceptions/exceptions.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/visibility_control.hpp \
  /opt/ros/humble/include/rcpputils/rcpputils/join.hpp \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /opt/ros/humble/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp \
@@ -713,6 +692,11 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /opt/ros/humble/include/rcpputils/rcpputils/visibility_control.hpp \
  /opt/ros/humble/include/rcutils/rcutils/logging_macros.h \
  /opt/ros/humble/include/rclcpp/rclcpp/utilities.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/context.hpp \
+ /usr/include/c++/11/typeindex /usr/include/c++/11/unordered_set \
+ /usr/include/c++/11/bits/unordered_set.h \
+ /opt/ros/humble/include/rclcpp/rclcpp/init_options.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/macros.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp \
  /opt/ros/humble/include/rcl/rcl/graph.h \
  /opt/ros/humble/include/rmw/rmw/names_and_types.h \
@@ -740,6 +724,8 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /usr/include/c++/11/cxxabi.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
  /opt/ros/humble/include/rmw/rmw/impl/config.h \
+ /opt/ros/humble/include/rclcpp/rclcpp/guard_condition.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/contexts/default_context.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/publisher_base.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/network_flow_endpoint.hpp \
  /opt/ros/humble/include/rcl/rcl/network_flow_endpoints.h \
@@ -781,22 +767,28 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__builder.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/rate.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp \
+ /opt/ros/humble/include/rcpputils/rcpputils/shared_library.hpp \
+ /opt/ros/humble/include/rcutils/rcutils/shared_library.h \
  /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_use_intra_process.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/intra_process_setting.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/get_message_type_support_handle.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/is_ros_compatible_type.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/loaned_message.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/publisher_options.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_publisher_payload.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_payload.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/publisher_factory.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_payload.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__type_support.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics_state.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/subscription_traits.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp \
@@ -823,44 +815,6 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /opt/ros/humble/include/rcpputils/rcpputils/thread_safety_annotations.hpp \
  /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp \
  /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/get_message_type_support_handle.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/is_ros_compatible_type.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/loaned_message.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/publisher_options.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_publisher_payload.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/future_return_code.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/node.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/list_parameters_result.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_descriptor.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__type_support.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_event.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__builder.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp \
- /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__type_support.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp \
- /opt/ros/humble/include/rcpputils/rcpputils/shared_library.hpp \
- /opt/ros/humble/include/rcutils/rcutils/shared_library.h \
- /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/publisher_factory.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/subscription_factory.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/typesupport_helpers.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/generic_subscription.hpp \
@@ -904,6 +858,93 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface_traits.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/camera_publisher.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/camera_info.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/region_of_interest__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__builder.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/region_of_interest__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__type_support.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/single_subscriber_publisher.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/visibility_control.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/camera_subscriber.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/publisher.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/exception.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/loader_fwds.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/subscriber.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/transport_hints.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor_info.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__struct.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__builder.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__traits.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__type_support.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/serial_driver.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__struct.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__builder.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__traits.hpp \
+ /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/serial_driver__type_support.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__builder.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__type_support.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.h \
+ /opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.hpp \
+ /opt/ros/humble/include/tf2_ros/tf2_ros/visibility_control.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
+ /usr/include/c++/11/csignal /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+ /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstksz.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
+ /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
+ /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
+ /opt/ros/humble/include/rcpputils/rcpputils/scope_exit.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/future_return_code.hpp \
+ /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/executors/static_single_threaded_executor.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/executors/static_executor_entities_collector.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/experimental/executable_list.hpp \

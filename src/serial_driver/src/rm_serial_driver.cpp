@@ -129,15 +129,15 @@ namespace rm_serial_driver
                 // RCLCPP_INFO(get_logger(), "Received header: 0x%02X", header[0]);
 
                 
-                 if (data[0] == 0xAA)
-                 {
-                    RCLCPP_INFO(get_logger(), "Received header: 0x%02X", data[0]);
-                 }
-                 else
-                 {
-                     RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", data[0]);
-                     continue; // 跳过本次循环，等待下一个数据包
-                 }
+                //  if (data[0] == 0xAA)
+                //  {
+                //     // RCLCPP_INFO(get_logger(), "Received header: 0x%02X", data[0]);
+                //  }
+                //  else
+                //  {
+                //      RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", data[0]);
+                //      continue; // 跳过本次循环，等待下一个数据包
+                //  }
                 
                 
                 // serial_driver_->port()->receive(data);
@@ -168,7 +168,7 @@ namespace rm_serial_driver
                 msg.yaw = yaw;
                 msg.pitch = pitch;
 
-                RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", msg.yaw, msg.pitch);
+                // RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", msg.yaw, msg.pitch);
 
                 receive_data_publisher_->publish(msg);
 
