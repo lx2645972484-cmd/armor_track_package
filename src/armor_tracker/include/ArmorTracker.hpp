@@ -3,6 +3,7 @@
 #define ARMOR_TRACKER
 
 #include <opencv2/opencv.hpp>
+#include <opencv2/dnn.hpp>
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -49,6 +50,8 @@
 class ArmorTracker : public rclcpp::Node
 {
 private:
+    cv::dnn::Net net;     
+
     // 图像处理类
     PreProcess pp;
 

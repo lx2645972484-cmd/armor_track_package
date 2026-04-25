@@ -1,52 +1,3 @@
-# from ament_index_python.packages import get_package_share_directory
-# from launch import LaunchDescription
-# from launch_ros.actions import Node
-# from launch.substitutions import PathJoinSubstitution
-# from launch_ros.substitutions import FindPackageShare
-# import os
-
-# def generate_launch_description():
-#     package_share = get_package_share_directory("armor_tracker_node")
-
-#     return LaunchDescription(
-#         [
-#             # ===== armor_tracker_node =====
-#             Node(
-#                 package="armor_tracker_node",
-#                 executable="armor_tracker_node",
-#                 name="armor_tracker_node",
-#                 output="screen",
-#                 parameters=[
-#                     {'setting': 0}   
-#                 ]
-#             ),
-            
-#             # ===== armor_drawer =====
-#             Node(
-#                 package="armor_drawer",
-#                 executable="armor_drawer",
-#                 name="armor_drawer",
-#                 output="screen",
-#             ),
-
-#             # ===== rm_serial_driver 节点 (修正 stop_bits 类型) =====
-#             Node(
-#                 package="rm_serial_driver",
-#                 executable="rm_serial_driver_node",
-#                 name="rm_serial_driver",
-#                 output="screen",
-#                 parameters=[
-#                     {
-#                         "device_name": "/dev/ttyACM0",
-#                         "baud_rate": 115200,
-#                         "flow_control": "none",
-#                         "parity": "none",
-#                         "stop_bits": "1"   # 修正为字符串类型
-#                     }
-#                 ],
-#             )
-#         ]
-#     )
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -88,7 +39,7 @@ def generate_launch_description():
         package="rviz2",
         executable="rviz2",
         name="rviz2",
-        output="screen",
+        output="screen"
         # 如需自动加载配置文件，可添加 arguments=["-d", "/path/to/your.rviz"]
         # arguments=["-d", os.path.join(tracker_pkg_share, "config", "display_tf.rviz")]   # 可选：自动加载配置
     )
@@ -99,7 +50,9 @@ def generate_launch_description():
         executable="armor_tracker_node",
         name="armor_tracker_node",
         output="screen",
-        parameters=[{'setting': 0}]
+        parameters=[{
+            'setting': 0,
+            }]
     )
 
     armor_drawer_node = Node(
@@ -127,7 +80,7 @@ def generate_launch_description():
         model_arg,
         robot_state_publisher_node,
         rviz2_node,
-        TimerAction(period=10.0, actions=[armor_tracker_node]),  # 延迟 2 秒启动
+        TimerAction(period=5.0, actions=[armor_tracker_node]),  # 延迟 2 秒启动
         armor_drawer_node,
         rm_serial_driver_node,
     ])

@@ -8,6 +8,8 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
     int num_cores = cv::getNumberOfCPUs();
     cv::setNumThreads(num_cores);
 
+    net = cv::dnn::readNetFromONNX("/home/eee/ros2/src/armor_detect_ros2-main/src/Number-Classifier-for-RoboMaster-main/output/Zenet-sim.onnx");
+
     // 初始化调试图像发布者
     debug_image_pub_ = image_transport::create_publisher(this, "/tracker/debug_image");
 
@@ -16,7 +18,6 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
     center_publisher = this->create_publisher<geometry_msgs::msg::PointStamped>("center_point", 10);
 
     // 发布相机到世界坐标系的初始姿态
-
     tf_camera_to_world_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
     joint_state_msg_.name = {"yaw_joint", "pitch_joint"};
     joint_state_msg_.position = {0.0, 0.0};
@@ -34,19 +35,6 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
         this->get_node_timers_interface());
     tf_buffer_->setCreateTimerInterface(timer_interface);
     transform_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
-
-    // 订阅目标点
-    // point_sub_.subscribe(this, "target_point");
-
-    // // 初始化目标点发布者
-    // target_point_pub_ = this->create_publisher<geometry_msgs::msg::PointStamped>("target_point", 10);
-
-    // // 创建消息过滤器过滤被处理的数据；
-    // tf2_filter_ = std::make_shared<tf2_ros::MessageFilter<geometry_msgs::msg::PointStamped>>(
-    //     point_sub_, *tf_buffer_, target_frame_, 100, this->get_node_logging_interface(),
-    //     this->get_node_clock_interface(), buffer_timeout);
-    // // 为消息过滤器注册转换坐标点数据的回调函数。
-    // tf2_filter_->registerCallback(&ArmorTracker::msgCallback, this);
 
     // 初始化串口数据发布者和订阅者
     serial_driver_publisher_ = this->create_publisher<armor_interfaces::msg::SerialDriver>("/tracker/target", rclcpp::SensorDataQoS());
@@ -66,8 +54,9 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
         RCLCPP_INFO(this->get_logger(), "相机初始化失败");
         return;
     }
-    galaxy_camera_.startCapture();        // 手动开始采集线程
+    galaxy_camera_.startCapture();         // 手动开始采集线程
     galaxy_camera_.setExposureTime(5000); // 设置曝光时间为5000微秒
+    // galaxy_camera_.setGain(8);
 
     // if (!camera_ready_)
     // {
@@ -101,10 +90,10 @@ void ArmorTracker::run()
     cv::Mat dist_coeffs = (cv::Mat_<double>(1, 5) << -0.059743, 0.355479, -0.000625, 0.001595, 0.000000);
 
     // 图像相关参数
-    cv::Mat img, imgClose;
+    cv::Mat img, imgClose, imgWarp;
     galaxy_camera::ImageData img_data;
-    int blue_thre_value = 50; // 二值化查找蓝色装甲板光条参数
-    int red_thre_value = 50;
+    int blue_thre_value = 80; // 二值化查找蓝色装甲板光条参数
+    int red_thre_value = 80;
 
     // int frame_width = 0, frame_height = 0;
     // double fps = 0.0, current_time_ms = 0.0;
@@ -121,7 +110,6 @@ void ArmorTracker::run()
         return;
     }
 
-    // --- 优化：将循环中不变的对象提前声明，避免高频的动态内存开辟销毁 ---
     const std::vector<cv::Point3f> object_points = {
         cv::Point3f(-HALF_ARMOR_WIDTH, -HALF_ARMOR_HEIGHT, 0.0f), // 左上
         cv::Point3f(HALF_ARMOR_WIDTH, -HALF_ARMOR_HEIGHT, 0.0f),  // 右上
@@ -191,7 +179,7 @@ void ArmorTracker::run()
                 angle += 90.0;
             }
 
-            if (w * h < 200)
+            if (w * h < 800)
                 continue;
             if (w / h < 1.5)
                 continue;
@@ -258,10 +246,64 @@ void ArmorTracker::run()
                 l2.rect.points(rp);
 
                 cv::Point2f tl, bl, tr, br;
+                cv::Point2f n_tl, n_bl, n_tr, n_br;
+                cv::Point2f top_lift, top_right, bottom_left, bottom_right;
+
                 lbp.getLightBarEndpoints(leftBar.rect, tl, bl);
                 lbp.getLightBarEndpoints(rightBar.rect, tr, br);
 
+                lbp.getLightBarInnerPoints(leftBar.rect, n_tl, n_bl, 0);
+                lbp.getLightBarInnerPoints(rightBar.rect, n_tr, n_br, 1);
+
                 armorPoints = {tl, tr, br, bl};
+
+                // if (tl.x < 0 || tl.y < 0 || tr.x < 0 || tr.y < 0 || bl.x < 0 || bl.y < 0 || br.x < 0 || br.y < 0)
+                // {
+                //     RCLCPP_INFO(get_logger(), "计算初始时顶点阶段出错");
+                //     continue;
+                // }
+
+                // 计算从上到下的方向向量
+                cv::Point2f left_vector = n_bl - n_tl;
+                cv::Point2f right_vector = n_br - n_tr;
+                cv::Point2f top_left_ext = n_tl - 0.55f * left_vector;
+                cv::Point2f top_right_ext = n_tr - 0.55f * right_vector;
+                cv::Point2f bottom_left_ext = n_bl + 0.55f * left_vector;
+                cv::Point2f bottom_right_ext = n_br + 0.55f * right_vector;
+
+                cv::Point2f top_horizontal_vec = top_right_ext - top_left_ext;
+                cv::Point2f bottom_horizontal_vec = bottom_right_ext - bottom_left_ext;
+
+                float shrink_ratio = 0.12f;
+
+                cv::Point2f final_top_left = top_left_ext + shrink_ratio * top_horizontal_vec;
+                cv::Point2f final_top_right = top_right_ext - shrink_ratio * top_horizontal_vec;
+                cv::Point2f final_bottom_left = bottom_left_ext + shrink_ratio * bottom_horizontal_vec;
+                cv::Point2f final_bottom_right = bottom_right_ext - shrink_ratio * bottom_horizontal_vec;
+
+                std::vector<cv::Point2f> ext_points = {final_top_left, final_top_right, final_bottom_right, final_bottom_left};
+
+                cv::Point2f src_points[4] = {final_top_left, final_top_right, final_bottom_right, final_bottom_left};
+                cv::Point2f dst_points[4] = {{0.0f, 0.0f}, {28.0f, 0.0f}, {28.0f, 28.0f}, {0.0f, 28.0f}};
+                cv::Mat warp_matrix = cv::getPerspectiveTransform(src_points, dst_points);
+                cv::warpPerspective(img, imgWarp, warp_matrix, cv::Size(28, 28));
+                cvtColor(imgWarp, imgWarp, cv::COLOR_BGR2GRAY);
+                cv::threshold(imgWarp, imgWarp, 15, 255, cv::THRESH_BINARY);
+
+                cv::Mat blob = cv::dnn::blobFromImage(imgWarp, 1.0 / 255.0, cv::Size(28.0f, 28.0f), cv::Scalar(0), false, false);
+
+                net.setInput(blob);
+                cv::Mat output = net.forward();
+
+                cv::Mat class_scores = output.colRange(1, 11);
+
+                cv::Point classIdPoint;
+                double confidence;
+                minMaxLoc(class_scores, nullptr, &confidence, nullptr, &classIdPoint);
+                int predicted_id = classIdPoint.x;
+
+                cv::putText(img, "Number of Observations: " + std::to_string(predicted_id), cv::Point2f(100, 100),
+                            cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 0, 255), 2);
 
                 double armor_width = tr.x - tl.x;
                 double armor_height = bl.y - tl.y;
@@ -433,9 +475,9 @@ void ArmorTracker::run()
             continue; // 直接跳过这帧的后续绘制和发送，抓取下一张图
         }
 
-        double x = test.point.x;
-        double y = test.point.y;
-        double z = test.point.z;
+        double x = kalman_point.point.x;
+        double y = kalman_point.point.y;
+        double z = kalman_point.point.z;
 
         // std::cout << "卡尔曼滤波预测点坐标 (相机坐标系): X=" << test.point.x
         //<< " Y=" << test.point.y
@@ -477,6 +519,10 @@ void ArmorTracker::run()
         // }
 
         cv::imshow("Debug Image", img);
+        if (!imgWarp.empty())
+        {
+            cv::imshow("Warped Armor", imgWarp);
+        }
         cv::waitKey(1);
         publish_to_serial_driver(yaw_test, pitch_test, armorPoints);
     }
@@ -590,7 +636,7 @@ void ArmorTracker::publish_to_serial_driver(double yaw, double pitch, const std:
 void ArmorTracker::receiveDataCallback(const armor_interfaces::msg::SerialReceiveData msg)
 {
     // 【必须加上这句】给关节状态打上当前的时间戳！
-    joint_state_msg_.header.stamp = this->now(); 
+    joint_state_msg_.header.stamp = this->now();
 
     joint_state_msg_.position[0] = msg.yaw * M_PI / 180.0;
     joint_state_msg_.position[1] = msg.pitch * M_PI / 180.0;

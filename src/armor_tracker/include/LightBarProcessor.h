@@ -8,7 +8,7 @@ class LightBarProcessor
 public:
     void getLightBarEndpoints(const cv::RotatedRect &rect, cv::Point2f &top, cv::Point2f &bottom);
     
-    
+    void getLightBarInnerPoints(const cv::RotatedRect &rect, cv::Point2f &top, cv::Point2f &bottom, int sign);
 };
 
 struct LightBar
