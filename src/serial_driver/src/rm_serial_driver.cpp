@@ -65,6 +65,9 @@ namespace rm_serial_driver
 
         receive_data_publisher_ = this->create_publisher<armor_interfaces::msg::SerialReceiveData>("/tracker/receive_data", rclcpp::SensorDataQoS());
 
+        time_sub_ = this->create_subscription<std_msgs::msg::Float32>("time_stamp_from_get_image",
+            rclcpp::SensorDataQoS(),std::bind(&RMSerialDriver::deal_time_stamp,this,std::placeholders::_1));
+
         try
         {
             serial_driver_->init_port(device_name_, *device_config_);
@@ -129,15 +132,15 @@ namespace rm_serial_driver
                 // RCLCPP_INFO(get_logger(), "Received header: 0x%02X", header[0]);
 
                 
-                //  if (data[0] == 0xAA)
-                //  {
-                //     // RCLCPP_INFO(get_logger(), "Received header: 0x%02X", data[0]);
-                //  }
-                //  else
-                //  {
-                //      RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", data[0]);
-                //      continue; // 跳过本次循环，等待下一个数据包
-                //  }
+                 if (data[0] == 0xAA)
+                 {
+                    // RCLCPP_INFO(get_logger(), "Received header: 0x%02X", data[0]);
+                 }
+                 else
+                 {
+                     RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: 0x%02X", data[0]);
+                     continue; // 跳过本次循环，等待下一个数据包
+                 }
                 
                 
                 // serial_driver_->port()->receive(data);
@@ -154,33 +157,18 @@ namespace rm_serial_driver
                     Frame.Raw[i] = data[i];
                 }
 
-                // for(int i = 0; i < sizeof(Frame.Raw); i++)
-                // {
-                //     RCLCPP_INFO(get_logger(), "Received data[%d]: 0x%02X", i, Frame.Raw[i]);
-                // }
-
                 double yaw = Frame.Data.Yaw ;
                 double pitch = Frame.Data.Pitch ;
 
-                // RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", yaw, pitch);
+             
 
                 armor_interfaces::msg::SerialReceiveData msg;
                 msg.yaw = yaw;
                 msg.pitch = pitch;
 
-                // RCLCPP_INFO(get_logger(), "Received yaw: %f, pitch: %f", msg.yaw, msg.pitch);
+                
 
                 receive_data_publisher_->publish(msg);
-
-               
-
-                // printf("第一个数: %.2f\n", first);
-                // printf("第二个数: %.2f\n", second);
-                // }
-                // else
-                // {
-                // RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 20, "Invalid header: %02X", header[0]);
-                // }
             }
             catch (const std::exception &ex)
             {
@@ -239,6 +227,15 @@ namespace rm_serial_driver
             RCLCPP_ERROR(get_logger(), "Error while sending data: %s", ex.what());
             reopenPort();
         }
+    }
+
+    void RMSerialDriver::deal_time_stamp(std_msgs::msg::Float32::SharedPtr msg)
+    {
+        float time_stamp = msg->data;
+        rclcpp::Time time_now = this->now();
+        float time_now_float = time_now.seconds();
+        float time_diff = time_now_float - time_stamp;
+        RCLCPP_INFO(get_logger(), "从获取图像->发送的大致时间差: %f", time_diff);
     }
 
     void RMSerialDriver::getParams()

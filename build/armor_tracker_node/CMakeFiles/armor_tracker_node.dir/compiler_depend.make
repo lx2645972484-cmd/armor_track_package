@@ -1101,6 +1101,11 @@ CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o: /home/eee/ros2/src/arm
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/float32.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp \
   /opt/ros/humble/include/tf2/tf2/LinearMath/Matrix3x3.hpp \
   /opt/ros/humble/include/tf2/tf2/LinearMath/Vector3.hpp \
   /opt/ros/humble/include/tf2/tf2/LinearMath/Scalar.hpp \
@@ -5595,6 +5600,11 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/float32.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp \
   /opt/ros/humble/include/tf2/tf2/LinearMath/Matrix3x3.hpp \
   /opt/ros/humble/include/tf2/tf2/LinearMath/Vector3.hpp \
   /opt/ros/humble/include/tf2/tf2/LinearMath/Scalar.hpp \
@@ -6005,6 +6015,14 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/joint_state__builder.hpp:
 
+/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/joint_state__struct.hpp:
+
+/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/joint_state.hpp:
+
+/opt/ros/humble/include/tf2/tf2/transform_storage.hpp:
+
+/opt/ros/humble/include/tf2/tf2/exceptions.hpp:
+
 /usr/include/eigen3/Eigen/src/misc/Kernel.h:
 
 /usr/include/eigen3/Eigen/src/Core/Reverse.h:
@@ -6116,6 +6134,8 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/float32.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/Visitor.h:
 
@@ -6435,8 +6455,6 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/opencv4/opencv2/core/mat.inl.hpp:
-
 /usr/include/opencv4/opencv2/core/bufferpool.hpp:
 
 /opt/ros/humble/include/rmw/rmw/qos_profiles.h:
@@ -6741,6 +6759,8 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp:
+
 /usr/include/opencv4/opencv2/opencv.hpp:
 
 /usr/include/opencv4/opencv2/flann/sampling.h:
@@ -6798,8 +6818,6 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 /usr/include/opencv4/opencv2/flann/timer.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
-
-/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/joint_state__struct.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:
 
@@ -6915,6 +6933,8 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp:
+
 /usr/include/eigen3/Eigen/src/Core/NestByValue.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
@@ -6922,8 +6942,6 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 /opt/ros/humble/include/rclcpp/rclcpp/create_generic_publisher.hpp:
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
-/opt/ros/humble/include/tf2/tf2/transform_storage.hpp:
 
 /home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor_info__traits.hpp:
 
@@ -7154,8 +7172,6 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 /usr/include/c++/11/bits/localefwd.h:
 
 /usr/include/c++/11/tr1/hypergeometric.tcc:
-
-/opt/ros/humble/include/tf2/tf2/exceptions.hpp:
 
 /usr/include/c++/11/bits/istream.tcc:
 
@@ -7607,6 +7623,14 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
 
+/opt/ros/humble/include/tf2/tf2/time.hpp:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp:
+
 /opt/ros/humble/include/rmw/rmw/domain_id.h:
 
 /opt/ros/humble/include/rmw/rmw/localhost.h:
@@ -7806,6 +7830,10 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 /opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
+
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:
 
@@ -8201,8 +8229,6 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
-/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/joint_state.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
@@ -8331,6 +8357,8 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp:
+
 /usr/include/opencv4/opencv2/flann/general.h:
 
 /opt/ros/humble/include/tf2/tf2/LinearMath/Matrix3x3.hpp:
@@ -8350,11 +8378,3 @@ CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o: /home/eee/ros2/src/armor_dete
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__traits.hpp:
-
-/usr/include/libintl.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp:
-
-/opt/ros/humble/include/tf2/tf2/time.hpp:

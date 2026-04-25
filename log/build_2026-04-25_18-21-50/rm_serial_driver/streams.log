@@ -1,0 +1,12 @@
+[0.008s] Invoking command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20
+[0.061s] [ 22%] Built target rm_serial_driver_node
+[0.070s] [ 33%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[2.276s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:[m[K In constructor ‘[01m[Krm_serial_driver::RMSerialDriver::RMSerialDriver(const rclcpp::NodeOptions&)[m[K’:
+[2.276s] [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/serial_driver/src/rm_serial_driver.cpp:68:150:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+[2.276s]    68 | _from_get_image",rclcpp::SensorDataQoS(),std::bind(&RMSerialDriver::[01;31m[K)[m[K);
+[2.276s]       |                                                                     [01;31m[K^[m[K
+[2.276s] 
+[4.027s] gmake[2]: *** [CMakeFiles/rm_serial_driver.dir/build.make:76：CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o] 错误 1
+[4.028s] gmake[1]: *** [CMakeFiles/Makefile2:141：CMakeFiles/rm_serial_driver.dir/all] 错误 2
+[4.028s] gmake: *** [Makefile:146：all] 错误 2
+[4.030s] Invoked command in '/home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver' returned '2': AMENT_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/eee/ros2/src/armor_detect_ros2-main/install/armor_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/eee/ros2/src/armor_detect_ros2-main/build/rm_serial_driver -- -j20 -l20

@@ -23,6 +23,9 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
     joint_state_msg_.position = {0.0, 0.0};
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
 
+    // 获取图像时间戳发布方
+    time_stamp_publisher_ = this->create_publisher<std_msgs::msg::Float32>("time_stamp_from_get_image", 10);
+
     // TF相关参数
     target_frame_ = "base_link"; // 赋值给成员变量，不是声明局部变量
     typedef std::chrono::duration<int> seconds_type;
@@ -54,7 +57,7 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
         RCLCPP_INFO(this->get_logger(), "相机初始化失败");
         return;
     }
-    galaxy_camera_.startCapture();         // 手动开始采集线程
+    galaxy_camera_.startCapture();        // 手动开始采集线程
     galaxy_camera_.setExposureTime(5000); // 设置曝光时间为5000微秒
     // galaxy_camera_.setGain(8);
 
@@ -125,6 +128,10 @@ void ArmorTracker::run()
 
     while (galaxy_camera_.isReady() && rclcpp::ok())
     {
+        auto time_stamp_msg = std_msgs::msg::Float32();
+        rclcpp::Time time = this->now();
+        time_stamp_msg.data = time.seconds();
+
         armorPoints.clear();
         LightBarVector.clear();
         current_yaws.clear(); // 优化：不清空底层内存只重置size，比重新声明快
@@ -463,6 +470,12 @@ void ArmorTracker::run()
         kalman_point.point.y = kalman.X(1);
         kalman_point.point.z = kalman.X(2);
 
+        if (!armorPoints.empty())
+        {
+            yaw_test = std::atan2(kalman_point.point.y, kalman_point.point.x) * 180.0 / M_PI;
+            double horiz_test = std::sqrt(kalman_point.point.x * kalman_point.point.x + kalman_point.point.y * kalman_point.point.y);
+            pitch_test = std::atan2(kalman_point.point.z, horiz_test) * 180.0 / M_PI;
+        }
         geometry_msgs::msg::PointStamped test;
         try
         {
@@ -475,9 +488,9 @@ void ArmorTracker::run()
             continue; // 直接跳过这帧的后续绘制和发送，抓取下一张图
         }
 
-        double x = kalman_point.point.x;
-        double y = kalman_point.point.y;
-        double z = kalman_point.point.z;
+        double x = test.point.x;
+        double y = test.point.y;
+        double z = test.point.z;
 
         // std::cout << "卡尔曼滤波预测点坐标 (相机坐标系): X=" << test.point.x
         //<< " Y=" << test.point.y
@@ -493,31 +506,6 @@ void ArmorTracker::run()
 
         cv::circle(img, out_center_2d[0], 8, cv::Scalar(0, 0, 255), -1);
 
-        // geometry_msgs::msg::PointStamped test;
-
-        // tf_buffer_->transform(kalman_point, test, "camera_link");
-
-        double yaw_test = std::atan2(kalman_point.point.y, kalman_point.point.x) * 180.0 / M_PI;
-        double horiz_test = std::sqrt(kalman_point.point.x * kalman_point.point.x + kalman_point.point.y * kalman_point.point.y);
-        double pitch_test = std::atan2(kalman_point.point.z, horiz_test) * 180.0 / M_PI;
-
-        // RCLCPP_INFO(this->get_logger(), "卡尔曼滤波预测点角度 (世界坐标系): X=%.2f Y=%.2f Z=%.2f", yaw_test, pitch_test);
-
-        // if (debug_image_pub_.getNumSubscribers() > 0)
-        // {
-        //     std_msgs::msg::Header header;
-        //     // 获取当前时间戳
-        //     header.stamp = this->now();
-        //     header.frame_id = "camera_link";
-
-        //     // cv_bridge::CvImage 将 header、图像编码格式("bgr8")和原始 cv::Mat 包装起来
-        //     // toImageMsg() 将其转化为 sensor_msgs::msg::Image
-        //     auto img_msg = cv_bridge::CvImage(header, "bgr8", img).toImageMsg();
-
-        //     // 发布图像！
-        //     debug_image_pub_.publish(img_msg);
-        // }
-
         cv::imshow("Debug Image", img);
         if (!imgWarp.empty())
         {
@@ -525,6 +513,7 @@ void ArmorTracker::run()
         }
         cv::waitKey(1);
         publish_to_serial_driver(yaw_test, pitch_test, armorPoints);
+        time_stamp_publisher_->publish(time_stamp_msg);
     }
 
     galaxy_camera_.stop();

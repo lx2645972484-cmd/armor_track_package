@@ -25,6 +25,7 @@
 #include <message_filters/subscriber.h>
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float64.hpp"
+#include "std_msgs/msg/float32.hpp"
 #include "tf2/LinearMath/Matrix3x3.hpp"
 #include "tf2/LinearMath/Quaternion.hpp"
 #include "tf2_ros/transform_listener.h"
@@ -103,6 +104,8 @@ private:
 
     rclcpp::Publisher<armor_interfaces::msg::SerialDriver>::SharedPtr serial_driver_publisher_;
 
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr time_stamp_publisher_;
+
     rclcpp::Subscription<armor_interfaces::msg::SerialReceiveData>::SharedPtr camera_to_world_sub_;
 
     sensor_msgs::msg::JointState joint_state_msg_; // 关节状态消息
@@ -132,6 +135,10 @@ private:
     image_transport::Publisher debug_image_pub_; // 调试图像发布者
 
     bool isFindArmor = false; // 是否找到装甲板的标志
+
+    double yaw_test;
+
+    double pitch_test;
 public:
     ArmorTracker();
     void run();

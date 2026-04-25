@@ -13,6 +13,8 @@
 #include <serial_driver/serial_driver.hpp>
 #include "armor_interfaces/msg/serial_driver.hpp"
 #include <armor_interfaces/msg/serial_receive_data.hpp>
+#include "std_msgs/msg/float32.hpp"
+
 // #include <std_msgs/msg/float64.hpp>
 // #include <std_msgs/msg/float64_multi_array.hpp>
 // #include <std_srvs/srv/trigger.hpp>
@@ -45,6 +47,8 @@ private:
 
   void getParams();
 
+  void deal_time_stamp(std_msgs::msg::Float32::SharedPtr msg);
+
   rclcpp::Publisher<armor_interfaces::msg::SerialReceiveData>::SharedPtr receive_data_publisher_;
 
   // Serial port
@@ -56,6 +60,8 @@ private:
   rclcpp::Subscription<armor_interfaces::msg::SerialDriver>::SharedPtr target_sub_;
 
   std::thread receive_thread_;
+
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr time_sub_;
 };
 
 }  // namespace rm_serial_driver
