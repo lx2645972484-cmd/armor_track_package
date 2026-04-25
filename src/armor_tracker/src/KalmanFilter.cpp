@@ -18,7 +18,7 @@ Kalman::Kalman(int state, int observe)
     H(1,1) = 1.0;
     H(2,2) = 1.0;
     
-    Q = Eigen::MatrixXd::Identity(state, state) * 1;
+    Q = Eigen::MatrixXd::Identity(state, state) * 10;
     R = Eigen::MatrixXd::Identity(observe, observe) * 10;
     P = Eigen::MatrixXd::Identity(state, state);
     X = Eigen::VectorXd::Zero(state);

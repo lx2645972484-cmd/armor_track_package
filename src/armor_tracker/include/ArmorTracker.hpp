@@ -139,6 +139,18 @@ private:
     double yaw_test;
 
     double pitch_test;
+
+    const float ARMOR_WIDTH = 0.135f;                    // 灯条中心间距 135mm
+    const float ARMOR_HEIGHT = 0.055f;                   // 灯条高度 55mm
+    const float HALF_ARMOR_WIDTH = ARMOR_WIDTH / 2.0f;   // 0.0675m
+    const float HALF_ARMOR_HEIGHT = ARMOR_HEIGHT / 2.0f; // 0.0275m
+
+    const std::vector<cv::Point3f> object_points = {
+        cv::Point3f(-HALF_ARMOR_WIDTH, -HALF_ARMOR_HEIGHT, 0.0f), // 左上
+        cv::Point3f(HALF_ARMOR_WIDTH, -HALF_ARMOR_HEIGHT, 0.0f),  // 右上
+        cv::Point3f(HALF_ARMOR_WIDTH, HALF_ARMOR_HEIGHT, 0.0f),   // 右下
+        cv::Point3f(-HALF_ARMOR_WIDTH, HALF_ARMOR_HEIGHT, 0.0f)   // 左下
+    };
 public:
     ArmorTracker();
     void run();

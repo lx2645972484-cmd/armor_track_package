@@ -23,6 +23,9 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
     joint_state_msg_.position = {0.0, 0.0};
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
 
+    // 动态广播器，用于发布旋转中心到相机的位置
+    tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
+    
     // 获取图像时间戳发布方
     time_stamp_publisher_ = this->create_publisher<std_msgs::msg::Float32>("time_stamp_from_get_image", 10);
 
@@ -80,11 +83,6 @@ void ArmorTracker::run()
 {
     isFindArmor = false;
 
-    const float ARMOR_WIDTH = 0.135f;                    // 灯条中心间距 135mm
-    const float ARMOR_HEIGHT = 0.055f;                   // 灯条高度 55mm
-    const float HALF_ARMOR_WIDTH = ARMOR_WIDTH / 2.0f;   // 0.0675m
-    const float HALF_ARMOR_HEIGHT = ARMOR_HEIGHT / 2.0f; // 0.0275m
-
     cv::Mat camera_matrix = (cv::Mat_<double>(3, 3) << 2374.54248, 0.0, 698.85288,
                              0.0, 2377.53648, 520.8649,
                              0.0, 0.0, 1.0);
@@ -112,13 +110,6 @@ void ArmorTracker::run()
         std::cout << "我草，哥们，相机炸了" << std::endl;
         return;
     }
-
-    const std::vector<cv::Point3f> object_points = {
-        cv::Point3f(-HALF_ARMOR_WIDTH, -HALF_ARMOR_HEIGHT, 0.0f), // 左上
-        cv::Point3f(HALF_ARMOR_WIDTH, -HALF_ARMOR_HEIGHT, 0.0f),  // 右上
-        cv::Point3f(HALF_ARMOR_WIDTH, HALF_ARMOR_HEIGHT, 0.0f),   // 右下
-        cv::Point3f(-HALF_ARMOR_WIDTH, HALF_ARMOR_HEIGHT, 0.0f)   // 左下
-    };
 
     cv::Mat rvec_zero = cv::Mat::zeros(3, 1, CV_64F);
     cv::Mat tvec_zero = cv::Mat::zeros(3, 1, CV_64F);
@@ -271,26 +262,7 @@ void ArmorTracker::run()
                 // }
 
                 // 计算从上到下的方向向量
-                cv::Point2f left_vector = n_bl - n_tl;
-                cv::Point2f right_vector = n_br - n_tr;
-                cv::Point2f top_left_ext = n_tl - 0.55f * left_vector;
-                cv::Point2f top_right_ext = n_tr - 0.55f * right_vector;
-                cv::Point2f bottom_left_ext = n_bl + 0.55f * left_vector;
-                cv::Point2f bottom_right_ext = n_br + 0.55f * right_vector;
-
-                cv::Point2f top_horizontal_vec = top_right_ext - top_left_ext;
-                cv::Point2f bottom_horizontal_vec = bottom_right_ext - bottom_left_ext;
-
-                float shrink_ratio = 0.12f;
-
-                cv::Point2f final_top_left = top_left_ext + shrink_ratio * top_horizontal_vec;
-                cv::Point2f final_top_right = top_right_ext - shrink_ratio * top_horizontal_vec;
-                cv::Point2f final_bottom_left = bottom_left_ext + shrink_ratio * bottom_horizontal_vec;
-                cv::Point2f final_bottom_right = bottom_right_ext - shrink_ratio * bottom_horizontal_vec;
-
-                std::vector<cv::Point2f> ext_points = {final_top_left, final_top_right, final_bottom_right, final_bottom_left};
-
-                cv::Point2f src_points[4] = {final_top_left, final_top_right, final_bottom_right, final_bottom_left};
+                cv::Point2f src_points[4] = mtl.armor_vector_extend(n_tl,n_tr,n_bl,n_br);
                 cv::Point2f dst_points[4] = {{0.0f, 0.0f}, {28.0f, 0.0f}, {28.0f, 28.0f}, {0.0f, 28.0f}};
                 cv::Mat warp_matrix = cv::getPerspectiveTransform(src_points, dst_points);
                 cv::warpPerspective(img, imgWarp, warp_matrix, cv::Size(28, 28));
@@ -488,16 +460,11 @@ void ArmorTracker::run()
             continue; // 直接跳过这帧的后续绘制和发送，抓取下一张图
         }
 
-        double x = test.point.x;
-        double y = test.point.y;
-        double z = test.point.z;
-
-        // std::cout << "卡尔曼滤波预测点坐标 (相机坐标系): X=" << test.point.x
-        //<< " Y=" << test.point.y
-        // << " Z=" << test.point.z << std::endl;
+        double project_x,project_y,project_z;
+        mtl.axis_turn_ros_to_opencv(project_x,project_y,project_z,test);
 
         std::vector<cv::Point3f> out_center_3d;
-        out_center_3d.emplace_back(x, y, z);
+        out_center_3d.emplace_back(project_x,project_y,project_z);
         std::vector<cv::Point2f> out_center_2d;
 
         // 优化：复用初始化的 zeros 矩阵，杜绝每帧动态生成 Mat 的操作
