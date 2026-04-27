@@ -1,0 +1,100 @@
+[35m[1mConsolidate compiler generated dependencies of target armor_tracker_node[0m
+[  9%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/KalmanFilter.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.o[0m
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/MathTool.cpp:1[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:15:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs[m[K’ has not been declared
+   15 |     void axis_turn_ros_to_opencv(double &x, double &y, double &z, [01;31m[Kgeometry_msgs[m[K::msg::PointStamped ros2_test)
+      |                                                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:15:100:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kros2_test[m[K’
+   15 |     void axis_turn_ros_to_opencv(double &x, double &y, double &z, geometry_msgs::msg::PointStamped [01;31m[Kros2_test[m[K)
+      |                                                                                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:29:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs[m[K’ has not been declared
+   29 |     void axis_turn_opencv_to_ros(double &ros_x, double &ros_y, double &ros_z, [01;31m[Kgeometry_msgs[m[K::msg::PointStamped opencv_test)
+      |                                                                               [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:29:112:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kopencv_test[m[K’
+   29 |     void axis_turn_opencv_to_ros(double &ros_x, double &ros_y, double &ros_z, geometry_msgs::msg::PointStamped [01;31m[Kopencv_test[m[K)
+      |                                                                                                                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:[m[K In member function ‘[01m[Kvoid MathTool::axis_turn_ros_to_opencv(double&, double&, double&, int)[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:17:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kros2_test[m[K’ was not declared in this scope
+   17 |         x = -[01;31m[Kros2_test[m[K.point.y; // OpenCV的右 = ROS左的反向
+      |              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:15:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KPointStamped[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   15 |     void axis_turn_ros_to_opencv(double &x, double &y, double &z, [01;35m[Kgeometry_msgs::msg::PointStamped[m[K ros2_test)
+      |                                                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:[m[K In member function ‘[01m[Kvoid MathTool::axis_turn_opencv_to_ros(double&, double&, double&, int)[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:31:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kopencv_test[m[K’ was not declared in this scope
+   31 |         ros_x = [01;31m[Kopencv_test[m[K.point.z;  // ROS的前 = OpenCV的前
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/MathTool.h:29:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KPointStamped[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   29 |     void axis_turn_opencv_to_ros(double &ros_x, double &ros_y, double &ros_z, [01;35m[Kgeometry_msgs::msg::PointStamped[m[K opencv_test)
+      |                                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:118：CMakeFiles/armor_tracker_node.dir/src/MathTool.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+In file included from [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GxIAPI.h:12[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:48[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:18[m[K:
+[01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GXDef.h:173:1:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypedef[m[K’ was ignored in this declaration
+  173 | [01;35m[Ktypedef[m[K enum GX_IP_CONFIGURE_MODE_LIST
+      | [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GxIAPI.h:12[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/galaxy_camera.hpp:4[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:48[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1[m[K:
+[01m[K/home/eee/Galaxy_Linux-x86_Gige-U3_32bits-64bits_2.4.2507.9231/Galaxy_camera/inc/GXDef.h:173:1:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypedef[m[K’ was ignored in this declaration
+  173 | [01;35m[Ktypedef[m[K enum GX_IP_CONFIGURE_MODE_LIST
+      | [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:49[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:18[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/extra_kalman_filter.hpp:[m[K In member function ‘[01m[KEigen::Vector3d ExtraKalman::init(cv::Mat, cv::Mat)[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/extra_kalman_filter.hpp:45:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   45 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:49[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/extra_kalman_filter.hpp:[m[K In member function ‘[01m[KEigen::Vector3d ExtraKalman::init(cv::Mat, cv::Mat)[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/extra_kalman_filter.hpp:45:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   45 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:18[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:[m[K At global scope:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:72:24:[m[K [01;31m[Kerror: [m[K‘[01m[KExtraKalman::ExtraKalman(int, int)[m[K’ is private within this context
+   72 |     ExtraKalman ekf{9,3[01;31m[K}[m[K;
+      |                        [01;31m[K^[m[K
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:49[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp:18[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/extra_kalman_filter.hpp:18:5:[m[K [01;36m[Knote: [m[Kdeclared private here
+   18 |     [01;36m[KExtraKalman[m[K(int state, int guance);
+      |     [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:[m[K At global scope:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:72:24:[m[K [01;31m[Kerror: [m[K‘[01m[KExtraKalman::ExtraKalman(int, int)[m[K’ is private within this context
+   72 |     ExtraKalman ekf{9,3[01;31m[K}[m[K;
+      |                        [01;31m[K^[m[K
+In file included from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/ArmorTracker.hpp:49[m[K,
+                 from [01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:1[m[K:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/include/extra_kalman_filter.hpp:18:5:[m[K [01;36m[Knote: [m[Kdeclared private here
+   18 |     [01;36m[KExtraKalman[m[K(int state, int guance);
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:[m[K In member function ‘[01m[Kvoid ArmorTracker::run()[m[K’:
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:160:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<cv::Point_<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  160 |         for (int i = 0; [01;35m[Ki < contours.size()[m[K; i++)
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:194:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  194 |         for (int i = 0; [01;35m[Ki < this->LightBarVector.size()[m[K; i++)
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:196:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<LightBar>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  196 |             for (int j = i + 1; [01;35m[Kj < this->LightBarVector.size()[m[K; j++)
+      |                                 [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:265:68:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+  265 |                 cv::Point2f src_points[4] = [01;31m[Kmtl.armor_vector_extend(n_tl,n_tr,n_bl,n_br)[m[K;
+      |                                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/ArmorTracker.cpp:364:31:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktvec_data[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  364 |                 const double *[01;35m[Ktvec_data[m[K = tvec.ptr<double>();
+      |                               [01;35m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:76：CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/armor_tracker_node.dir/build.make:174：CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/armor_tracker_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

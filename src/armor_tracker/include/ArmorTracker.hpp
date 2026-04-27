@@ -46,7 +46,7 @@
 #include "ArmorMsg.h"
 // #include "armor_camera_capture.hpp"
 #include "galaxy_camera.hpp"
-
+// #include "extra_kalman_filter.hpp"
 
 class ArmorTracker : public rclcpp::Node
 {
@@ -59,7 +59,6 @@ private:
     // 视频信息类
     VedioProcessor vp;
 
-    // 旋转中心处理类
     RotationCenterSolver centerSolver{1000}; // 记录最近1000帧 随便记
     // 灯条处理类
     LightBarProcessor lbp;
@@ -69,6 +68,8 @@ private:
 
     // 单目标卡尔曼类
     Kalman kalman{9,3}; // 9维状态，3维观测
+
+    // ExtraKalman ekf{9,4};
 
     // 多目标卡尔曼类
     // MultipleKalman mltkalman;
@@ -91,7 +92,9 @@ private:
 
     rclcpp::Publisher<armor_interfaces::msg::ArmorInfo>::SharedPtr armor_info_publisher; // 装甲信息发布者
     rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr center_publisher;     // 中心点发布者
-    std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster;     
+
+    std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;     
+
     rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr tf_camera_to_world_publisher_;                  // TF广播器
 
     cv::Matx33d cv_to_ros; // OpenCV到ROS的转换矩阵

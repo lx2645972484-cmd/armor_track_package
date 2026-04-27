@@ -24,8 +24,8 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
     tf_camera_to_world_publisher_->publish(joint_state_msg_);
 
     // 动态广播器，用于发布旋转中心到相机的位置
-    tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
-    
+    tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(this);
+
     // 获取图像时间戳发布方
     time_stamp_publisher_ = this->create_publisher<std_msgs::msg::Float32>("time_stamp_from_get_image", 10);
 
@@ -169,22 +169,40 @@ void ArmorTracker::run()
 
             double w = rect.size.width;
             double h = rect.size.height;
-            double angle = rect.angle;
+
+            cv::Vec4f line_vector;
+            // cv::DIST_L2 表示使用标准的最小二乘法
+            cv::fitLine(contours[i], line_vector, cv::DIST_L2, 0, 0.01, 0.01);
+
+            // line_vector 的前两个元素是直线的方向向量 (vx, vy)
+            // 后两个元素是直线上的一点 (x0, y0)，通常是质心，这里我们算角度只需要向量
+            float vx = line_vector[0];
+            float vy = line_vector[1];
+
+            // 使用 std::atan2 计算角度，得到的是弧度 [-pi, pi]
+            // 并且可以通过乘以 180 / PI 转换为角度
+            double angle_rad = std::atan2(vy, vx);
+            double angle_deg = angle_rad * 180.0 / CV_PI;
+
+            // 统一映射到你想要的范围（比如 0~180 度）
+            if (angle_deg < 0)
+            {
+                angle_deg += 180.0;
+            }
 
             if (w < h)
             {
                 std::swap(w, h);
-                angle += 90.0;
             }
 
-            if (w * h < 800)
+            if (w * h < 100)
                 continue;
             if (w / h < 1.5)
                 continue;
 
             LightBar light;
             light.rect = rect;
-            light.angle = angle;
+            light.angle = angle_deg;
             light.center = rect.center;
             light.light_rect = light_rect;
 
@@ -200,22 +218,32 @@ void ArmorTracker::run()
 
                 // 优化：利用 std::abs 避免隐式转整型导致的精度丢失问题并加速计算
                 double angle_cha = std::abs(l1.angle - l2.angle);
+
+                if(angle_cha > 180)
+                {
+                    angle_cha = 360 - angle_cha;
+                }
                 if (angle_cha > 10)
                     continue;
 
                 double w1 = std::max(l1.rect.size.height, l1.rect.size.width);
                 double w2 = std::max(l2.rect.size.height, l2.rect.size.width);
-                double ave_width = (w1 + w2) / 2;
+                double ave_height = (w1 + w2) / 2;
 
                 double h_cha = std::abs(w1 - w2);
-                if (h_cha / ave_width > 0.5)
+                if (h_cha / ave_height > 0.5)
                     continue;
 
                 double dist = mtl.getMyDistance(l1.center, l2.center);
-                if (dist / ave_width < 1.5 || dist / ave_width > 6)
+                if (dist / ave_height < 1.3 || dist / ave_height > 3.8)
                     continue;
 
                 if (l1.color != l2.color)
+                {
+                    continue;
+                }
+
+                if (std::abs(l1.center.y - l2.center.y) / ave_height > 0.2)
                 {
                     continue;
                 }
@@ -262,7 +290,13 @@ void ArmorTracker::run()
                 // }
 
                 // 计算从上到下的方向向量
-                cv::Point2f src_points[4] = mtl.armor_vector_extend(n_tl,n_tr,n_bl,n_br);
+                auto result = mtl.armor_vector_extend(n_tl, n_tr, n_bl, n_br);
+                cv::Point2f src_points[4];
+                src_points[0] = result[0];
+                src_points[1] = result[1];
+                src_points[2] = result[2];
+                src_points[3] = result[3];
+
                 cv::Point2f dst_points[4] = {{0.0f, 0.0f}, {28.0f, 0.0f}, {28.0f, 28.0f}, {0.0f, 28.0f}};
                 cv::Mat warp_matrix = cv::getPerspectiveTransform(src_points, dst_points);
                 cv::warpPerspective(img, imgWarp, warp_matrix, cv::Size(28, 28));
@@ -362,19 +396,19 @@ void ArmorTracker::run()
                 // 优化：用底层内存指针获取数据远比调用 .at<double>() 快
                 const double *tvec_data = tvec.ptr<double>();
 
-                geometry_msgs::msg::PointStamped point_in_camera;
-                point_in_camera.header.frame_id = "camera_link";
-                point_in_camera.header.stamp = rclcpp::Time(0);
-                point_in_camera.point.x = tvec.at<double>(2);  // ROS的前 = OpenCV的前
-                point_in_camera.point.y = -tvec.at<double>(0); // ROS的左 = OpenCV右的反向
-                point_in_camera.point.z = -tvec.at<double>(1); // ROS的上 = OpenCV下的反向
+                geometry_msgs::msg::PointStamped target_point_in_camera;
+                target_point_in_camera.header.frame_id = "camera_link";
+                target_point_in_camera.header.stamp = rclcpp::Time(0);
+                target_point_in_camera.point.x = tvec.at<double>(2);  // ROS的前 = OpenCV的前
+                target_point_in_camera.point.y = -tvec.at<double>(0); // ROS的左 = OpenCV右的反向
+                target_point_in_camera.point.z = -tvec.at<double>(1); // ROS的上 = OpenCV下的反向
 
                 geometry_msgs::msg::PointStamped point_out_local;
                 try
                 {
-                    tf_buffer_->transform(point_in_camera, point_out_local, target_frame_, tf2::durationFromSec(0.0));
+                    tf_buffer_->transform(target_point_in_camera, point_out_local, target_frame_, tf2::durationFromSec(0.0));
                     this->target_point_out = point_out_local;
-                    auto camera_transformStamped = tf_buffer_->lookupTransform("camera_link", "base_link", tf2::TimePointZero);
+                    // auto camera_transformStamped = tf_buffer_->lookupTransform("camera_link", "base_link", tf2::TimePointZero);
                 }
                 catch (const tf2::TransformException &ex)
                 {
@@ -460,11 +494,11 @@ void ArmorTracker::run()
             continue; // 直接跳过这帧的后续绘制和发送，抓取下一张图
         }
 
-        double project_x,project_y,project_z;
-        mtl.axis_turn_ros_to_opencv(project_x,project_y,project_z,test);
+        double project_x, project_y, project_z;
+        mtl.axis_turn_ros_to_opencv(project_x, project_y, project_z, test);
 
         std::vector<cv::Point3f> out_center_3d;
-        out_center_3d.emplace_back(project_x,project_y,project_z);
+        out_center_3d.emplace_back(project_x, project_y, project_z);
         std::vector<cv::Point2f> out_center_2d;
 
         // 优化：复用初始化的 zeros 矩阵，杜绝每帧动态生成 Mat 的操作
@@ -504,7 +538,6 @@ bool ArmorTracker::containLight(const LightBar &light_1, const LightBar &light_2
         return false;
     }
 
-    // 优化：彻底砍掉原先为了包围盒去临时创建 std::vector 的昂贵内存分配与回收
     float expand_factor = 20.0f;
     float min_x = std::min(light_1.center.x, light_2.center.x) - expand_factor;
     float max_x = std::max(light_1.center.x, light_2.center.x) + expand_factor;
@@ -517,8 +550,6 @@ bool ArmorTracker::containLight(const LightBar &light_1, const LightBar &light_2
         {
             continue;
         }
-
-        // 直接进行数值范围校验，速度提升极其明显
         if (test_light.center.x >= min_x && test_light.center.x <= max_x &&
             test_light.center.y >= min_y && test_light.center.y <= max_y)
         {

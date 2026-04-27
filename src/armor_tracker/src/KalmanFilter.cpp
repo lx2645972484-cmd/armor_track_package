@@ -60,7 +60,7 @@ Eigen::VectorXd Kalman::update(geometry_msgs::msg::PointStamped point)
     Eigen::VectorXd y = Z - H * X;   // 新息
     X = X + K * y;
     
-    // Joseph 形式协方差更新（确保对称正定）
+    // Joseph 形式协方差更新
     Eigen::MatrixXd I_KH = I - K * H;
     P = I_KH * P * I_KH.transpose() + K * R * K.transpose();
     return X;

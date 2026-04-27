@@ -43,6 +43,7 @@ set(SOURCES
   src/ArmorTracker.cpp
   src/armor_camera_capture.cpp
   src/galaxy_camera.cpp
+  # src/extra_kalman_filter
               # 主程序入口
                 # 主程序入口
   # 添加其他需要的源文件...
