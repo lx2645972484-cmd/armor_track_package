@@ -16,6 +16,7 @@
 #include <cv_bridge/cv_bridge.h>
 #include <image_transport/image_transport.hpp>
 
+#include <opencv2/core/eigen.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
 #include "armor_interfaces/msg/armor_info.hpp"
 #include "armor_interfaces/msg/serial_driver.hpp"
@@ -36,6 +37,7 @@
 #include <tf2_ros/message_filter.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
+#include "camera_intrinsics_parser.hpp"
 #include "RotationCenterSolver.h"
 #include "KalmanFilter.h"
 #include "Preprocessing.h"
@@ -46,12 +48,12 @@
 #include "ArmorMsg.h"
 // #include "armor_camera_capture.hpp"
 #include "galaxy_camera.hpp"
-// #include "extra_kalman_filter.hpp"
+#include "extra_kalman_filter.hpp"
 
 class ArmorTracker : public rclcpp::Node
 {
 private:
-    cv::dnn::Net net;     
+    cv::dnn::Net net;
 
     // 图像处理类
     PreProcess pp;
@@ -67,9 +69,9 @@ private:
     MathTool mtl;
 
     // 单目标卡尔曼类
-    Kalman kalman{9,3}; // 9维状态，3维观测
+    Kalman kalman{9, 3}; // 9维状态，3维观测
 
-    // ExtraKalman ekf{9,4};
+    ExtraKalman ekf{9,4};
 
     // 多目标卡尔曼类
     // MultipleKalman mltkalman;
@@ -80,7 +82,7 @@ private:
     bool has_last_frame_time_ = false;
     std::chrono::steady_clock::time_point last_frame_time_{};
 
-    //存储LightBar的vector
+    // 存储LightBar的vector
     std::vector<LightBar> LightBarVector;
 
     // 绘图类
@@ -93,14 +95,22 @@ private:
     rclcpp::Publisher<armor_interfaces::msg::ArmorInfo>::SharedPtr armor_info_publisher; // 装甲信息发布者
     rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr center_publisher;     // 中心点发布者
 
-    std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;     
+    std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
 
-    rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr tf_camera_to_world_publisher_;                  // TF广播器
+    rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr tf_camera_to_world_publisher_; // TF广播器
 
     cv::Matx33d cv_to_ros; // OpenCV到ROS的转换矩阵
     double delta_t = 0.02; // 时间间隔
 
     int setting_;
+
+    int blue_thre_value_;
+    int red_thre_value_;
+    int exposure_time_;
+    double gain_;
+
+    OnSetParametersCallbackHandle::SharedPtr param_subscriber_;
+    rcl_interfaces::msg::SetParametersResult parametersCallback(const std::vector<rclcpp::Parameter> &parameters);
 
     // CameraHandle hCamera;
     galaxy_camera::GalaxyCamera galaxy_camera_; // 使用GalaxyCamera类，索引从1开始，默认不自动启动采集线程
@@ -114,7 +124,7 @@ private:
     sensor_msgs::msg::JointState joint_state_msg_; // 关节状态消息
 
     std::shared_ptr<tf2_ros::TransformListener> transform_listener_; // TF监听器
-    
+
     std::unique_ptr<tf2_ros::Buffer> tf_buffer_; // TF缓冲区
 
     rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr target_point_pub_; // 目标点发布者
@@ -143,9 +153,9 @@ private:
 
     double pitch_test;
 
-    const float ARMOR_WIDTH = 0.135f;                    // 灯条中心间距 135mm
-    const float ARMOR_HEIGHT = 0.055f;                   // 灯条高度 55mm
-    const float HALF_ARMOR_WIDTH = ARMOR_WIDTH / 2.0f;   // 0.0675m
+    const float ARMOR_WIDTH = 0.140f;                    // 灯条中心间距 140mm
+    const float ARMOR_HEIGHT = 0.050f;                   // 灯条高度 55mm
+    const float HALF_ARMOR_WIDTH = ARMOR_WIDTH / 2.0f;   // 0.070m
     const float HALF_ARMOR_HEIGHT = ARMOR_HEIGHT / 2.0f; // 0.0275m
 
     const std::vector<cv::Point3f> object_points = {
@@ -154,6 +164,9 @@ private:
         cv::Point3f(HALF_ARMOR_WIDTH, HALF_ARMOR_HEIGHT, 0.0f),   // 右下
         cv::Point3f(-HALF_ARMOR_WIDTH, HALF_ARMOR_HEIGHT, 0.0f)   // 左下
     };
+
+    rm_vision::CameraIntrinsics intrinsics;
+
 public:
     ArmorTracker();
     void run();
@@ -163,13 +176,13 @@ private:
 
     bool containLight(const LightBar &light_1, const LightBar &light_2);
 
-    void ColorDetect(std::vector<cv::Point> contour,LightBar light,cv::Mat img);
+    void ColorDetect(std::vector<cv::Point> contour, LightBar light, cv::Mat img);
 
-    void publish_to_serial_driver(double yaw, double pitch,const std::vector<cv::Point2f> &armorPoints);
+    void publish_to_serial_driver(double yaw, double pitch, const std::vector<cv::Point2f> &armorPoints);
 
     void receiveDataCallback(const armor_interfaces::msg::SerialReceiveData msg);
 
-    void msgCallback(const geometry_msgs::msg::PointStamped::SharedPtr point_ptr);  
+    void msgCallback(const geometry_msgs::msg::PointStamped::SharedPtr point_ptr);
 };
 
 #endif

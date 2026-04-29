@@ -235,7 +235,7 @@ namespace rm_serial_driver
         rclcpp::Time time_now = this->now();
         float time_now_float = time_now.seconds();
         float time_diff = time_now_float - time_stamp;
-        RCLCPP_INFO(get_logger(), "从获取图像->发送的大致时间差: %f", time_diff);
+        // RCLCPP_INFO(get_logger(), "从获取图像->发送的大致时间差: %f", time_diff);
     }
 
     void RMSerialDriver::getParams()

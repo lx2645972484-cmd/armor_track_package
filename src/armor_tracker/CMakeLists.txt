@@ -26,6 +26,7 @@ find_package(OpenCV REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
+find_package(camera_calibration_parsers REQUIRED)
 find_package(Eigen3 REQUIRED)
 message(STATUS "Eigen3_INCLUDE_DIRS = ${Eigen3_INCLUDE_DIRS}")
 
@@ -43,7 +44,8 @@ set(SOURCES
   src/ArmorTracker.cpp
   src/armor_camera_capture.cpp
   src/galaxy_camera.cpp
-  # src/extra_kalman_filter
+  src/camera_intrinsics_parser.cpp
+  src/extra_kalman_filter
               # 主程序入口
                 # 主程序入口
   # 添加其他需要的源文件...
@@ -85,6 +87,7 @@ ament_target_dependencies(armor_tracker_node
   sensor_msgs
   cv_bridge
   image_transport
+  camera_calibration_parsers
 )
 
 # 安装可执行文件

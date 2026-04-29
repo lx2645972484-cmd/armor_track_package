@@ -28,6 +28,8 @@ namespace galaxy_camera
     {
         GX_STATUS status;
 
+        GXSetEnum(camera_handle_, GX_ENUM_TRIGGER_MODE, GX_TRIGGER_MODE_OFF);
+
         // 初始化 SDK
         status = GXInitLib();
         if (!GX_SUCCESS(status))
@@ -66,12 +68,19 @@ namespace galaxy_camera
         // 注意：这里可以调用一次 setExposureTime / setGain 来确保初始值合理，但为了简洁先不设置
 
         // 开始采集（发送命令）
-        status = GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_START);
-        if (!GX_SUCCESS(status))
-        {
-            std::cerr << "[GalaxyCamera] Failed to start acquisition" << std::endl;
-            return false;
-        }
+        // status = GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_START);
+        // if (!GX_SUCCESS(status))
+        // {
+        //     std::cerr << "[GalaxyCamera] Failed to start acquisition" << std::endl;
+        //     return false;
+        // }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+
+        //ATTENTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!这里改变了相机开流指令！！！！！！！！！！！！
+
+        //可以按需要修改！！！！
 
         std::cout << "[GalaxyCamera] Initialized successfully, max resolution = " << width_max_ << "x" << height_max_ << std::endl;
         return true;
@@ -81,6 +90,15 @@ namespace galaxy_camera
     {
         if (running_)
             return;
+
+        //调整部分
+        GX_STATUS status = GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_START);
+        if (!GX_SUCCESS(status))
+        {
+            std::cerr << "[GalaxyCamera] Failed to start acquisition" << std::endl;
+            return;
+        }
+
         running_ = true;
         capture_thread_ = std::thread(&GalaxyCamera::captureLoop, this);
     }
@@ -162,6 +180,45 @@ namespace galaxy_camera
         return value;
     }
 
+    bool GalaxyCamera::setGamma(double gamma_value)
+    {
+        if (!camera_handle_)
+            return false;
+
+        // 1. 必须先开启 Gamma 使能 (Gamma Enable)
+        // 注意：大恒部分较老的型号或特定固件可能是 GX_ENUM_GAMMA_MODE，
+        // 但目前绝大多数支持 GxIAPI 的型号都使用 GX_BOOL_GAMMA_ENABLE
+        GX_STATUS status_enable = GXSetBool(camera_handle_, GX_BOOL_GAMMA_ENABLE, true);
+        if (!GX_SUCCESS(status_enable))
+        {
+            std::cerr << "[GalaxyCamera] Failed to enable Gamma (maybe already on or not supported), status = " << status_enable << std::endl;
+            // 我们不 return false，因为有些相机默认开启且只读使能位，直接尝试去设值
+        }
+
+        // 2. 写入具体的 Gamma 值
+        GX_STATUS status = GXSetFloat(camera_handle_, GX_FLOAT_GAMMA, gamma_value);
+        if (!GX_SUCCESS(status))
+        {
+            std::cerr << "[GalaxyCamera] Failed to set Gamma, status = " << status << std::endl;
+            return false;
+        }
+        
+        return true;
+    }
+
+    double GalaxyCamera::getGamma()
+    {
+        if (!camera_handle_)
+            return -1;
+            
+        double value;
+        GX_STATUS status = GXGetFloat(camera_handle_, GX_FLOAT_GAMMA, &value);
+        if (!GX_SUCCESS(status))
+            return -1;
+            
+        return value;
+    }
+
     void GalaxyCamera::captureLoop()
     {
         GX_FRAME_DATA bayer_frame = {0};
@@ -183,14 +240,74 @@ namespace galaxy_camera
             {
                 status = GXGetImage(camera_handle_, &bayer_frame, 500);
                 // 处理并转换为 RGB
-                ImageData rgb_image;
-                if (processFrame(bayer_frame, rgb_image))
+                // ImageData rgb_image;
+                // if (processFrame(bayer_frame, rgb_image))
+                // {
+                //     std::lock_guard<std::mutex> lock(image_mutex_);
+                //     latest_image_ = std::move(rgb_image);
+                //     has_new_image_ = true;
+                // }
+                // fail_count_ = 0;
+
+                // if (status == GX_STATUS_SUCCESS && bayer_frame.nStatus == GX_FRAME_STATUS_SUCCESS)
+                // {
+                //     ImageData rgb_image;
+                //     if (processFrame(bayer_frame, rgb_image))
+                //     {
+                //         std::lock_guard<std::mutex> lock(image_mutex_);
+                //         latest_image_ = std::move(rgb_image);
+                //         has_new_image_ = true;
+                //     }
+                //     fail_count_ = 0; // 只有在真正成功获取并处理后，才重置错误计数
+                // }
+                // else
+                // {
+                //     // 【取消注释并优化】：触发掉线恢复机制
+                //     std::cerr << "[GalaxyCamera] Get image failed or frame incomplete. Status: " << status
+                //               << " FrameStatus: " << bayer_frame.nStatus << std::endl;
+
+                //     // 尝试重启采集流
+                //     GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_STOP);
+                //     std::this_thread::sleep_for(std::chrono::milliseconds(10)); // 给硬件一点缓冲时间
+                //     GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_START);
+
+                //     // fail_count_++;
+                // }
+
+                if (status == GX_STATUS_SUCCESS && bayer_frame.nStatus == GX_FRAME_STATUS_SUCCESS)
                 {
-                    std::lock_guard<std::mutex> lock(image_mutex_);
-                    latest_image_ = std::move(rgb_image);
-                    has_new_image_ = true;
+                    ImageData rgb_image;
+                    if (processFrame(bayer_frame, rgb_image))
+                    {
+                        std::lock_guard<std::mutex> lock(image_mutex_);
+                        latest_image_ = std::move(rgb_image);
+                        has_new_image_ = true;
+                    }
+                    fail_count_ = 0; // 只有在真正成功获取并处理后，才重置错误计数
                 }
-                fail_count_ = 0;
+                else
+                {
+                    std::cerr << "[GalaxyCamera] Get image failed or frame incomplete. Status: " << status
+                              << " FrameStatus: " << bayer_frame.nStatus << std::endl;
+
+                    // 【核心修复】：如果是超时 (通常 -14 代表 GX_STATUS_TIMEOUT)，不要重启数据流，继续等待下一帧即可
+                    if (status == -14 || status == GX_STATUS_TIMEOUT) 
+                    {
+                        // 仅做日志打印，直接 continue，不累加 fail_count_，不重启相机
+                        continue; 
+                    }
+
+                    fail_count_++;
+
+                    // 只有当连续多次出现严重错误时，才尝试重启数据流
+                    if (fail_count_ >= 3 && fail_count_ <= 5)
+                    {
+                        std::cerr << "[GalaxyCamera] Attempting to restart acquisition stream..." << std::endl;
+                        GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_STOP);
+                        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 增加缓冲时间至 100ms
+                        GXSendCommand(camera_handle_, GX_COMMAND_ACQUISITION_START);
+                    }
+                }
             }
             catch (const std::exception &e)
             {

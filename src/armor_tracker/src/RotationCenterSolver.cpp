@@ -56,7 +56,7 @@ bool RotationCenterSolver::solve(cv::Point3f &result_center)
     Eigen::Vector3d C;
     // 使用 SVD 分解求逆，更稳定
     Eigen::JacobiSVD<Eigen::Matrix3d> svd(Mat_A, Eigen::ComputeFullU | Eigen::ComputeFullV);
-C = svd.solve(Vec_b);
+    C = svd.solve(Vec_b);
 
     result_center.x = (float)C(0);
     result_center.y = (float)C(1);

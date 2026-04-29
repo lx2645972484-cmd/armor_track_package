@@ -209,6 +209,34 @@ CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp -o CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.s
 
+CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
+CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/camera_intrinsics_parser.cpp
+CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/camera_intrinsics_parser.cpp
+
+CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/camera_intrinsics_parser.cpp > CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.i
+
+CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/camera_intrinsics_parser.cpp -o CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.s
+
+CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o: CMakeFiles/armor_tracker_node.dir/flags.make
+CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o: /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/extra_kalman_filter.cpp
+CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o: CMakeFiles/armor_tracker_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o -MF CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o.d -o CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o -c /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/extra_kalman_filter.cpp
+
+CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/extra_kalman_filter.cpp > CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.i
+
+CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/extra_kalman_filter.cpp -o CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.s
+
 # Object files for target armor_tracker_node
 armor_tracker_node_OBJECTS = \
 "CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o" \
@@ -220,7 +248,9 @@ armor_tracker_node_OBJECTS = \
 "CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o" \
 "CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o" \
 "CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o" \
-"CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o"
+"CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o" \
+"CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o" \
+"CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o"
 
 # External object files for target armor_tracker_node
 armor_tracker_node_EXTERNAL_OBJECTS =
@@ -235,6 +265,8 @@ armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/ArmorTracker.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o
+armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o
+armor_tracker_node: CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/build.make
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.5.4d
@@ -280,6 +312,7 @@ armor_tracker_node: /home/eee/ros2/src/armor_detect_ros2-main/install/armor_inte
 armor_tracker_node: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
 armor_tracker_node: /opt/ros/humble/lib/libcv_bridge.so
 armor_tracker_node: /opt/ros/humble/lib/x86_64-linux-gnu/libimage_transport.so
+armor_tracker_node: /opt/ros/humble/lib/libcamera_calibration_parsers.so
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.5.4d
@@ -330,30 +363,6 @@ armor_tracker_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_genera
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 armor_tracker_node: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
-armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/libmessage_filters.so
 armor_tracker_node: /opt/ros/humble/lib/librclcpp.so
 armor_tracker_node: /opt/ros/humble/lib/liblibstatistics_collector.so
@@ -381,36 +390,61 @@ armor_tracker_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
 armor_tracker_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
 armor_tracker_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
 armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
+armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
+armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so
+armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so
+armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
+armor_tracker_node: /opt/ros/humble/lib/libtracetools.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
 armor_tracker_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 armor_tracker_node: /opt/ros/humble/lib/librmw.so
-armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
+armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
+armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
+armor_tracker_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+armor_tracker_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+armor_tracker_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
 armor_tracker_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so
-armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
-armor_tracker_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
-armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so
-armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-armor_tracker_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
-armor_tracker_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
 armor_tracker_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
 armor_tracker_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 armor_tracker_node: /opt/ros/humble/lib/librcpputils.so
-armor_tracker_node: /opt/ros/humble/lib/libtracetools.so
 armor_tracker_node: /opt/ros/humble/lib/librcutils.so
+armor_tracker_node: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.7.0
 armor_tracker_node: CMakeFiles/armor_tracker_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable armor_tracker_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eee/ros2/src/armor_detect_ros2-main/build/armor_tracker_node/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable armor_tracker_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/armor_tracker_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

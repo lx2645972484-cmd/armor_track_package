@@ -1,17 +1,21 @@
 #include "ArmorTracker.hpp"
+
 #include <algorithm>
 #include <cmath>
 #include <chrono>
 
 ArmorTracker::ArmorTracker() : Node("armor_tracker")
 {
+    std::string path = "/home/eee/ros2/src/armor_detect_ros2-main/vedio/2.mp4";
+    cap.open(path);
+    
     int num_cores = cv::getNumberOfCPUs();
     cv::setNumThreads(num_cores);
 
     net = cv::dnn::readNetFromONNX("/home/eee/ros2/src/armor_detect_ros2-main/src/Number-Classifier-for-RoboMaster-main/output/Zenet-sim.onnx");
 
-    // 初始化调试图像发布者
-    debug_image_pub_ = image_transport::create_publisher(this, "/tracker/debug_image");
+    // // 初始化调试图像发布者
+    // debug_image_pub_ = image_transport::create_publisher(this, "/tracker/debug_image");
 
     // 初始化发布者和TF广播器
     armor_info_publisher = this->create_publisher<armor_interfaces::msg::ArmorInfo>("armor_info", 10);
@@ -50,25 +54,36 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
         "/tracker/receive_data", rclcpp::SensorDataQoS(),
         std::bind(&ArmorTracker::receiveDataCallback, this, std::placeholders::_1));
 
-    // std::string path = "/home/eee/VSCCC/ACE3.2/2.mp4";
-    // cap.open(path);
+    this->declare_parameter<std::string>("camera_info_path", "");
+    std::string yaml_path = this->get_parameter("camera_info_path").as_string();
 
-    // 初始化相机
-    if (!galaxy_camera_.init())
+    if (yaml_path.empty())
     {
-        // 初始化失败
-        RCLCPP_INFO(this->get_logger(), "相机初始化失败");
+        RCLCPP_ERROR(this->get_logger(), "必须提供 camera_info_path 参数");
         return;
     }
-    galaxy_camera_.startCapture();        // 手动开始采集线程
-    galaxy_camera_.setExposureTime(5000); // 设置曝光时间为5000微秒
-    // galaxy_camera_.setGain(8);
 
-    // if (!camera_ready_)
-    // {
-    //     RCLCPP_ERROR(this->get_logger(), "相机初始化失败");
-    //     return;
-    // }
+    // 使用抽离出来的解析器
+    if (!rm_vision::CameraIntrinsicsParser::parseYaml(yaml_path, intrinsics))
+    {
+        RCLCPP_ERROR(this->get_logger(), "加载内参失败，请检查文件格式和路径");
+        return;
+    }
+
+    RCLCPP_INFO(this->get_logger(), "成功加载相机 [%s] 的内参", intrinsics.camera_name.c_str());
+
+    if (intrinsics.distortion_model != "plumb_bob")
+    {
+        RCLCPP_WARN(this->get_logger(),
+                    "畸变模型为 '%s'，当前示例只针对 plumb_bob。",
+                    intrinsics.distortion_model.c_str());
+    }
+
+    // 生成去畸变映射表
+    cv::Mat map1, map2;
+    cv::initUndistortRectifyMap(
+        intrinsics.K, intrinsics.D, cv::Mat::eye(3, 3, CV_64F), intrinsics.K,
+        intrinsics.image_size, CV_16SC2, map1, map2);
 
     last_time_ = this->now();
 
@@ -76,28 +91,58 @@ ArmorTracker::ArmorTracker() : Node("armor_tracker")
 
     this->declare_parameter<int>("setting", 3);
     setting_ = this->get_parameter("setting").as_int();
+
+    this->declare_parameter<int>("blue_thre_value", 140);
+    blue_thre_value_ = this->get_parameter("blue_thre_value").as_int();
+
+    this->declare_parameter<int>("red_thre_value", 150);
+    red_thre_value_ = this->get_parameter("red_thre_value").as_int();
+
+    this->declare_parameter<int>("exposure_time", 3000);
+    exposure_time_ = this->get_parameter("exposure_time").as_int();
+
+    this->declare_parameter<double>("gain", 8.0);
+    gain_ = this->get_parameter("gain").as_double();
+
+    this->declare_parameter<double>("gamma", 1.5); // 1.5 是个不错的起步值，暗部会明显提亮
+    double gamma_ = this->get_parameter("gamma").as_double();
+
     RCLCPP_INFO(this->get_logger(), "对方阵营参数: %d (0=蓝色, 2=红色)", setting_);
+
+    param_subscriber_ = this->add_on_set_parameters_callback(
+        std::bind(&ArmorTracker::parametersCallback, this, std::placeholders::_1));
+
+    //初始化相机
+    if (!galaxy_camera_.init())
+    {
+        // 初始化失败
+        RCLCPP_INFO(this->get_logger(), "相机初始化失败");
+        return;
+    }
+
+    galaxy_camera_.setExposureTime(exposure_time_);
+    galaxy_camera_.setGain(gain_);
+    galaxy_camera_.setGamma(gamma_);
+    galaxy_camera_.startCapture();
+
+    last_time_ = this->now();
+    RCLCPP_INFO(this->get_logger(), "相机初始化成功, 对方阵营: %d (0=蓝, 2=红)", setting_);
 }
 
 void ArmorTracker::run()
 {
     isFindArmor = false;
 
-    cv::Mat camera_matrix = (cv::Mat_<double>(3, 3) << 2374.54248, 0.0, 698.85288,
-                             0.0, 2377.53648, 520.8649,
-                             0.0, 0.0, 1.0);
+    // cv::Mat camera_matrix = (cv::Mat_<double>(3, 3) << 2374.54248, 0.0, 698.85288,
+    //                          0.0, 2377.53648, 520.8649,
+    //                          0.0, 0.0, 1.0);
 
-    // 畸变系数
-    cv::Mat dist_coeffs = (cv::Mat_<double>(1, 5) << -0.059743, 0.355479, -0.000625, 0.001595, 0.000000);
+    // // 畸变系数
+    // cv::Mat dist_coeffs = (cv::Mat_<double>(1, 5) << -0.059743, 0.355479, -0.000625, 0.001595, 0.000000);
 
     // 图像相关参数
     cv::Mat img, imgClose, imgWarp;
     galaxy_camera::ImageData img_data;
-    int blue_thre_value = 80; // 二值化查找蓝色装甲板光条参数
-    int red_thre_value = 80;
-
-    // int frame_width = 0, frame_height = 0;
-    // double fps = 0.0, current_time_ms = 0.0;
 
     double yaw;
     double pitch;
@@ -125,7 +170,7 @@ void ArmorTracker::run()
 
         armorPoints.clear();
         LightBarVector.clear();
-        current_yaws.clear(); // 优化：不清空底层内存只重置size，比重新声明快
+        current_yaws.clear(); 
         contours.clear();
 
         rclcpp::Time current_time = this->now(); // 获取当前时间
@@ -140,7 +185,8 @@ void ArmorTracker::run()
         {
             // 给相机一点时间出图，避免 CPU 100% 空转
             std::this_thread::sleep_for(std::chrono::milliseconds(2));
-            continue; // 不要 break，继续等待下一帧
+            cv::waitKey(1); // 【关键修复】：确保即使没图，窗口依然能响应操作系统事件！
+            continue;       // 不要 break，继续等待下一帧
         }
 
         img = cv::Mat(img_data.height, img_data.width, CV_8UC3, img_data.data.data());
@@ -153,7 +199,7 @@ void ArmorTracker::run()
             break; // 图像空了应该退出循环
         }
 
-        imgClose = pp.PreprocessImg(img, blue_thre_value, red_thre_value, setting_);
+        imgClose = pp.PreprocessImg(img, blue_thre_value_, red_thre_value_, setting_);
 
         cv::findContours(imgClose, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 
@@ -197,7 +243,7 @@ void ArmorTracker::run()
 
             if (w * h < 100)
                 continue;
-            if (w / h < 1.5)
+            if (w / h < 1.2)
                 continue;
 
             LightBar light;
@@ -219,12 +265,12 @@ void ArmorTracker::run()
                 // 优化：利用 std::abs 避免隐式转整型导致的精度丢失问题并加速计算
                 double angle_cha = std::abs(l1.angle - l2.angle);
 
-                if(angle_cha > 180)
+                if (angle_cha > 180)
                 {
                     angle_cha = 360 - angle_cha;
                 }
-                if (angle_cha > 10)
-                    continue;
+                // if (angle_cha > 10)
+                //     continue;
 
                 double w1 = std::max(l1.rect.size.height, l1.rect.size.width);
                 double w2 = std::max(l2.rect.size.height, l2.rect.size.width);
@@ -235,15 +281,15 @@ void ArmorTracker::run()
                     continue;
 
                 double dist = mtl.getMyDistance(l1.center, l2.center);
-                if (dist / ave_height < 1.3 || dist / ave_height > 3.8)
-                    continue;
+                // if (dist / ave_height < 1.3 || dist / ave_height > 4.8)
+                //     continue;
 
                 if (l1.color != l2.color)
                 {
                     continue;
                 }
 
-                if (std::abs(l1.center.y - l2.center.y) / ave_height > 0.2)
+                if (std::abs(l1.center.y - l2.center.y) / ave_height > 2.0)
                 {
                     continue;
                 }
@@ -301,7 +347,11 @@ void ArmorTracker::run()
                 cv::Mat warp_matrix = cv::getPerspectiveTransform(src_points, dst_points);
                 cv::warpPerspective(img, imgWarp, warp_matrix, cv::Size(28, 28));
                 cvtColor(imgWarp, imgWarp, cv::COLOR_BGR2GRAY);
-                cv::threshold(imgWarp, imgWarp, 15, 255, cv::THRESH_BINARY);
+
+                // cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE(2.0, cv::Size(4, 4));
+                // clahe->apply(imgWarp, imgWarp); // 克拉赫增强
+
+                cv::threshold(imgWarp, imgWarp, 5, 255, cv::THRESH_BINARY);
 
                 cv::Mat blob = cv::dnn::blobFromImage(imgWarp, 1.0 / 255.0, cv::Size(28.0f, 28.0f), cv::Scalar(0), false, false);
 
@@ -356,45 +406,84 @@ void ArmorTracker::run()
                 }
 
                 cv::Mat rvec, tvec;
-                bool pnp_success = cv::solvePnP(object_points, armorPoints, camera_matrix, dist_coeffs, rvec, tvec);
+                bool pnp_success = cv::solvePnP(object_points, armorPoints, intrinsics.K, intrinsics.D, rvec, tvec);
 
+                /*
                 if (pnp_success)
                 {
-                    centerSolver.addObservation(tvec, rvec);
-
+                     centerSolver.addObservation(tvec, rvec);
                     cv::Point3f calculated_center;
                     bool fit_success = centerSolver.solve(calculated_center);
 
-                    if (fit_success)
-                    {
+                     if (fit_success)
+                     {
                         std::vector<cv::Point3f> fit_center_3d = {calculated_center};
                         std::vector<cv::Point2f> fit_center_2d;
 
-                        // 优化：复用初始化的 zeros 矩阵，杜绝每帧动态生成 Mat 的操作
-                        cv::projectPoints(fit_center_3d, rvec_zero, tvec_zero,
-                                          camera_matrix, dist_coeffs, fit_center_2d);
+                         // 优化：复用初始化的 zeros 矩阵，杜绝每帧动态生成 Mat 的操作
+                       cv::projectPoints(fit_center_3d, rvec_zero, tvec_zero,
+                                           intrinsics.K, intrinsics.D, fit_center_2d);
 
                         cv::circle(img, fit_center_2d[0], 8, cv::Scalar(0, 255, 0), -1);
                         cv::putText(img, "Fit Center", fit_center_2d[0] + cv::Point2f(10, -10),
                                     cv::FONT_HERSHEY_SIMPLEX, 0.6, cv::Scalar(0, 255, 0), 2);
 
                         float radius = centerSolver.getLastRadius(calculated_center);
-                        // 优化：避免 substring 操作造成的越界崩溃与字符串复制开销
+                         // 优化：避免 substring 操作造成的越界崩溃与字符串复制开销
                         std::string r_text = cv::format("R: %.2fm", radius);
                         cv::putText(img, r_text, fit_center_2d[0] + cv::Point2f(10, 10),
                                     cv::FONT_HERSHEY_SIMPLEX, 0.6, cv::Scalar(0, 255, 0), 2);
-                    }
-                    else
-                    {
-                        cv::putText(img, "Collecting Data...", cv::Point2f(50, 50),
-                                    cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 0, 255), 2);
-                    }
-                }
+                 }
+                     else
+                     {
+                         cv::putText(img, "Collecting Data...", cv::Point2f(50, 50),
+                                  cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 0, 255), 2);
+                     }
+                 }
+                */
 
                 double distance = cv::norm(tvec);
 
                 // 优化：用底层内存指针获取数据远比调用 .at<double>() 快
                 const double *tvec_data = tvec.ptr<double>();
+
+                cv::Mat R;
+                Eigen::Vector3d pos;
+                Eigen::Vector3d norm;
+                Eigen::Vector3d rotated_center;
+                cv::Rodrigues(rvec, R); // 旋转向量 -> 旋转矩阵
+
+                cv::cv2eigen(tvec, pos); // huoqu pos
+
+                cv::cv2eigen(R.col(2), norm); // huoqu norm
+
+                if (ekf.is_initialized == false)
+                {
+                    norm[0] *= 0.25;
+                    norm[1] *= 0.25;
+                    norm[2] *= 0.25;
+                }
+                else if (ekf.is_initialized == true)
+                {
+                    double norm_horiz = std::sqrt(norm[2] * norm[2] + norm[0] * norm[0]);
+                    double norm_zong = std::sqrt(norm[1] * norm[1] + norm[2] * norm[2] + norm[0] * norm[0]);
+                    double n = norm_zong / norm_horiz;
+                    norm[0] *= ekf.X(6) * n;
+                    norm[1] *= ekf.X(6) * n;
+                    norm[2] *= ekf.X(6) * n;
+                }
+                rotated_center[0] = pos[0] + norm[0];
+                rotated_center[1] = pos[1] + norm[1];
+                rotated_center[2] = pos[2] + norm[2];
+
+                geometry_msgs::msg::PointStamped rotated_center_point_in_camera;
+                rotated_center_point_in_camera.header.frame_id = "camera_link";
+                rotated_center_point_in_camera.header.stamp = rclcpp::Time(0);
+                rotated_center_point_in_camera.point.x = rotated_center(2);  // ROS的前 = OpenCV的前
+                rotated_center_point_in_camera.point.y = -rotated_center(0); // ROS的左 = OpenCV右的反向
+                rotated_center_point_in_camera.point.z = -rotated_center(1); // ROS的上 = OpenCV下的反向
+
+                geometry_msgs::msg::PointStamped rotated_center_point_out_local;
 
                 geometry_msgs::msg::PointStamped target_point_in_camera;
                 target_point_in_camera.header.frame_id = "camera_link";
@@ -406,20 +495,40 @@ void ArmorTracker::run()
                 geometry_msgs::msg::PointStamped point_out_local;
                 try
                 {
+                    tf_buffer_->transform(rotated_center_point_in_camera, rotated_center_point_out_local, "base_link", tf2::durationFromSec(0.0));
                     tf_buffer_->transform(target_point_in_camera, point_out_local, target_frame_, tf2::durationFromSec(0.0));
                     this->target_point_out = point_out_local;
                     // auto camera_transformStamped = tf_buffer_->lookupTransform("camera_link", "base_link", tf2::TimePointZero);
                 }
                 catch (const tf2::TransformException &ex)
                 {
-                    // 如果查不到，说明底盘位姿没跟上，丢弃这帧的数据，直接 continue 抓取下一张图
-                    RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
-                                         "坐标变换未就绪，丢弃本帧: %s", ex.what());
-                    isFindArmor = false;
-                    continue;
+                    // // 如果查不到，说明底盘位姿没跟上，丢弃这帧的数据，直接 continue 抓取下一张图
+                    // RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+                    //                      "坐标变换未就绪，丢弃本帧: %s", ex.what());
+                    // isFindArmor = false;
+                    // continue;
                 }
 
-                // camera -> base_link 的变换只需要查询一次
+                double dx = point_out_local.point.x - rotated_center_point_out_local.point.x;
+                double dy = point_out_local.point.y - rotated_center_point_out_local.point.y;
+
+                double true_theta = std::atan2(dy, dx);
+
+                Eigen::VectorXd X(9);
+                Eigen::VectorXd Z(4);
+
+                if (ekf.is_initialized == false && isFindArmor == true)
+                {
+                    X << rotated_center_point_out_local.point.x, rotated_center_point_out_local.point.y,
+                        rotated_center_point_out_local.point.z, 0, 0, 0, 0.25, true_theta, 0;
+                    ekf.init(X);
+                }
+                else if (ekf.is_initialized == true && isFindArmor == true)
+                {
+                    Z << point_out_local.point.x, point_out_local.point.y, point_out_local.point.z, true_theta;
+                    ekf.predict(delta_time);
+                    ekf.update(Z);
+                }
 
                 // 至此，我们获得了相机到底座的变换关系，以及装甲板中心点在底座坐标系下的坐标！！！
 
@@ -476,6 +585,13 @@ void ArmorTracker::run()
         kalman_point.point.y = kalman.X(1);
         kalman_point.point.z = kalman.X(2);
 
+        geometry_msgs::msg::PointStamped rotated_center_extra_kalman_point;
+        rotated_center_extra_kalman_point.header.frame_id = "base_link";
+        rotated_center_extra_kalman_point.header.stamp = rclcpp::Time(0);
+        rotated_center_extra_kalman_point.point.x = ekf.X(0);
+        rotated_center_extra_kalman_point.point.y = ekf.X(1);
+        rotated_center_extra_kalman_point.point.z = ekf.X(2);
+
         if (!armorPoints.empty())
         {
             yaw_test = std::atan2(kalman_point.point.y, kalman_point.point.x) * 180.0 / M_PI;
@@ -483,35 +599,48 @@ void ArmorTracker::run()
             pitch_test = std::atan2(kalman_point.point.z, horiz_test) * 180.0 / M_PI;
         }
         geometry_msgs::msg::PointStamped test;
+        geometry_msgs::msg::PointStamped ekf_test;
         try
         {
             test = tf_buffer_->transform(kalman_point, "camera_link");
+            ekf_test = tf_buffer_->transform(rotated_center_extra_kalman_point, "camera_link");
         }
         catch (const tf2::TransformException &ex)
         {
-            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
-                                 "卡尔曼预测点 TF 变换未就绪: %s", ex.what());
-            continue; // 直接跳过这帧的后续绘制和发送，抓取下一张图
+            // RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+            //                      "卡尔曼预测点 TF 变换未就绪: %s", ex.what());
+            // continue; // 直接跳过这帧的后续绘制和发送，抓取下一张图
         }
 
         double project_x, project_y, project_z;
+        double rotated_project_x, rotated_project_y, rotated_project_z;
         mtl.axis_turn_ros_to_opencv(project_x, project_y, project_z, test);
+        mtl.axis_turn_ros_to_opencv(rotated_project_x, rotated_project_y, rotated_project_z, ekf_test);
 
-        std::vector<cv::Point3f> out_center_3d;
-        out_center_3d.emplace_back(project_x, project_y, project_z);
-        std::vector<cv::Point2f> out_center_2d;
+        std::vector<cv::Point3f> target_out_center_3d;
+        target_out_center_3d.emplace_back(project_x, project_y, project_z);
+        std::vector<cv::Point2f> target_out_center_2d;
+
+        std::vector<cv::Point3f> rotated_center_out_center_3d;
+        rotated_center_out_center_3d.emplace_back(rotated_project_x, rotated_project_y, rotated_project_z);
+        std::vector<cv::Point2f> rotated_center_out_center_2d;
 
         // 优化：复用初始化的 zeros 矩阵，杜绝每帧动态生成 Mat 的操作
-        cv::projectPoints(out_center_3d, rvec_zero, tvec_zero,
-                          camera_matrix, dist_coeffs, out_center_2d);
+        cv::projectPoints(target_out_center_3d, rvec_zero, tvec_zero,
+                          intrinsics.K, intrinsics.D, target_out_center_2d);
 
-        cv::circle(img, out_center_2d[0], 8, cv::Scalar(0, 0, 255), -1);
+        cv::projectPoints(rotated_center_out_center_3d, rvec_zero, tvec_zero,
+                          intrinsics.K, intrinsics.D, rotated_center_out_center_2d);
+
+        cv::circle(img, target_out_center_2d[0], 8, cv::Scalar(0, 0, 255), -1);
+        cv::circle(img, rotated_center_out_center_2d[0], 8, cv::Scalar(0, 255, 0), -1);
 
         cv::imshow("Debug Image", img);
         if (!imgWarp.empty())
         {
             cv::imshow("Warped Armor", imgWarp);
         }
+        cv::imshow("Preprocessed", imgClose);
         cv::waitKey(1);
         publish_to_serial_driver(yaw_test, pitch_test, armorPoints);
         time_stamp_publisher_->publish(time_stamp_msg);
@@ -538,7 +667,7 @@ bool ArmorTracker::containLight(const LightBar &light_1, const LightBar &light_2
         return false;
     }
 
-    float expand_factor = 20.0f;
+    float expand_factor = 100.0f;
     float min_x = std::min(light_1.center.x, light_2.center.x) - expand_factor;
     float max_x = std::max(light_1.center.x, light_2.center.x) + expand_factor;
     float min_y = std::min(light_1.center.y, light_2.center.y) - expand_factor;
@@ -654,4 +783,58 @@ void ArmorTracker::msgCallback(const geometry_msgs::msg::PointStamped::SharedPtr
         RCLCPP_WARN(
             this->get_logger(), "变换失败: %s\n", ex.what());
     }
+}
+
+rcl_interfaces::msg::SetParametersResult ArmorTracker::parametersCallback(const std::vector<rclcpp::Parameter> &parameters)
+{
+    rcl_interfaces::msg::SetParametersResult result;
+    result.successful = true;
+    result.reason = "success";
+
+    for (const auto &param : parameters)
+    {
+        if (param.get_name() == "blue_thre_value")
+        {
+            blue_thre_value_ = param.as_int();
+            RCLCPP_INFO(this->get_logger(), "蓝方阈值更新为: %d", blue_thre_value_);
+        }
+        else if (param.get_name() == "red_thre_value")
+        {
+            red_thre_value_ = param.as_int();
+            RCLCPP_INFO(this->get_logger(), "红方阈值更新为: %d", red_thre_value_);
+        }
+        else if (param.get_name() == "setting")
+        {
+            setting_ = param.as_int();
+            RCLCPP_INFO(this->get_logger(), "攻击阵营更新为: %d (0=蓝, 2=红)", setting_);
+        }
+        else if (param.get_name() == "exposure_time")
+        {
+            exposure_time_ = param.as_int();
+            if (galaxy_camera_.isReady())
+            {
+                galaxy_camera_.setExposureTime(exposure_time_); // 大恒 SDK 支持运行时实时改写底层寄存器
+            }
+            RCLCPP_INFO(this->get_logger(), "相机曝光时间更新为: %d", exposure_time_);
+        }
+        else if (param.get_name() == "gain")
+        {
+            gain_ = param.as_double();
+            if (galaxy_camera_.isReady())
+            {
+                galaxy_camera_.setGain(gain_);
+            }
+            RCLCPP_INFO(this->get_logger(), "相机增益更新为: %.2f", gain_);
+        }
+        else if (param.get_name() == "gamma")
+        {
+            double new_gamma = param.as_double();
+            if (galaxy_camera_.isReady())
+            {
+                galaxy_camera_.setGamma(new_gamma);
+            }
+            RCLCPP_INFO(this->get_logger(), "相机 Gamma 更新为: %.2f", new_gamma);
+        }
+    }
+    return result;
 }

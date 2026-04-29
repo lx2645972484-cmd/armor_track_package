@@ -73,6 +73,10 @@ public:
      */
     bool setGain(double gain);
 
+    bool setGamma(double gamma_value);
+    
+    double getGamma();
+
     /**
      * @brief 获取当前增益
      * @return 增益值，失败返回 -1

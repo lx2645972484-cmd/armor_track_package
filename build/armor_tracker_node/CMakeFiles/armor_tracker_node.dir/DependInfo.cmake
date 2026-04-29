@@ -16,6 +16,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/RotationCenterSolver.cpp" "CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o" "gcc" "CMakeFiles/armor_tracker_node.dir/src/RotationCenterSolver.cpp.o.d"
   "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/Vedio.cpp" "CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o" "gcc" "CMakeFiles/armor_tracker_node.dir/src/Vedio.cpp.o.d"
   "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/armor_camera_capture.cpp" "CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o" "gcc" "CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.o.d"
+  "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/camera_intrinsics_parser.cpp" "CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o" "gcc" "CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o.d"
+  "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/extra_kalman_filter.cpp" "CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o" "gcc" "CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o.d"
   "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/galaxy_camera.cpp" "CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o" "gcc" "CMakeFiles/armor_tracker_node.dir/src/galaxy_camera.cpp.o.d"
   "/home/eee/ros2/src/armor_detect_ros2-main/src/armor_tracker/src/main1.cpp" "CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o" "gcc" "CMakeFiles/armor_tracker_node.dir/src/main1.cpp.o.d"
   )

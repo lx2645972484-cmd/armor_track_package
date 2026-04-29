@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <robot name="turret_with_camera_imu">
-  <!-- 定义颜色 -->
   <material name="gray">
     <color rgba="0.5 0.5 0.5 1.0"/>
   </material>
@@ -20,7 +19,6 @@
     <color rgba="0.0 0.8 0.0 1.0"/>
   </material>
 
-  <!-- ========== 固定基座（相当于底盘或安装座） ========== -->
   <link name="base_link">
     <visual>
       <geometry>
@@ -31,7 +29,6 @@
     </visual>
   </link>
 
-  <!-- ========== 云台底座（绕 Yaw 轴旋转） ========== -->
   <link name="turret_base_link">
     <visual>
       <geometry>
@@ -42,15 +39,13 @@
     </visual>
   </link>
 
-  <!-- Yaw 关节：绕 Z 轴旋转 -->
   <joint name="yaw_joint" type="continuous">
     <parent link="base_link"/>
     <child link="turret_base_link"/>
-    <origin xyz="0.0 0.0 0.03" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.02" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
-  <!-- ========== 云台上部（绕 Pitch 轴旋转） ========== -->
   <link name="turret_top_link">
     <visual>
       <geometry>
@@ -61,8 +56,6 @@
     </visual>
   </link>
 
-  <!-- Pitch 关节：绕 Y 轴旋转（俯仰） -->
-  <!-- 修改 z 偏移为 0.015，使相机中心到底盘底面距离为 6 cm -->
   <joint name="pitch_joint" type="continuous">
     <parent link="turret_base_link"/>
     <child link="turret_top_link"/>
@@ -70,7 +63,6 @@
     <axis xyz="0 1 0"/>
   </joint>
 
-  <!-- ========== 相机 ========== -->
   <link name="camera_link">
     <visual>
       <geometry>
@@ -88,14 +80,12 @@
     </visual>
   </link>
 
-  <!-- 相机固定关节 -->
   <joint name="camera_joint" type="fixed">
     <parent link="turret_top_link"/>
     <child link="camera_link"/>
     <origin xyz="0.05 0.0 0.0" rpy="0 0 0"/>
   </joint>
 
-  <!-- ========== IMU（固定在相机正上方，距离底盘底面 9 cm） ========== -->
   <link name="imu_link">
     <visual>
       <geometry>
@@ -106,7 +96,6 @@
     </visual>
   </link>
 
-  <!-- IMU 固定关节：位于相机正上方 3 cm 处 -->
   <joint name="imu_joint" type="fixed">
     <parent link="camera_link"/>
     <child link="imu_link"/>

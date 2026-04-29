@@ -355,6 +355,9 @@ armor_tracker_node_SOURCE_DIR:STATIC=/home/eee/ros2/src/armor_detect_ros2-main/s
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake
 
+//The directory containing a CMake configuration file for camera_calibration_parsers.
+camera_calibration_parsers_DIR:PATH=/opt/ros/humble/share/camera_calibration_parsers/cmake
+
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/humble/share/class_loader/cmake
 
@@ -550,8 +553,14 @@ tracetools_DIR:PATH=/opt/ros/humble/share/tracetools/cmake
 //The directory containing a CMake configuration file for unique_identifier_msgs.
 unique_identifier_msgs_DIR:PATH=/opt/ros/humble/share/unique_identifier_msgs/cmake
 
+//The directory containing a CMake configuration file for yaml-cpp.
+yaml-cpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp
+
 //The directory containing a CMake configuration file for yaml.
 yaml_DIR:PATH=/opt/ros/humble/cmake
+
+//The directory containing a CMake configuration file for yaml_cpp_vendor.
+yaml_cpp_vendor_DIR:PATH=/opt/ros/humble/share/yaml_cpp_vendor/cmake
 
 
 ########################

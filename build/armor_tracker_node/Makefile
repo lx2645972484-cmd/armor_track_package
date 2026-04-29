@@ -402,6 +402,54 @@ src/armor_camera_capture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/armor_camera_capture.cpp.s
 .PHONY : src/armor_camera_capture.cpp.s
 
+src/camera_intrinsics_parser.o: src/camera_intrinsics_parser.cpp.o
+.PHONY : src/camera_intrinsics_parser.o
+
+# target to build an object file
+src/camera_intrinsics_parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.o
+.PHONY : src/camera_intrinsics_parser.cpp.o
+
+src/camera_intrinsics_parser.i: src/camera_intrinsics_parser.cpp.i
+.PHONY : src/camera_intrinsics_parser.i
+
+# target to preprocess a source file
+src/camera_intrinsics_parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.i
+.PHONY : src/camera_intrinsics_parser.cpp.i
+
+src/camera_intrinsics_parser.s: src/camera_intrinsics_parser.cpp.s
+.PHONY : src/camera_intrinsics_parser.s
+
+# target to generate assembly for a file
+src/camera_intrinsics_parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/camera_intrinsics_parser.cpp.s
+.PHONY : src/camera_intrinsics_parser.cpp.s
+
+src/extra_kalman_filter.o: src/extra_kalman_filter.cpp.o
+.PHONY : src/extra_kalman_filter.o
+
+# target to build an object file
+src/extra_kalman_filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.o
+.PHONY : src/extra_kalman_filter.cpp.o
+
+src/extra_kalman_filter.i: src/extra_kalman_filter.cpp.i
+.PHONY : src/extra_kalman_filter.i
+
+# target to preprocess a source file
+src/extra_kalman_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.i
+.PHONY : src/extra_kalman_filter.cpp.i
+
+src/extra_kalman_filter.s: src/extra_kalman_filter.cpp.s
+.PHONY : src/extra_kalman_filter.s
+
+# target to generate assembly for a file
+src/extra_kalman_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_tracker_node.dir/build.make CMakeFiles/armor_tracker_node.dir/src/extra_kalman_filter.cpp.s
+.PHONY : src/extra_kalman_filter.cpp.s
+
 src/galaxy_camera.o: src/galaxy_camera.cpp.o
 .PHONY : src/galaxy_camera.o
 
@@ -490,6 +538,12 @@ help:
 	@echo "... src/armor_camera_capture.o"
 	@echo "... src/armor_camera_capture.i"
 	@echo "... src/armor_camera_capture.s"
+	@echo "... src/camera_intrinsics_parser.o"
+	@echo "... src/camera_intrinsics_parser.i"
+	@echo "... src/camera_intrinsics_parser.s"
+	@echo "... src/extra_kalman_filter.o"
+	@echo "... src/extra_kalman_filter.i"
+	@echo "... src/extra_kalman_filter.s"
 	@echo "... src/galaxy_camera.o"
 	@echo "... src/galaxy_camera.i"
 	@echo "... src/galaxy_camera.s"

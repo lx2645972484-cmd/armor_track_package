@@ -33,14 +33,14 @@ cv::Mat PreProcess::PreprocessImg(cv::Mat img, int blue_value, int red_value, in
     // return mask;
     if (setting == 0)
     {
-        cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
-        cv::morphologyEx(blueMask, imgClose, cv::MORPH_OPEN, kernel);
+        cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(7, 7));
+        cv::morphologyEx(blueMask, imgClose, cv::MORPH_CLOSE, kernel);
     }
 
     if (setting == 2)
     {
-        cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
-        cv::morphologyEx(redMask, imgClose, cv::MORPH_OPEN, kernel);
+        cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(7, 7));
+        cv::morphologyEx(redMask, imgClose, cv::MORPH_CLOSE, kernel);
     }
 
     return imgClose;

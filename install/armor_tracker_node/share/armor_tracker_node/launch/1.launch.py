@@ -52,6 +52,7 @@ def generate_launch_description():
         output="screen",
         parameters=[{
             'setting': 0,
+            'camera_info_path': '/home/eee/ros2/src/armor_detect_ros2-main/yaml/galaxy_camera.yaml'
             }]
     )
 
