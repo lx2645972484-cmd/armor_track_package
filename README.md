@@ -3,6 +3,108 @@
 ## 📌 项目简介
 本项目是为 RoboMaster 机器人对抗赛设计的一套基于 ROS 2 的装甲板视觉自瞄系统。系统涵盖了从图像采集、预处理、目标检测、数字识别到三维状态估计和云台控制的完整业务流。项目采用 C++ 与 OpenCV 编写核心视觉逻辑，并结合 PyTorch 训练的轻量级神经网络进行数字分类，最后通过串口将解算后的偏航角 (Yaw) 和俯仰角 (Pitch) 发送至底层电控。
 
+## 文件树粗展示
+armor_detect_ros2-main
+├── build
+├── Camera
+├── include
+├── install
+├── log
+└── src
+    ├── armor_drawer
+    │   ├── include
+    │   │   └── DrawMyFunction.h
+    │   ├── src
+    │   │   ├── DrawMyFunction.cpp
+    │   │   └── main1.cpp
+    │   ├── CMakeLists.txt
+    │   └── package.xml
+    ├── armor_interfaces
+    │   ├── msg
+    │   │   ├── ArmorInfo.msg
+    │   │   ├── JointState.msg
+    │   │   ├── SerialDriver.msg
+    │   │   └── SerialReceiveData.msg
+    │   ├── CMakeLists.txt
+    │   └── package.xml
+    ├── armor_tracker
+    │   ├── include
+    │   │   ├── armor_camera_capture.hpp
+    │   │   ├── ArmorMsg.h
+    │   │   ├── ArmorTracker.hpp
+    │   │   ├── camera_intrinsics_parser.hpp
+    │   │   ├── extra_kalman_filter.hpp
+    │   │   ├── galaxy_camera.hpp
+    │   │   ├── KalmanFilter.h
+    │   │   ├── LightBarProcessor.h
+    │   │   ├── MathTool.h
+    │   │   ├── MultipleKalman.h
+    │   │   ├── Preprocessing.h
+    │   │   ├── RotationCenterSolver.h
+    │   │   ├── vector_extend.hpp
+    │   │   └── Vedio.h
+    │   ├── launch
+    │   │   └── 1.launch.py
+    │   ├── src
+    │   │   ├── armor_camera_capture.cpp
+    │   │   ├── ArmorTracker.cpp
+    │   │   ├── camera_intrinsics_parser.cpp
+    │   │   ├── extra_kalman_filter.cpp
+    │   │   ├── galaxy_camera.cpp
+    │   │   ├── KalmanFilter.cpp
+    │   │   ├── LightBarProcessor.cpp
+    │   │   ├── main1.cpp
+    │   │   ├── MathTool.cpp
+    │   │   ├── MultipleKalman.cpp
+    │   │   ├── Preprocessing.cpp
+    │   │   ├── RotationCenterSolver.cpp
+    │   │   └── Vedio.cpp
+    │   ├── CMakeLists.txt
+    │   ├── package.xml
+    │   └── README.md
+    ├── armor_urdf
+    │   ├── launch
+    │   ├── meshes
+    │   ├── rviz
+    │   ├── src
+    │   ├── urdf
+    │   │   └── armor_urdf.urdf
+    │   ├── CMakeLists.txt
+    │   └── package.xml
+    ├── Number-Classifier-for-RoboMaster-main
+    │   ├── dataset
+    │   ├── example
+    │   ├── output
+    │   ├── src
+    │   │   ├── __pycache__
+    │   │   ├── dataset.py
+    │   │   ├── model.py
+    │   │   └── train.py
+    │   ├── datasetarmors.txt
+    │   ├── README_EN.md
+    │   ├── README.md
+    │   └── requirements.txt
+    ├── serial_driver
+    │   ├── .vscode
+    │   ├── config
+    │   ├── include
+    │   ├── launch
+    │   ├── src
+    │   │   ├── crc.cpp
+    │   │   ├── main.cpp
+    │   │   └── rm_serial_driver.cpp
+    │   ├── CMakeLists.txt
+    │   └── package.xml
+    ├── vedio
+    │   └── 2.mp4
+    ├── yaml
+    │   └── galaxy_camera.yaml
+    ├── frames_2026-04-11_07.35.59.gv
+    ├── frames_2026-04-11_07.35.59.pdf
+    ├── frames_2026-04-11_07.36.16.gv
+    ├── frames_2026-04-11_07.36.16.pdf
+    └── frames_2026-04-15_00.23.47.gv
+
 ## ✨ 核心功能特性 (Features)
 
 ### 1. 稳定平滑的追踪与全链路坐标转换
